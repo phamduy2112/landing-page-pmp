@@ -609,7 +609,7 @@
                 for="hero-name"
                 class="mb-2 block font-label-md text-label-md text-on-surface"
               >
-                Họ và tên *
+                Họ và tên <span class="text-red-500 font-bold ml-0.5">*</span> 
               </label>
 
               <input
@@ -627,7 +627,7 @@
                 for="hero-phone"
                 class="mb-2 block font-label-md text-label-md text-on-surface"
               >
-                Số điện thoại *
+                Số điện thoại <span class="text-red-500 font-bold ml-0.5">*</span>
               </label>
 
               <input
@@ -645,7 +645,7 @@
                 for="hero-program"
                 class="mb-2 block font-label-md text-label-md text-on-surface"
               >
-                Chương trình quan tâm *
+                Chương trình quan tâm <span class="text-red-500 font-bold ml-0.5">*</span> 
               </label>
 
               <select
@@ -657,6 +657,28 @@
                 <option value="toeic">TOEIC 4 Kỹ Năng</option>
                 <option value="ielts">IELTS Mastery</option>
               </select>
+
+              
+            </div>
+            <div>
+              <label
+                for="hero-program"
+                class="mb-2 block font-label-md text-label-md text-on-surface"
+              >
+Chọn cơ sở gần với bạn nhất<span class="text-red-500 font-bold ml-0.5">*</span>              </label>
+
+              <select
+                id="hero-program"
+                required
+                class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-sm text-body-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              >
+                <option value="">34 Hồ Thị Tư, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minhh</option>
+                <option value="toeic">411 Lê Văn Việt, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh</option>
+                <option value="ielts">1D Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh</option>
+                <option value="ielts">1Q Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh</option>
+              </select>
+
+              
             </div>
 
             <!-- Submit -->
@@ -2324,7 +2346,7 @@
 
         <div class="mb-7">
           <h3 class="mb-2 font-headline-md text-headline-md text-primary">
-            Đăng ký kiểm tra trình độ
+            Đăng ký kiểm tra trình độ miễn phí
           </h3>
 
           <p class="font-body-sm text-body-sm text-on-surface-variant">
@@ -2339,7 +2361,7 @@
               for="name"
               class="mb-2 block font-label-md text-label-md text-on-surface"
             >
-              Họ và tên *
+              Họ và tên<span class="text-red-500 font-bold ml-0.5">*</span> 
             </label>
 
             <input
@@ -2357,7 +2379,7 @@
               for="phone"
               class="mb-2 block font-label-md text-label-md text-on-surface"
             >
-              Số điện thoại *
+              Số điện thoại<span class="text-red-500 font-bold ml-0.5">*</span> 
             </label>
 
             <input
@@ -2375,7 +2397,7 @@
               for="program"
               class="mb-2 block font-label-md text-label-md text-on-surface"
             >
-              Chương trình quan tâm *
+              Chương trình quan tâm<span class="text-red-500 font-bold ml-0.5">*</span> 
             </label>
 
             <select
@@ -2392,8 +2414,28 @@
                 IELTS
               </option>
             </select>
+            
           </div>
+<div>
+              <label
+                for="hero-program"
+                class="mb-2 block font-label-md text-label-md text-on-surface"
+              >
+Chọn cơ sở gần với bạn nhất<span class="text-red-500 font-bold ml-0.5">*</span>              </label>
 
+              <select
+                id="hero-program"
+                required
+                class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-sm text-body-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              >
+                <option value="">34 Hồ Thị Tư, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minhh</option>
+                <option value="toeic">411 Lê Văn Việt, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh</option>
+                <option value="ielts">1D Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh</option>
+                <option value="ielts">1Q Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh</option>
+              </select>
+
+              
+            </div>
           <button
             type="submit"
             class="w-full rounded-lg bg-secondary px-6 py-4 font-label-md text-label-md text-on-secondary transition-all hover:bg-on-secondary-fixed-variant hover:shadow-lg"
