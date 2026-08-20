@@ -2,6 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>PMP English - TOEIC &amp; IELTS</title>
+
 <link
   rel="icon"
   type="image/png"
@@ -386,7 +387,7 @@
     }
     .captcha-brand i {
       font-size: 18px;
-      color: #1a73e8;
+      color: #00aeef;
       display: block;
       margin-bottom: 2px;
     }
@@ -408,6 +409,11 @@
       font-size: 16px;
       transition: transform 0.2s, background-color 0.2s, color 0.2s;
     }
+    .faq-answer { grid-template-rows: 0fr; opacity: 0; }
+    .faq-item.is-open .faq-answer { grid-template-rows: 1fr; opacity: 1; }
+    .faq-item.is-open .faq-chevron { transform: rotate(180deg); background: #00aeef; color: white; }
+    .faq-item.is-open .faq-number { background: #00aeef; color: white; }
+    .faq-item.is-open { border-color: rgba(8,104,185,.25); background: rgba(8,104,185,.04); }
     .social-icon:hover {
       transform: translateY(-3px);
       background-color: #38bdf8;
@@ -870,71 +876,219 @@ Chọn cơ sở gần với bạn nhất<span class="text-red-500 font-bold ml-0
     </div>
 
     <!-- Programs -->
-    <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+<div class="my-12">
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 
-      <!-- TOEIC -->
-      <a href="https://pmpenglish.edu.vn/khoa_hoc/toeic-4-ky-nang/" class="group flex h-full flex-col overflow-hidden rounded-2xl bg-surface soft-shadow">
-
-        <div class="relative h-64 overflow-hidden">
-          <img
-            src="./assets/TOEIC-4KN-BAN-DAT-DUOC-GI-SAU-KHOA-HOC-min-4.png"
-            alt="TOEIC 4 Kỹ Năng"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+    <!-- TOEIC Roadmap -->
+    <article
+      class="group flex h-full flex-col rounded-3xl border border-slate-200
+             bg-white p-6 shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl
+             hover:shadow-blue-100/60 sm:p-8"
+    >
+      <!-- Header -->
+      <div class="mb-5 flex items-center gap-4">
+        <div
+          class="flex h-14 w-14 shrink-0 items-center justify-center
+                 rounded-2xl bg-blue-50 text-blue-600
+                 transition-colors duration-300 group-hover:bg-blue-600
+                 group-hover:text-white"
+        >
+          <span
+            class="material-symbols-outlined text-[28px]"
+            style="font-variation-settings: 'FILL' 1"
+          >
+            work
+          </span>
         </div>
 
-        <div class="relative z-10 -mt-16 flex flex-grow flex-col rounded-t-3xl bg-surface p-8">
-
-          <span class="mb-4 w-fit rounded-full bg-primary/10 px-3 py-1 font-label-sm text-label-sm text-primary">
-            TOEIC
+        <div>
+          <span
+            class="mb-1 inline-block text-xs font-bold uppercase
+                   tracking-[0.16em] text-blue-600"
+          >
+            Dành cho học tập và công việc
           </span>
 
-          <h3 class="mb-4 font-headline-md text-headline-md text-primary">
-            TOEIC 4 Kỹ Năng
+          <h3 class="text-2xl font-bold text-slate-900">
+            Lộ trình TOEIC
           </h3>
-
-          <p class="flex-grow font-body-md text-body-md text-on-surface-variant">
-            Phù hợp với mục tiêu chuẩn đầu ra, thực tập, ứng tuyển và phát triển
-            năng lực tiếng Anh phục vụ công việc.
-          </p>
-
         </div>
-      </a>
+      </div>
 
-      <!-- IELTS -->
-      <a href="https://pmpenglish.edu.vn/khoa_hoc/luyen-thi-ielts/" class="group flex h-full flex-col overflow-hidden rounded-2xl bg-surface soft-shadow">
+      <!-- Description -->
+      <p class="mb-6 leading-7 text-slate-600">
+        Phù hợp với mục tiêu xét tốt nghiệp, hoàn thiện hồ sơ xin việc
+        và sử dụng tiếng Anh trong môi trường công sở.
+      </p>
 
-        <div class="relative h-64 overflow-hidden">
-          <img
-            src="./assets/TOEIC-IELTS-BAN-DAT-DUOC-GI-SAU-KHOA-HOC-1.png"
-            alt="IELTS"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
-        </div>
-
-        <div class="relative z-10 -mt-16 flex flex-grow flex-col rounded-t-3xl bg-surface p-8">
-
-          <span class="mb-4 w-fit rounded-full bg-secondary/10 px-3 py-1 font-label-sm text-label-sm text-secondary">
-            IELTS
+      <!-- Information -->
+      <ul class="mb-8 flex-grow space-y-4 text-[15px] text-slate-700">
+        <li class="flex items-start gap-3">
+          <span
+            class="material-symbols-outlined mt-0.5 text-[21px]
+                   text-blue-600"
+          >
+            check_circle
           </span>
 
-          <h3 class="mb-4 font-headline-md text-headline-md text-primary">
-            IELTS
-          </h3>
+          <span>
+            <strong class="font-semibold text-slate-900">Mục tiêu:</strong>
+            Đáp ứng chuẩn đầu ra, xin việc và phát triển nghề nghiệp.
+          </span>
+        </li>
 
-          <p class="flex-grow font-body-md text-body-md text-on-surface-variant">
-            Phù hợp với mục tiêu xét tuyển, học thuật, du học, học bổng và những
-            kế hoạch cần chứng chỉ tiếng Anh dài hạn.
-          </p>
+        <li class="flex items-start gap-3">
+          <span
+            class="material-symbols-outlined mt-0.5 text-[21px]
+                   text-blue-600"
+          >
+            check_circle
+          </span>
 
-        </div>
+          <span>
+            <strong class="font-semibold text-slate-900">Phù hợp:</strong>
+            Sinh viên, người đi làm và học viên cần chứng chỉ TOEIC.
+          </span>
+        </li>
+
+        <li class="flex items-start gap-3">
+          <span
+            class="material-symbols-outlined mt-0.5 text-[21px]
+                   text-blue-600"
+          >
+            check_circle
+          </span>
+
+          <span>
+            <strong class="font-semibold text-slate-900">Lộ trình:</strong>
+            Được xây dựng theo trình độ đầu vào và mục tiêu điểm số.
+          </span>
+        </li>
+      </ul>
+
+      <!-- Button -->
+      <a
+        href="#toeic"
+        class="flex w-full items-center justify-center gap-2 rounded-xl
+               border-2 border-blue-600 px-5 py-3 text-sm font-bold
+               text-blue-600 transition-all duration-300
+               hover:bg-blue-600 hover:text-white"
+      >
+        Xem chi tiết TOEIC
+
+        <span class="material-symbols-outlined text-[19px]">
+          arrow_forward
+        </span>
       </a>
+    </article>
 
-    </div>
+    <!-- IELTS Roadmap -->
+    <article
+      class="group flex h-full flex-col rounded-3xl border border-slate-200
+             bg-white p-6 shadow-sm transition-all duration-300
+             hover:-translate-y-1 hover:border-amber-500 hover:shadow-xl
+             hover:shadow-amber-100/60 sm:p-8"
+    >
+      <!-- Header -->
+      <div class="mb-5 flex items-center gap-4">
+        <div
+          class="flex h-14 w-14 shrink-0 items-center justify-center
+                 rounded-2xl bg-amber-50 text-amber-600
+                 transition-colors duration-300 group-hover:bg-amber-500
+                 group-hover:text-white"
+        >
+          <span
+            class="material-symbols-outlined text-[28px]"
+            style="font-variation-settings: 'FILL' 1"
+          >
+            public
+          </span>
+        </div>
+
+        <div>
+          <span
+            class="mb-1 inline-block text-xs font-bold uppercase
+                   tracking-[0.16em] text-amber-600"
+          >
+            Dành cho mục tiêu quốc tế
+          </span>
+
+          <h3 class="text-2xl font-bold text-slate-900">
+            Lộ trình IELTS
+          </h3>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="mb-6 leading-7 text-slate-600">
+        Phù hợp với mục tiêu du học, săn học bổng, xét tuyển đại học
+        và phát triển năng lực tiếng Anh toàn diện.
+      </p>
+
+      <!-- Information -->
+      <ul class="mb-8 flex-grow space-y-4 text-[15px] text-slate-700">
+        <li class="flex items-start gap-3">
+          <span
+            class="material-symbols-outlined mt-0.5 text-[21px]
+                   text-amber-500"
+          >
+            check_circle
+          </span>
+
+          <span>
+            <strong class="font-semibold text-slate-900">Mục tiêu:</strong>
+            Phát triển toàn diện Listening, Reading, Writing và Speaking.
+          </span>
+        </li>
+
+        <li class="flex items-start gap-3">
+          <span
+            class="material-symbols-outlined mt-0.5 text-[21px]
+                   text-amber-500"
+          >
+            check_circle
+          </span>
+
+          <span>
+            <strong class="font-semibold text-slate-900">Phù hợp:</strong>
+            Học viên có mục tiêu du học, học bổng hoặc xét tuyển.
+          </span>
+        </li>
+
+        <li class="flex items-start gap-3">
+          <span
+            class="material-symbols-outlined mt-0.5 text-[21px]
+                   text-amber-500"
+          >
+            check_circle
+          </span>
+
+          <span>
+            <strong class="font-semibold text-slate-900">Lộ trình:</strong>
+            Cá nhân hóa theo năng lực hiện tại và band điểm mục tiêu.
+          </span>
+        </li>
+      </ul>
+
+      <!-- Button -->
+      <a
+        href="#ielts"
+        class="flex w-full items-center justify-center gap-2 rounded-xl
+               border-2 border-amber-500 px-5 py-3 text-sm font-bold
+               text-amber-600 transition-all duration-300
+               hover:bg-amber-500 hover:text-white"
+      >
+        Xem chi tiết IELTS
+
+        <span class="material-symbols-outlined text-[19px]">
+          arrow_forward
+        </span>
+      </a>
+    </article>
+
+  </div>
+</div>
 
     <!-- Financial Support -->
     <div class="rounded-2xl bg-surface-container p-8 soft-shadow">
@@ -2101,7 +2255,7 @@ Chọn cơ sở gần với bạn nhất<span class="text-red-500 font-bold ml-0
 
     display: block;
 
-    object-fit: cover;
+    object-fit: fill;
 
     transition: transform 500ms ease;
   }
@@ -2138,325 +2292,327 @@ Chọn cơ sở gần với bạn nhất<span class="text-red-500 font-bold ml-0
 
 
 <!-- 12. FAQ -->
-<section class="bg-surface-alt px-margin-mobile py-20 md:px-margin-desktop md:py-32" id="cau-hoi">
-  <div class="mx-auto max-w-container-max">
+<section class="relative min-h-screen overflow-hidden py-12 md:py-20">
+    <div class="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-secondary/15 blur-3xl"></div>
 
-    <div class="mb-12 text-center">
-      <h2 class="mb-4 font-headline-lg-mobile text-headline-lg-mobile text-primary md:font-headline-lg md:text-headline-lg">
-        Câu Hỏi Thường Gặp 
-      </h2>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-start gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+        <div class="lg:sticky lg:top-8">
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary shadow-sm">
+            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-secondary font-bold text-white">?</span>
+            Giải đáp cùng PMP English
+          </div>
+
+          <h1 class="max-w-xl text-3xl font-bold leading-tight md:text-4xl">
+            Những Điều Học Viên<br />
+            <span class="text-primary">Thường Quan Tâm</span>
+          </h1>
+
+          <p class="mt-5 max-w-lg leading-7 text-slate-600">
+            PMP tổng hợp những thông tin cần thiết để bạn hiểu rõ chương trình, lựa chọn đúng khóa học và xây dựng lộ trình phù hợp với mục tiêu.
+          </p>
+
+          <div class="mt-8 grid grid-cols-2 gap-3">
+            <article class="rounded-2xl border border-white bg-white p-4 shadow-sm">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V6H6.5A2.5 2.5 0 004 8.5v11zM8 10h8M8 13h6" />
+                </svg>
+              </div>
+              <p class="text-xl font-bold sm:text-2xl">TOEIC & IELTS</p>
+              <p class="mt-1 text-sm text-slate-500">Theo từng mục tiêu</p>
+            </article>
+
+            <article class="rounded-2xl border border-white bg-white p-4 shadow-sm">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-secondary/20 text-[#D99A00]">
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M12 22a10 10 0 100-20 10 10 0 000 20z" />
+                </svg>
+              </div>
+              <p class="text-xl font-bold sm:text-2xl">Cá nhân hóa</p>
+              <p class="mt-1 text-sm text-slate-500">Theo trình độ đầu vào</p>
+            </article>
+          </div>
+
+          <div class="mt-5 rounded-2xl bg-primary p-5 text-white shadow-lg shadow-primary/20">
+            <p class="text-lg font-bold">Chưa biết nên chọn TOEIC hay IELTS?</p>
+            <p class="mt-1 text-sm leading-6 text-white/85">
+              PMP sẽ dựa trên trình độ, mục tiêu và thời gian dự kiến để tư vấn lộ trình phù hợp, giúp bạn tránh học sai hướng và mất thêm thời gian.
+            </p>
+            <a href="#contact" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md">
+              Nhận tư vấn lộ trình
+              <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-[28px] bg-white p-4 shadow-[0_20px_60px_rgba(15,74,120,0.08)] sm:p-6">
+          <div class="mb-5 flex items-center justify-between gap-4 px-2">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.16em] text-primary">FAQ</p>
+              <h2 class="mt-1 text-xl font-bold md:text-2xl">Câu hỏi thường gặp</h2>
+            </div>
+            <div class="hidden h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary sm:flex">
+              <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9a3.772 3.772 0 117.544 0c0 2.514-3.772 2.514-3.772 5M12 18h.01" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+            </div>
+          </div>
+
+          <div id="faq-list" class="space-y-3"></div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="mx-auto max-w-3xl space-y-4">
+  <script>
+    const faqs = [
+      {
+        title: "PMP hiện đào tạo những khóa học nào?",
+        content: "PMP đào tạo các chương trình TOEIC 4 kỹ năng, TOEIC nâng cao, IELTS và tiếng Anh giao tiếp, đáp ứng nhiều mục tiêu từ tốt nghiệp, việc làm đến du học."
+      },
+      {
+        title: "Người yếu hoặc mất gốc có thể bắt đầu học không?",
+        content: "Có. Học viên được kiểm tra đầu vào để xác định phần kiến thức còn thiếu, sau đó được tư vấn lộ trình xây lại nền tảng trước khi bước vào giai đoạn luyện đề và tăng điểm."
+      },
+      {
+        title: "Học viên có được kiểm tra trình độ đầu vào không?",
+        content: "Có. Kết quả kiểm tra đầu vào giúp PMP đánh giá năng lực hiện tại, xác định mục tiêu phù hợp và sắp xếp lớp đúng trình độ cho từng học viên."
+      },
+      {
+        title: "Lộ trình TOEIC và IELTS được xây dựng như thế nào?",
+        content: "Lộ trình được xây dựng dựa trên trình độ đầu vào, mục tiêu điểm số và thời gian dự kiến thi. Mỗi giai đoạn tập trung vào đúng kỹ năng học viên cần cải thiện."
+      },
+      {
+        title: "PMP có cam kết đầu ra cho học viên không?",
+        content: "PMP xây dựng mục tiêu đầu ra theo từng khóa học và lộ trình đã tư vấn. Điều kiện cam kết được trao đổi rõ ràng để học viên hiểu quyền lợi và trách nhiệm trong quá trình học."
+      },
+      {
+        title: "Làm thế nào để đăng ký kiểm tra và học thử?",
+        content: "Bạn có thể để lại thông tin trên website, nhắn tin fanpage hoặc liên hệ trực tiếp với PMP để được tư vấn, kiểm tra trình độ và sắp xếp buổi học phù hợp."
+      }
+    ];
 
-      <details class="group rounded-lg bg-surface p-4 soft-shadow">
-        <summary class="flex cursor-pointer list-none items-center justify-between font-label-md text-label-md text-on-surface">
-          <span>TOEIC 4 Kỹ Năng gồm những nội dung gì?</span>
+    const list = document.getElementById("faq-list");
 
-          <span class="material-symbols-outlined transition group-open:rotate-180">
-            expand_more
+    faqs.forEach((faq, index) => {
+      const item = document.createElement("article");
+      item.className = `faq-item overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:border-primary/20 ${index === 0 ? "is-open" : ""}`;
+      item.innerHTML = `
+        <button type="button" class="faq-button flex w-full items-center gap-4 px-4 py-4 text-left sm:px-5" aria-expanded="${index === 0}" aria-controls="faq-answer-${index}">
+          <span class="faq-number flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-sm font-bold text-primary transition">${String(index + 1).padStart(2, "0")}</span>
+          <span class="flex-1 font-semibold leading-6 text-slate-900">${faq.title}</span>
+          <span class="faq-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition-all duration-300">
+            <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
           </span>
-        </summary>
+        </button>
+        <div id="faq-answer-${index}" class="faq-answer grid transition-all duration-300 ease-in-out">
+          <div class="overflow-hidden">
+            <p class="border-t border-primary/10 px-4 pb-5 pt-4 text-sm leading-7 text-slate-600 sm:ml-[52px] sm:px-5">${faq.content}</p>
+          </div>
+        </div>`;
+      list.appendChild(item);
+    });
 
-        <p class="mt-3 font-body-sm text-body-sm text-on-surface-variant">
-          Lộ trình được cá nhân hóa dựa trên bài kiểm tra đầu vào và mục tiêu của học viên.
-        </p>
-      </details>
+    list.addEventListener("click", (event) => {
+      const button = event.target.closest(".faq-button");
+      if (!button) return;
 
-      <details class="group rounded-lg bg-surface p-4 soft-shadow">
-        <summary class="flex cursor-pointer list-none items-center justify-between font-label-md text-label-md text-on-surface">
-          <span>2. Có cam kết đầu ra không?</span>
+      const selectedItem = button.closest(".faq-item");
+      const wasOpen = selectedItem.classList.contains("is-open");
 
-          <span class="material-symbols-outlined transition group-open:rotate-180">
-            expand_more
-          </span>
-        </summary>
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.classList.remove("is-open");
+        item.querySelector(".faq-button").setAttribute("aria-expanded", "false");
+      });
 
-        <p class="mt-3 font-body-sm text-body-sm text-on-surface-variant">
-          Có, PMP English cam kết đầu ra bằng hợp đồng văn bản.
-        </p>
-      </details>
-
-      <details class="group rounded-lg bg-surface p-4 soft-shadow">
-        <summary class="flex cursor-pointer list-none items-center justify-between font-label-md text-label-md text-on-surface">
-          <span>3. Tôi có thể học thử không?</span>
-
-          <span class="material-symbols-outlined transition group-open:rotate-180">
-            expand_more
-          </span>
-        </summary>
-
-        <p class="mt-3 font-body-sm text-body-sm text-on-surface-variant">
-          Vui lòng liên hệ để biết thêm chi tiết về các buổi học trải nghiệm.
-        </p>
-      </details>
-
-      <details class="group rounded-lg bg-surface p-4 soft-shadow">
-        <summary class="flex cursor-pointer list-none items-center justify-between font-label-md text-label-md text-on-surface">
-          <span>4. Hình thức thanh toán như thế nào?</span>
-
-          <span class="material-symbols-outlined transition group-open:rotate-180">
-            expand_more
-          </span>
-        </summary>
-
-        <p class="mt-3 font-body-sm text-body-sm text-on-surface-variant">
-          Chúng tôi hỗ trợ nhiều hình thức thanh toán, bao gồm trả góp 0% qua thẻ tín dụng.
-        </p>
-      </details>
-
-    </div>
-
-  </div>
-</section>
-
+      if (!wasOpen) {
+        selectedItem.classList.add("is-open");
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+  </script>
 <!-- 10. ƯU ĐÃI & CHÍNH SÁCH -->
-<section class="bg-surface-container px-margin-mobile py-20 md:px-margin-desktop md:py-28" id="uu-dai-chinh-sach">
-  <div class="mx-auto max-w-container-max">
+
+<main class=" mx-auto space-y-12 my-20">
+<!-- BEGIN: Header Section -->
+<header class="text-center space-y-4">
+<h1 class="text-3xl md:text-4xl font-bold text-primary uppercase">Ưu Đãi &amp; Chính Sách</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Hỗ trợ học viên lựa chọn lộ trình phù hợp và chủ động hơn về chi phí học tập.</p>
+</header>
+<!-- END: Header Section -->
+<!-- BEGIN: Main Content Area -->
+<section class="max-w-6xl mx-auto">
+<div class="flex flex-col lg:flex-row gap-12 items-start">
+<!-- Left Column: Promotions -->
+<div class="w-full lg:w-2/5 space-y-6">
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant flex items-center gap-6">
+<div class="bg-secondary-fixed text-secondary p-4 rounded-full shrink-0">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h3 class="font-semibold text-primary text-lg mb-1">Đăng ký nhóm</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Giảm <span class="font-bold text-secondary">200.000 VNĐ/người</span></p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant flex items-center gap-6">
+<div class="bg-secondary-fixed text-secondary p-4 rounded-full shrink-0">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h3 class="font-semibold text-primary text-lg mb-1">Giới thiệu bạn học</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Quà <span class="font-bold text-secondary">100k - 600k VNĐ</span></p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant flex items-center gap-6">
+<div class="bg-secondary-fixed text-secondary p-4 rounded-full shrink-0">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h3 class="font-semibold text-primary text-lg mb-1">Trả góp 0%</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Lãi suất 0% qua Sacombank</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Registration Form -->
+<div class="w-full lg:w-3/5">
+  <div class="bg-surface-container-lowest p-8 lg:p-10 rounded-3xl shadow-lg border border-outline-variant">
 
     <!-- Heading -->
-    <div class="mx-auto mb-12 max-w-3xl text-center">
-      <h2 class="mb-4 font-headline-lg-mobile text-headline-lg-mobile text-primary md:font-headline-lg md:text-headline-lg">
-        ƯU ĐÃI &amp; CHÍNH SÁCH
+    <div class="mb-8 text-center">
+      <h2 class="text-2xl font-bold text-primary mb-3">
+        Đăng ký kiểm tra trình độ miễn phí
       </h2>
-
-      <p class="font-body-md text-body-md text-on-surface-variant">
-        Hỗ trợ học viên lựa chọn lộ trình phù hợp và chủ động hơn về chi phí học tập.
+      <p class="text-on-surface-variant">
+        Để lại thông tin, PMP sẽ liên hệ tư vấn cho bạn.
       </p>
     </div>
 
-    <!-- Policies -->
-    <div class="mb-12 grid grid-cols-1 gap-4 md:grid-cols-3">
+    <form action="#" class="space-y-6" method="POST">
 
-      <!-- Policy -->
-      <div class="flex gap-4 rounded-xl bg-surface p-6 soft-shadow">
-        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary/10">
-          <span class="material-symbols-outlined text-2xl text-secondary">
-            group_add
-          </span>
-        </div>
+      <!-- Họ tên + Số điện thoại -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <div>
-          <h3 class="mb-1 font-headline-md text-body-lg font-bold text-primary">
-            Đăng ký nhóm
-          </h3>
-
-          <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Từ 2 học viên đăng ký chung được giảm
-            <strong class="text-primary">200.000 VNĐ/người.</strong>
-          </p>
-        </div>
-      </div>
-
-      <!-- Policy -->
-      <div class="flex gap-4 rounded-xl bg-surface p-6 soft-shadow">
-        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary/10">
-          <span class="material-symbols-outlined text-2xl text-secondary">
-            card_giftcard
-          </span>
-        </div>
-
-        <div>
-          <h3 class="mb-1 font-headline-md text-body-lg font-bold text-primary">
-            Giới thiệu bạn học
-          </h3>
-
-          <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Nhận quà hiện kim
-            <strong class="text-primary">100.000 – 600.000 VNĐ</strong>
-            tùy giá trị khóa học.
-          </p>
-        </div>
-      </div>
-
-      <!-- Policy -->
-      <div class="flex gap-4 rounded-xl bg-surface p-6 soft-shadow">
-        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary/10">
-          <span class="material-symbols-outlined text-2xl text-secondary">
-            payments
-          </span>
-        </div>
-
-        <div>
-          <h3 class="mb-1 font-headline-md text-body-lg font-bold text-primary">
-            Trả góp 0%
-          </h3>
-
-          <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Trả góp 6 tháng, lãi suất 0% qua thẻ tín dụng Sacombank.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Registration -->
-    <div class="grid overflow-hidden rounded-2xl bg-primary shadow-xl lg:grid-cols-2">
-
-      <!-- Left -->
-      <div class="p-8 text-on-primary md:p-12 lg:p-14">
-
-        <span class="mb-4 inline-block rounded-full bg-primary-fixed/10 px-4 py-2 font-label-sm text-label-sm text-primary-fixed">
-          BƯỚC ĐẦU TIÊN
-        </span>
-
-        <h2 class="mb-5 font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg">
-          Chưa biết nên bắt đầu từ đâu?
-        </h2>
-
-        <p class="mb-8 max-w-lg font-body-md text-body-md text-on-primary/80">
-          Hãy bắt đầu bằng việc xác định trình độ hiện tại.
-          PMP sẽ dựa trên năng lực và mục tiêu của bạn để tư vấn
-          lộ trình TOEIC hoặc IELTS phù hợp.
-        </p>
-
-        <div class="space-y-4">
-
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-white">
-              check_circle
-            </span>
-
-            <span class="font-body-md text-body-md">
-              Xác định trình độ hiện tại
-            </span>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-white">
-              check_circle
-            </span>
-
-            <span class="font-body-md text-body-md">
-              Xác định mục tiêu học tập
-            </span>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-white">
-              check_circle
-            </span>
-
-            <span class="font-body-md text-body-md">
-              Tư vấn lộ trình phù hợp
-            </span>
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- Form -->
-      <div class="bg-surface p-8 md:p-12 lg:p-14">
-
-        <div class="mb-7">
-          <h3 class="mb-2 font-headline-md text-headline-md text-primary">
-            Đăng ký kiểm tra trình độ miễn phí
-          </h3>
-
-          <p class="font-body-sm text-body-sm text-on-surface-variant">
-            Để lại thông tin, PMP sẽ liên hệ tư vấn cho bạn.
-          </p>
-        </div>
-
-        <form class="space-y-5">
-
-          <div>
-            <label
-              for="name"
-              class="mb-2 block font-label-md text-label-md text-on-surface"
-            >
-              Họ và tên<span class="text-red-500 font-bold ml-0.5">*</span> 
-            </label>
-
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Nhập họ và tên"
-              required
-              class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
-
-          <div>
-            <label
-              for="phone"
-              class="mb-2 block font-label-md text-label-md text-on-surface"
-            >
-              Số điện thoại<span class="text-red-500 font-bold ml-0.5">*</span> 
-            </label>
-
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="Nhập số điện thoại"
-              required
-              class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
-
-          <div>
-            <label
-              for="program"
-              class="mb-2 block font-label-md text-label-md text-on-surface"
-            >
-              Chương trình quan tâm<span class="text-red-500 font-bold ml-0.5">*</span> 
-            </label>
-
-            <select
-              id="program"
-              name="program"
-              required
-              class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-            >
-              <option value="">Chọn chương trình</option>
-              <option value="toeic">
-                TOEIC 4 Kỹ Năng
-              </option>
-              <option value="ielts">
-                IELTS
-              </option>
-            </select>
-            
-          </div>
-<div>
-              <label
-                for="hero-program"
-                class="mb-2 block font-label-md text-label-md text-on-surface"
-              >
-Chọn cơ sở gần với bạn nhất<span class="text-red-500 font-bold ml-0.5">*</span>              </label>
-
-              <select
-                id="hero-program"
-                required
-                class="w-full rounded-lg border border-outline-variant bg-surface px-4 py-3 font-body-sm text-body-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
-              >
-                <option value="">34 Hồ Thị Tư, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minhh</option>
-                <option value="toeic">411 Lê Văn Việt, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh</option>
-                <option value="ielts">1D Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh</option>
-                <option value="ielts">1Q Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh</option>
-              </select>
-
-              
-            </div>
-          <button
-            type="submit"
-            class="w-full rounded-lg bg-secondary px-6 py-4 font-label-md text-label-md text-on-secondary transition-all hover:bg-on-secondary-fixed-variant hover:shadow-lg"
+          <label
+            class="block text-sm font-medium text-on-surface mb-1.5"
+            for="fullName"
           >
-            Đăng ký kiểm tra trình độ
-          </button>
+            Họ và tên <span class="text-secondary">*</span>
+          </label>
 
-        </form>
+          <input
+            class="w-full rounded-xl border border-outline-variant focus:border-primary focus:ring-primary shadow-sm py-3 px-4 text-on-surface bg-surface-container-lowest placeholder:text-outline"
+            id="fullName"
+            name="fullName"
+            placeholder="Nhập họ và tên"
+            required
+            type="text"
+          />
+        </div>
+
+        <div>
+          <label
+            class="block text-sm font-medium text-on-surface mb-1.5"
+            for="phone"
+          >
+            Số điện thoại <span class="text-secondary">*</span>
+          </label>
+
+          <input
+            class="w-full rounded-xl border border-outline-variant focus:border-primary focus:ring-primary shadow-sm py-3 px-4 text-on-surface bg-surface-container-lowest placeholder:text-outline"
+            id="phone"
+            name="phone"
+            placeholder="Nhập số điện thoại"
+            required
+            type="tel"
+          />
+        </div>
 
       </div>
 
-    </div>
+      <!-- Hình thức học -->
+      <div>
+  <label class="block text-sm font-medium text-on-surface mb-2">
+    Hình thức học <span class="text-secondary">*</span>
+  </label>
+
+  <div class="flex gap-3">
+
+    <label class="flex-1 cursor-pointer">
+      <input
+        type="radio"
+        name="learningMethod"
+        value="offline"
+        class="mr-2"
+        required
+      />
+      Học trực tiếp
+    </label>
+
+    <label class="flex-1 cursor-pointer">
+      <input
+        type="radio"
+        name="learningMethod"
+        value="online"
+      />
+      Học trực tuyến
+    </label>
 
   </div>
-</section>
+</div>
 
+      <!-- Cơ sở -->
+      <div>
+        <label
+          class="block text-sm font-medium text-on-surface mb-1.5"
+          for="campus"
+        >
+          Chọn cơ sở gần với bạn nhất
+          <span class="text-secondary">*</span>
+        </label>
+
+        <select
+          class="w-full rounded-xl border border-outline-variant focus:border-primary focus:ring-primary shadow-sm py-3 px-4 text-on-surface bg-surface-container-lowest"
+          id="campus"
+          name="campus"
+          required
+        >
+          <option disabled selected value="">
+            Chọn cơ sở
+          </option>
+
+          <option value="cs1">
+            34 Hồ Thị Tư, Phường Hiệp Phú, Thành phố Thủ Đức
+          </option>
+
+          <option value="cs2">
+            Cơ sở 2
+          </option>
+        </select>
+      </div>
+
+      <!-- Button -->
+      <button
+        class="w-full bg-secondary hover:bg-on-secondary-fixed-variant text-on-secondary font-bold py-4 px-6 rounded-xl transition duration-150 ease-in-out shadow-md mt-8 text-lg"
+        type="submit"
+      >
+        Đăng ký kiểm tra trình độ
+      </button>
+
+    </form>
+  </div>
+</div>
+</div>
+</section>
+<!-- END: Main Content Area -->
+</main>
 
 
 <!-- 13. SECTION FOOTER -->
@@ -2573,6 +2729,20 @@ Chọn cơ sở gần với bạn nhất<span class="text-red-500 font-bold ml-0
 
     </div>
 
+  </div>
+</div>
+<div class="bg-[#EBF5FF] py-[40px]">
+  <div class="mx-auto max-w-container-max">
+    <div class="text-center">
+      <h3 class="mb-4 font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg md:text-headline-lg">
+      Bắt đầu từ đúng năng lực hiện tại
+    </h3>
+      <p class="font-body-md text-body-md text-on-surface-variant">PMP kiểm tra trình độ đầu vào, xác định mục tiêu điểm số, nhận diện kỹ năng cần cải thiện và xây dựng lộ trình phù hợp. Người học biết rõ mình đang ở đâu, cần cải thiện gì và cần học như thế nào để tiến gần mục tiêu.
+
+</p>
+    </div>
+    <img src="./assets/3.jpg" alt="Học viên PMP" class="w-full mt-[30px]" />
+    
   </div>
 </div>
 </body></html>
