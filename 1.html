@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký tư vấn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f4f7fb] min-h-screen flex items-center justify-center p-4 sm:p-8">
+
+  <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    
+    <!-- CỘT TRÁI: 3 thẻ ưu đãi -->
+    <div class="lg:col-span-6 flex flex-col gap-4">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-5 hover:shadow-md transition">
+        <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-[#0088cc]">Đăng ký nhóm</h3>
+          <p class="text-xs sm:text-sm text-gray-500 mt-0.5">Giảm <span class="text-red-500 font-semibold">200.000 VNĐ/người</span></p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-5 hover:shadow-md transition">
+        <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-[#0088cc]">Giới thiệu bạn học</h3>
+          <p class="text-xs sm:text-sm text-gray-500 mt-0.5">Quà <span class="text-red-500 font-semibold">100k - 600k VNĐ</span></p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-5 hover:shadow-md transition">
+        <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-[#0088cc]">Trả góp 0%</h3>
+          <p class="text-xs sm:text-sm text-gray-500 mt-0.5">Lãi suất 0% qua Sacombank</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CỘT PHẢI: Form tư vấn -->
+    <div class="lg:col-span-6 relative bg-white rounded-2xl shadow-xl p-6 sm:p-8 border-t-4 border-[#fab515]">
+      
+      <!-- Vạch vàng bên trái mép card -->
+      <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-1.5 h-24 bg-[#fab515] rounded-r"></div>
+
+      <h2 class="text-xl font-bold text-gray-900 leading-snug">Nhận tư vấn & Kiểm tra trình độ miễn phí</h2>
+      <p class="text-[11px] sm:text-xs text-gray-500 mt-2 mb-5 leading-relaxed">
+        TSE cam kết sử dụng thông tin vào mục đích tư vấn lộ trình học và không kinh doanh dưới mọi hình thức.
+      </p>
+
+      <form class="space-y-3.5">
+        <div>
+          <input 
+            type="text" 
+            placeholder="Tên của bạn" 
+            class="w-full px-4 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:border-[#fab515] focus:bg-white transition"
+            required
+          >
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input 
+            type="tel" 
+            placeholder="Số điện thoại" 
+            class="w-full px-4 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:border-[#fab515] focus:bg-white transition"
+            required
+          >
+          <select class="w-full px-3 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-500 outline-none focus:border-[#fab515] focus:bg-white transition" required>
+            <option value="" disabled selected>Khoá học bạn quan tâm</option>
+            <option value="ielts">IELTS Chuyên Sâu</option>
+            <option value="toeic">TOEIC Cấp Tốc</option>
+            <option value="comm">Tiếng Anh Giao Tiếp</option>
+          </select>
+        </div>
+
+        <div>
+          <select class="w-full px-3 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-500 outline-none focus:border-[#fab515] focus:bg-white transition" required>
+            <option value="" disabled selected>Bạn muốn kiểm tra ở trung tâm nào?</option>
+            <option value="cs1">Cơ sở 1 - Quận 1</option>
+            <option value="cs2">Cơ sở 2 - Cầu Giấy</option>
+          </select>
+        </div>
+
+        <!-- Hình thức học -->
+        <div class="pt-1">
+          <label class="block text-xs sm:text-sm font-bold text-gray-900 mb-2">Hình thức học*</label>
+          <div class="flex flex-wrap gap-4 text-xs text-gray-700">
+            <label class="flex items-center gap-1.5 cursor-pointer">
+              <input type="radio" name="learning_mode" value="online" class="accent-[#0088cc] w-4 h-4 cursor-pointer" checked>
+              Online
+            </label>
+            <label class="flex items-center gap-1.5 cursor-pointer">
+              <input type="radio" name="learning_mode" value="offline" class="accent-[#0088cc] w-4 h-4 cursor-pointer">
+              Offline
+            </label>
+            <label class="flex items-center gap-1.5 cursor-pointer">
+              <input type="radio" name="learning_mode" value="hybrid" class="accent-[#0088cc] w-4 h-4 cursor-pointer">
+              Kết hợp online & offline
+            </label>
+          </div>
+        </div>
+
+        <!-- Thời gian tư vấn -->
+        <div class="pt-1">
+          <label class="block text-xs sm:text-sm font-bold text-gray-900 mb-2.5">Thời gian bạn muốn nhận tư vấn: *</label>
+          <div class="space-y-2 text-xs">
+            
+            <!-- Hàng Sáng -->
+            <div class="flex items-center gap-2">
+              <span class="w-10 font-medium text-gray-700 shrink-0">Sáng</span>
+              <div class="grid grid-cols-3 gap-2 flex-1">
+                <label class="cursor-pointer">
+                  <input type="radio" name="slot" value="09-10" class="peer sr-only" checked>
+                  <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#fffdf0] peer-checked:text-[#b45309] peer-checked:border-[#fab515] peer-checked:font-semibold hover:bg-gray-200 transition">09h - 10h</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="slot" value="10-11" class="peer sr-only">
+                  <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#fffdf0] peer-checked:text-[#b45309] peer-checked:border-[#fab515] peer-checked:font-semibold hover:bg-gray-200 transition">10h - 11h</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="slot" value="11-12" class="peer sr-only">
+                  <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#fffdf0] peer-checked:text-[#b45309] peer-checked:border-[#fab515] peer-checked:font-semibold hover:bg-gray-200 transition">11h - 12h</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Hàng Chiều -->
+            <div class="flex items-center gap-2">
+              <span class="w-10 font-medium text-gray-700 shrink-0">Chiều</span>
+              <div class="grid grid-cols-3 gap-2 flex-1">
+                <label class="cursor-pointer">
+                  <input type="radio" name="slot" value="14-15" class="peer sr-only">
+                  <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#fffdf0] peer-checked:text-[#b45309] peer-checked:border-[#fab515] peer-checked:font-semibold hover:bg-gray-200 transition">14h - 15h</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="slot" value="15-16" class="peer sr-only">
+                  <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#fffdf0] peer-checked:text-[#b45309] peer-checked:border-[#fab515] peer-checked:font-semibold hover:bg-gray-200 transition">15h - 16h</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="slot" value="16-17" class="peer sr-only">
+                  <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#fffdf0] peer-checked:text-[#b45309] peer-checked:border-[#fab515] peer-checked:font-semibold hover:bg-gray-200 transition">16h - 17h</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Hàng Tối -->
+            <div class="flex items-center gap-2">
+              <span class="w-10 font-medium text-gray-700 shrink-0">Tối</span>
+              <div class="grid grid-cols-3 gap-2 flex-1">
+                <label class="cursor-pointer">
+                  <input type="radio" name="slot" value="17-18" class="peer sr-only">
+                  <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#fffdf0] peer-checked:text-[#b45309] peer-checked:border-[#fab515] peer-checked:font-semibold hover:bg-gray-200 transition">17h - 18h</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="slot" value="18-19" class="peer sr-only">
+                  <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#fffdf0] peer-checked:text-[#b45309] peer-checked:border-[#fab515] peer-checked:font-semibold hover:bg-gray-200 transition">18h - 19h</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="slot" value="19-20" class="peer sr-only">
+                  <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#fffdf0] peer-checked:text-[#b45309] peer-checked:border-[#fab515] peer-checked:font-semibold hover:bg-gray-200 transition">19h - 20h</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full mt-4 py-3 bg-[#fab515] hover:bg-[#e6a50f] text-gray-900 font-bold rounded-lg transition duration-200 text-sm shadow-sm cursor-pointer"
+        >
+          Nhận tư vấn ngay
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
