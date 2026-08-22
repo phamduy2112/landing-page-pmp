@@ -432,12 +432,29 @@
         grid-template-columns: 1fr;
       }
     }
+.navbar-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    animation: slideDown .3s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
 
+.navbar-space{
+    height: 80px;
+}
+
+@keyframes slideDown{
+    from{transform:translateY(-100%);}
+    to{transform:translateY(0);}
+}
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<nav class="relative top-0 z-50 w-full bg-surface shadow-sm">
+<nav id="navbar" class="relative z-50 w-full bg-white shadow-sm transition-all duration-300">
   <div class="max-w-container-max mx-auto h-20 px-margin-desktop flex items-center justify-between">
     
     <!-- Logo -->
@@ -545,6 +562,28 @@
       iconClose.classList.add('hidden');
     });
   });
+  const navbar = document.getElementById('navbar');
+const space = document.getElementById('nav-space');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    navbar.classList.add(
+      'fixed','top-0','left-0','w-full','z-50',
+      'shadow-lg','animate-in','slide-in-from-top'
+    );
+    navbar.classList.remove('relative');
+
+    space.classList.remove('hidden');
+  } else {
+    navbar.classList.remove(
+      'fixed','top-0','left-0','w-full','shadow-lg',
+      'animate-in','slide-in-from-top'
+    );
+    navbar.classList.add('relative');
+
+    space.classList.add('hidden');
+  }
+});
 </script>
 <!-- 01. SECTION HERO BANNER -->
 <header class="relative h-[350px] sm:h-[50vh] lg:h-[100vh] w-full overflow-hidden bg-black">
@@ -631,7 +670,7 @@ dots.forEach(dot => {
                     Bạn đang gặp khó khăn ở đâu?
                 </h2>
 
-                <div class="mt-5 h-1 w-16 rounded-full bg-blue-600"></div>
+                <div class="mt-5 h-1 w-16 rounded-full bg-primary"></div>
 
                 <p class="mt-5 max-w-lg text-base leading-7 text-slate-600">
                     PMP English hiểu rằng mỗi học viên đều có những rào cản riêng
@@ -649,7 +688,7 @@ dots.forEach(dot => {
                 <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <div class="flex items-center gap-4">
 
-                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-50 text-primary">
                             <span class="material-symbols-outlined text-2xl font-light">
                                 school
                             </span>
@@ -673,7 +712,7 @@ dots.forEach(dot => {
                 <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <div class="flex items-center gap-4">
 
-                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-50 text-primary">
                             <span class="material-symbols-outlined text-2xl font-light">
                                 trending_up
                             </span>
@@ -693,9 +732,54 @@ dots.forEach(dot => {
                 </div>
 
 
+                <!-- CARD 3 -->
+                <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <div class="flex items-center gap-4">
+
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-50 text-primary">
+                            <span class="material-symbols-outlined text-2xl font-light">
+                                translate
+                            </span>
+                        </div>
+
+                        <div class="flex-1">
+                            <h3 class="text-base font-semibold text-slate-900">
+                                Yếu kỹ năng
+                            </h3>
+
+                            <p class="mt-1 text-sm leading-6 text-slate-600">
+                                Các kỹ năng phát triển không đồng đều, đặc biệt Speaking
+                                và Writing còn hạn chế.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
 
 
-       
+                <!-- CARD 4 -->
+                <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <div class="flex items-center gap-4">
+
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-50 text-primary">
+                            <span class="material-symbols-outlined text-2xl font-light">
+                                work
+                            </span>
+                        </div>
+
+                        <div class="flex-1">
+                            <h3 class="text-base font-semibold text-slate-900">
+                                Cần bằng cấp gấp
+                            </h3>
+
+                            <p class="mt-1 text-sm leading-6 text-slate-600">
+                                Cần chứng chỉ phục vụ học tập, chuẩn đầu ra hoặc công việc
+                                nhưng chưa có kế hoạch học phù hợp.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -749,8 +833,8 @@ dots.forEach(dot => {
       <div class="mb-5 flex items-center gap-4">
         <div
           class="flex h-14 w-14 shrink-0 items-center justify-center
-                 rounded-2xl bg-blue-50 text-blue-600
-                 transition-colors duration-300 group-hover:bg-blue-600
+                 rounded-2xl bg-blue-50 text-primary
+                 transition-colors duration-300 group-hover:bg-primary
                  group-hover:text-white"
         >
           <span
@@ -764,7 +848,7 @@ dots.forEach(dot => {
         <div>
           <span
             class="mb-1 inline-block text-xs font-bold uppercase
-                   tracking-[0.16em] text-blue-600"
+                   tracking-[0.16em] text-primary"
           >
             Dành cho học tập và công việc
           </span>
@@ -786,7 +870,7 @@ dots.forEach(dot => {
         <li class="flex items-start gap-3">
           <span
             class="material-symbols-outlined mt-0.5 text-[21px]
-                   text-blue-600"
+                   text-primary"
           >
             check_circle
           </span>
@@ -800,7 +884,7 @@ dots.forEach(dot => {
         <li class="flex items-start gap-3">
           <span
             class="material-symbols-outlined mt-0.5 text-[21px]
-                   text-blue-600"
+                   text-primary"
           >
             check_circle
           </span>
@@ -814,7 +898,7 @@ dots.forEach(dot => {
         <li class="flex items-start gap-3">
           <span
             class="material-symbols-outlined mt-0.5 text-[21px]
-                   text-blue-600"
+                   text-primary"
           >
             check_circle
           </span>
@@ -830,9 +914,9 @@ dots.forEach(dot => {
       <a
         href="#toeic"
         class="flex w-full items-center justify-center gap-2 rounded-xl
-               border-2 border-blue-600 px-5 py-3 text-sm font-bold
-               text-blue-600 transition-all duration-300
-               hover:bg-blue-600 hover:text-white"
+               border-2 border-primary px-5 py-3 text-sm font-bold
+               text-primary transition-all duration-300
+               hover:bg-primary hover:text-white"
       >
         Xem chi tiết TOEIC
 
@@ -1335,7 +1419,7 @@ dots.forEach(dot => {
                 Lý do chọn PMP English
             </h2>
 
-            <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-blue-600"></div>
+            <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-primary"></div>
         </div>
 
 
@@ -1346,7 +1430,7 @@ dots.forEach(dot => {
             <!-- Card 1 -->
             <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                <span class="material-symbols-outlined text-[40px] text-blue-600" style="font-variation-settings: 'FILL' 1;">
+                <span class="material-symbols-outlined text-[40px] text-primary" style="font-variation-settings: 'FILL' 1;">
                     route
                 </span>
 
@@ -1364,7 +1448,7 @@ dots.forEach(dot => {
             <!-- Card 2 -->
             <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                <span class="material-symbols-outlined text-[40px] text-blue-600" style="font-variation-settings: 'FILL' 1;">
+                <span class="material-symbols-outlined text-[40px] text-primary" style="font-variation-settings: 'FILL' 1;">
                     school
                 </span>
 
@@ -1382,7 +1466,7 @@ dots.forEach(dot => {
             <!-- Card 3 -->
             <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                <span class="material-symbols-outlined text-[40px] text-blue-600" style="font-variation-settings: 'FILL' 1;">
+                <span class="material-symbols-outlined text-[40px] text-primary" style="font-variation-settings: 'FILL' 1;">
                     verified
                 </span>
 
@@ -1400,7 +1484,7 @@ dots.forEach(dot => {
             <!-- Card 4 -->
             <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                <span class="material-symbols-outlined text-[40px] text-blue-600" style="font-variation-settings: 'FILL' 1;">
+                <span class="material-symbols-outlined text-[40px] text-primary" style="font-variation-settings: 'FILL' 1;">
                     group
                 </span>
 
@@ -1418,7 +1502,7 @@ dots.forEach(dot => {
             <!-- Card 5 -->
             <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                <span class="material-symbols-outlined text-[40px] text-blue-600" style="font-variation-settings: 'FILL' 1;">
+                <span class="material-symbols-outlined text-[40px] text-primary" style="font-variation-settings: 'FILL' 1;">
                     more_time
                 </span>
 
@@ -1436,7 +1520,7 @@ dots.forEach(dot => {
             <!-- Card 6 -->
             <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                <span class="material-symbols-outlined text-[40px] text-blue-600" style="font-variation-settings: 'FILL' 1;">
+                <span class="material-symbols-outlined text-[40px] text-primary" style="font-variation-settings: 'FILL' 1;">
                     laptop_mac
                 </span>
 
@@ -1454,7 +1538,7 @@ dots.forEach(dot => {
             <!-- Card 7 -->
             <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-                <span class="material-symbols-outlined text-[40px] text-blue-600" style="font-variation-settings: 'FILL' 1;">
+                <span class="material-symbols-outlined text-[40px] text-primary" style="font-variation-settings: 'FILL' 1;">
                     location_on
                 </span>
 
@@ -2453,8 +2537,8 @@ dots.forEach(dot => {
             </article>
 
             <article class="rounded-2xl border border-white bg-white p-4 shadow-sm">
-              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-secondary/20 text-[#D99A00]">
-                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-secondary" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-primary">
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-primary" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M12 22a10 10 0 100-20 10 10 0 000 20z" />
                 </svg>
               </div>
