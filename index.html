@@ -437,7 +437,7 @@
 </head>
 <body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<nav class="sticky top-0 z-50 w-full bg-surface shadow-sm">
+<nav class="relative top-0 z-50 w-full bg-surface shadow-sm">
   <div class="max-w-container-max mx-auto h-20 px-margin-desktop flex items-center justify-between">
     
     <!-- Logo -->
@@ -547,28 +547,77 @@
   });
 </script>
 <!-- 01. SECTION HERO BANNER -->
-<header class="relative flex min-h-[100vh] w-full items-center overflow-hidden bg-primary">
+<header class="relative h-[350px] sm:h-[50vh] lg:h-[100vh] w-full overflow-hidden bg-black">
 
-  <!-- Background -->
-  <div
-    class="pointer-events-none h-[100%] absolute inset-0 bg-cover bg-center opacity-80 bg-no-repeat
-"
-    style="background-image: url('./assets/VE-PMP-ENGLISH-BANNER-DAU.png');"
-  ></div>
+  <!-- Slider -->
+  <div id="heroSlider" class="relative h-full w-full">
 
-  <!-- Overlay -->
+    <!-- Slide 1 -->
+    <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700">
+      <img
+        src="./assets/LANDING PAGE.png"
+        class="h-full w-full"
+        alt=""
+      />
+    </div>
 
-  <!-- Container -->
-  <div class="relative z-20 mx-auto w-full max-w-container-max px-margin-mobile py-16 md:px-margin-desktop md:py-20">
-
-    <div class="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
-
-
-
+    <!-- Slide 2 -->
+    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700">
+      <img
+        src="./assets/LANDING PAGE 2.png"
+        class="h-full w-full"
+        alt=""
+      />
     </div>
 
   </div>
+
+  <!-- Overlay -->
+  <!-- <div class="absolute inset-0 bg-black/20 pointer-events-none"></div> -->
+
+  <!-- Content -->
+  <div class="relative z-10 flex h-full items-center">
+    <div class="mx-auto w-full max-w-7xl px-6"></div>
+  </div>
+
+  <!-- Dots -->
+  <div class="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+    <button class="slider-dot h-2.5 w-2.5 rounded-full bg-white" data-slide="0"></button>
+    <button class="slider-dot h-2.5 w-2.5 rounded-full bg-white/40" data-slide="1"></button>
+  </div>
+
 </header>
+
+<script>
+ const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.slider-dot');
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('opacity-100', i === index);
+    slide.classList.toggle('opacity-0', i !== index);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('bg-white', i === index);
+    dot.classList.toggle('bg-white/40', i !== index);
+  });
+
+  currentSlide = index;
+}
+
+setInterval(() => {
+  showSlide((currentSlide + 1) % slides.length);
+}, 4000);
+
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    showSlide(+dot.dataset.slide);
+  });
+});
+</script>
 <!-- 02. SECTION NHẬN DIỆN NHU CẦU -->
 <section class="w-full bg-[#f5f9ff] px-5 py-12 md:px-8 md:py-14 lg:px-10">
     <div class="mx-auto w-full max-w-7xl">
@@ -644,54 +693,9 @@
                 </div>
 
 
-                <!-- CARD 3 -->
-                <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                    <div class="flex items-center gap-4">
-
-                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
-                            <span class="material-symbols-outlined text-2xl font-light">
-                                translate
-                            </span>
-                        </div>
-
-                        <div class="flex-1">
-                            <h3 class="text-base font-semibold text-slate-900">
-                                Yếu kỹ năng
-                            </h3>
-
-                            <p class="mt-1 text-sm leading-6 text-slate-600">
-                                Các kỹ năng phát triển không đồng đều, đặc biệt Speaking
-                                và Writing còn hạn chế.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
 
 
-                <!-- CARD 4 -->
-                <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                    <div class="flex items-center gap-4">
-
-                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-                            <span class="material-symbols-outlined text-2xl font-light">
-                                work
-                            </span>
-                        </div>
-
-                        <div class="flex-1">
-                            <h3 class="text-base font-semibold text-slate-900">
-                                Cần bằng cấp gấp
-                            </h3>
-
-                            <p class="mt-1 text-sm leading-6 text-slate-600">
-                                Cần chứng chỉ phục vụ học tập, chuẩn đầu ra hoặc công việc
-                                nhưng chưa có kế hoạch học phù hợp.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
+       
 
             </div>
         </div>
@@ -1083,9 +1087,9 @@
     <!-- Image -->
     <div class="w-full lg:w-1/2">
       <img
-        src="assets/2.jpg"
+        src="assets/4.png"
         alt="TOEIC Classroom"
-        class="h-auto max-h-[600px] w-full rounded-2xl object-cover soft-shadow"
+        class="h-auto max-h-[600px] w-full rounded-2xl object-fill soft-shadow"
       />
     </div>
 
@@ -1098,7 +1102,7 @@
     <!-- Image -->
     <div class="w-full lg:w-1/2">
       <img
-        src="assets/1.png"
+        src="assets/2.png"
         alt="IELTS Teacher"
         class="h-auto max-h-[600px] w-full rounded-2xl object-fill soft-shadow"
       />
@@ -1287,15 +1291,15 @@
     <div class="relative min-h-[520px]">
 
       <img
-        src="./assets/Hoc-IELTS-tai-trung-tam-doi-tac-IDP.jpg"
+        src="./assets/Untitled design (1).png"
         alt="Hỗ trợ kỳ thi IELTS tại PMP"
-        class="absolute inset-0 h-full w-full object-cover object-center"
+        class="absolute inset-0 h-full w-full object-fill object-center"
       />
 
       <div class="absolute inset-0 bg-gradient-to-t from-sky-900/30 via-transparent to-transparent"></div>
 
       <!-- Badge -->
-      <div class="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/95 p-4 backdrop-blur">
+      <!-- <div class="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/95 p-4 backdrop-blur">
 
         <div class="flex items-center gap-3">
 
@@ -1314,7 +1318,7 @@
 
         </div>
 
-      </div>
+      </div> -->
 
     </div>
 
@@ -2424,7 +2428,7 @@
       <div class="grid items-start gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
         <div class="lg:sticky lg:top-8">
           <div class="mb-5 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary shadow-sm">
-            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-secondary font-bold text-white">?</span>
+            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-primary font-bold text-white">?</span>
             Giải đáp cùng PMP English
           </div>
 
@@ -2459,12 +2463,12 @@
             </article>
           </div>
 
-          <div class="mt-5 rounded-2xl bg-primary p-5 text-white shadow-lg shadow-primary/20">
+          <div class="mt-5 rounded-2xl bg-white p-5 shadow-lg shadow-primary/20">
             <p class="text-lg font-bold">Chưa biết nên chọn TOEIC hay IELTS?</p>
-            <p class="mt-1 text-sm leading-6 text-white/85">
+            <p class="mt-1 text-sm leading-6">
               PMP sẽ dựa trên trình độ, mục tiêu và thời gian dự kiến để tư vấn lộ trình phù hợp, giúp bạn tránh học sai hướng và mất thêm thời gian.
             </p>
-            <a href="#contact" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md">
+            <a href="#contact" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md">
               Nhận tư vấn lộ trình
               <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" />
@@ -2612,7 +2616,7 @@
         </div>
         <div>
           <h3 class="text-base font-bold text-[#0088cc]">Trả góp 0%</h3>
-          <p class="text-xs sm:text-sm text-gray-500 mt-0.5 text-secondary">Lãi suất 0% qua Sacombank</p>
+          <p class="text-xs sm:text-sm text-gray-500 mt-0.5 text-secondary font-semibold">Lãi suất 0% qua Sacombank</p>
         </div>
       </div>
 
