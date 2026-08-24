@@ -412,6 +412,9 @@
       font-size: 16px;
       transition: transform 0.2s, background-color 0.2s, color 0.2s;
     }
+    p{
+      font-size: 15px!important;
+    }
     .faq-answer { grid-template-rows: 0fr; opacity: 0; }
     .faq-item.is-open .faq-answer { grid-template-rows: 1fr; opacity: 1; }
     .faq-item.is-open .faq-chevron { transform: rotate(180deg); background: #00aeef; color: white; }
@@ -796,7 +799,7 @@ dots.forEach(dot => {
 </section>
 <!-- 03. SECTION LỘ TRÌNH CÁ NHÂN HÓA -->
 <section class="bg-surface-container-low px-margin-mobile py-20 md:px-margin-desktop md:py-32">
- <div class="bg-[#EBF5FF] py-[20px]">
+ <div class="bg-[#EBF5FF]">
   <div class="mx-auto max-w-container-max">
     <div class="text-center">
       <h3 class="mb-4 font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg md:text-headline-lg capitalize
@@ -1427,20 +1430,20 @@ dots.forEach(dot => {
 
         <!-- Section Header -->
         <div class="mb-8 text-center md:mb-10">
-            <h2 class="text-3xl font-bold leading-tight tracking-tight text-slate-900 md:text-4xl ">
+            <h2 class="text-3xl font-bold leading-tight tracking-tight text-slate-900 md:text-4xl">
                 Lý Do Chọn PMP English
             </h2>
 
             <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-primary"></div>
         </div>
-
+ 
 
         <!-- Cards -->
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 ">
 
 
             <!-- Card 1 -->
-            <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex flex-col gap-1 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
                 <span class="material-symbols-outlined text-[40px] text-secondary" style="font-variation-settings: 'FILL' 1;">
                     route
@@ -1458,7 +1461,7 @@ dots.forEach(dot => {
 
 
             <!-- Card 2 -->
-            <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex flex-col gap-1 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
                 <span class="material-symbols-outlined text-[40px]  text-secondary" style="font-variation-settings: 'FILL' 1;">
                     school
@@ -1476,7 +1479,7 @@ dots.forEach(dot => {
 
 
             <!-- Card 3 -->
-            <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex flex-col gap-1 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
                 <span class="material-symbols-outlined text-[40px]  text-secondary" style="font-variation-settings: 'FILL' 1;">
                     verified
@@ -1494,7 +1497,7 @@ dots.forEach(dot => {
 
 
             <!-- Card 4 -->
-            <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex flex-col gap-1 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
                 <span class="material-symbols-outlined text-[40px]  text-secondary" style="font-variation-settings: 'FILL' 1;">
                     group
@@ -1512,7 +1515,7 @@ dots.forEach(dot => {
 
 
             <!-- Card 5 -->
-            <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex flex-col gap-1 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
                 <span class="material-symbols-outlined text-[40px]  text-secondary" style="font-variation-settings: 'FILL' 1;">
                     more_time
@@ -1522,15 +1525,15 @@ dots.forEach(dot => {
                     Lớp bổ trợ
                 </h3>
 
-                <p class="text-base leading-6 text-slate-600">
-                    Học viên TOEIC được tham gia các lớp bổ trợ ngoài giờ.
-                </p>
+                <span class="text-[15px] leading-6 text-slate-600">
+                    Học viên được tham gia các lớp bổ trợ ngoài giờ.
+                </span>
 
             </div>
 
 
             <!-- Card 6 -->
-            <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex flex-col gap-1 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
                 <span class="material-symbols-outlined text-[40px]  text-secondary" style="font-variation-settings: 'FILL' 1;">
                     laptop_mac
@@ -1540,7 +1543,7 @@ dots.forEach(dot => {
                     Tài khoản online
                 </h3>
 
-                <p class="text-base leading-6 text-slate-600">
+                <p class="text-[15px] leading-6 text-slate-600">
                     Có tài khoản bài giảng online, hỗ trợ học và ôn luyện tại nhà.
                 </p>
 
@@ -1548,7 +1551,7 @@ dots.forEach(dot => {
 
 
             <!-- Card 7 -->
-            <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <!-- <div class="flex flex-col gap-1 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
                 <span class="material-symbols-outlined text-[40px]  text-secondary" style="font-variation-settings: 'FILL' 1;">
                     location_on
@@ -1562,7 +1565,7 @@ dots.forEach(dot => {
                     3 cơ sở thuận tiện, giúp học viên linh hoạt lựa chọn địa điểm học.
                 </p>
 
-            </div>
+            </div> -->
 
 
         </div>
