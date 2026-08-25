@@ -1582,192 +1582,871 @@ dots.forEach(dot => {
 </section>
 
 
-<!-- 08. LÝ DO CHỌN PMP -->
+<style>
+  /* =========================
+     SLIDER WRAPPER
+  ========================== */
+
+  .reason-slider {
+    overflow: hidden;
+  }
+
+  .reason-track {
+    display: flex;
+    gap: 16px;
+
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+
+  .reason-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+
+  /* =========================
+     450PX - 767PX
+     SHOW 2 ITEM
+  ========================== */
+
+  @media (min-width: 450px) and (max-width: 767px) {
+
+    .reason-slide {
+      flex: 0 0 calc((100% - 16px) / 2);
+    }
+
+  }
+
+
+  /* =========================
+     >= 768PX
+     TẮT SLIDER
+  ========================== */
+
+  @media (min-width: 768px) {
+
+    .reason-slider {
+      overflow: visible;
+    }
+
+    .reason-track {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+
+      transform: none !important;
+    }
+
+    .reason-slide {
+      width: auto;
+      flex: none;
+    }
+
+    .reason-navigation {
+      display: none !important;
+    }
+
+  }
+
+
+  /* =========================
+     >= 1024PX
+     GRID 4 CỘT
+  ========================== */
+
+  @media (min-width: 1024px) {
+
+    .reason-track {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+  }
+
+
+  /* =========================
+     NAVIGATION
+  ========================== */
+
+  .reason-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+  }
+
+  .reason-btn {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+  }
+
+  .reason-btn:hover {
+    background: #f8fafc;
+  }
+
+  .reason-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  .reason-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+</style>
+
+
 <section class="w-full bg-[#f5f9ff] px-5 py-12 md:px-8 md:py-14 lg:px-10">
-    <div class="mx-auto w-full max-w-7xl">
 
-        <!-- Section Header -->
-        <div class="mb-8 text-center md:mb-10">
-            <h2 class="mb-4 font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg md:text-headline-lg capitalize text-center lg:text-start">
-                Lý Do Chọn PMP English
-            </h2>
+  <div class="mx-auto w-full max-w-7xl">
 
-            <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-primary"></div>
+    <!-- Section Header -->
+   <div class="mb-8 md:mb-10">
+
+  <div class="flex items-center justify-between gap-4">
+
+    <h2 
+      class="font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg md:text-headline-lg capitalize text-start"
+    >
+      Lý Do Chọn PMP English
+    </h2>
+
+
+    <div class="reason-navigation shrink-0">
+
+      <button 
+        type="button" 
+        id="reasonPrev" 
+        class="reason-btn" 
+        aria-label="Previous"
+      > 
+        <svg 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2"
+        > 
+          <path d="M15 18l-6-6 6-6"></path> 
+        </svg> 
+      </button> 
+
+
+      <button 
+        type="button" 
+        id="reasonNext" 
+        class="reason-btn" 
+        aria-label="Next"
+      > 
+        <svg 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2"
+        > 
+          <path d="M9 18l6-6-6-6"></path> 
+        </svg> 
+      </button> 
+
+    </div>
+
+  </div>
+
+
+  <div class="mt-4 h-1 w-16 rounded-full bg-primary hidden lg:block"></div>
+
+</div>
+
+
+    <!-- Slider -->
+    <div class="reason-slider">
+
+      <div
+        id="reasonTrack"
+        class="reason-track"
+      >
+
+
+        <!-- CARD 1 -->
+        <div class="reason-slide">
+
+          <div
+            class="h-full flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="28px"
+                width="28px"
+                viewBox="0 -960 960 960"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="35"
+                stroke-linejoin="round"
+              >
+
+                <path d="M247-167q-47-47-47-113v-327q-35-13-57.5-43.5T120-720q0-50 35-85t85-35q50 0 85 35t35 85q0 39-22.5 69.5T280-607v327q0 33 23.5 56.5T360-200q33 0 56.5-23.5T440-280v-400q0-66 47-113t113-47q66 0 113 47t47 113v327q35 13 57.5 43.5T840-240q0 50-35 85t-85 35q-50 0-85-35t-35-85q0-39 22.5-70t57.5-43v-327q0-33-23.5-56.5T600-760q-33 0-56.5 23.5T520-680v400q0 66-47 113t-113 47q-66 0-113-47Zm-7-513q17 0 28.5-11.5T280-720q0-17-11.5-28.5T240-760q-17 0-28.5 11.5T200-720q0 17 11.5 28.5T240-680Zm480 480q17 0 28.5-11.5T760-240q0-17-11.5-28.5T720-280q-17 0-28.5 11.5T680-240q0 17 11.5 28.5T720-200Z"/>
+
+              </svg>
+
+            </div>
+
+
+            <div>
+
+              <h3 class="text-lg font-semibold text-slate-900 capitalize">
+                Lộ trình cá nhân hóa
+              </h3>
+
+              <p class="mt-1 text-base leading-6 text-slate-600">
+                Lộ trình học phù hợp với năng lực và mục tiêu của từng học viên.
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
- 
 
-        <!-- Cards -->
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
 
-  <!-- Card 1 -->
-  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-   <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    height="28px" 
-    width="28px" 
-    viewBox="0 -960 960 960" 
-    fill="currentColor" 
-    stroke="currentColor" 
-    stroke-width="35" 
-    stroke-linejoin="round"
-  >
-    <path d="M247-167q-47-47-47-113v-327q-35-13-57.5-43.5T120-720q0-50 35-85t85-35q50 0 85 35t35 85q0 39-22.5 69.5T280-607v327q0 33 23.5 56.5T360-200q33 0 56.5-23.5T440-280v-400q0-66 47-113t113-47q66 0 113 47t47 113v327q35 13 57.5 43.5T840-240q0 50-35 85t-85 35q-50 0-85-35t-35-85q0-39 22.5-70t57.5-43v-327q0-33-23.5-56.5T600-760q-33 0-56.5 23.5T520-680v400q0 66-47 113t-113 47q-66 0-113-47Zm-7-513q17 0 28.5-11.5T280-720q0-17-11.5-28.5T240-760q-17 0-28.5 11.5T200-720q0 17 11.5 28.5T240-680Zm480 480q17 0 28.5-11.5T760-240q0-17-11.5-28.5T720-280q-17 0-28.5 11.5T680-240q0 17 11.5 28.5T720-200ZM240-720Zm480 480Z"/>
-  </svg>
-</div>
+        <!-- CARD 2 -->
+        <div class="reason-slide">
 
-    <div>
-      <h3 class="text-lg font-semibold text-slate-900 capitalize">
-        Lộ trình cá nhân hóa
-      </h3>
-      <p class="mt-1 text-base leading-6 text-slate-600">
-        Lộ trình học phù hợp với năng lực và mục tiêu của từng học viên.
-      </p>
+          <div
+            class="h-full flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="28px"
+                width="28px"
+                viewBox="0 -960 960 960"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="35"
+                stroke-linejoin="round"
+              >
+
+                <path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Z"/>
+
+              </svg>
+
+            </div>
+
+
+            <div>
+
+              <h3 class="text-lg font-semibold text-slate-900">
+                Trọng tâm đào tạo
+              </h3>
+
+              <p class="mt-1 text-base leading-6 text-slate-600">
+                Đào tạo trọng tâm TOEIC 4 Kỹ Năng và IELTS.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="reason-slide">
+
+          <div
+            class="h-full flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="28px"
+                width="28px"
+                viewBox="0 -960 960 960"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="35"
+                stroke-linejoin="round"
+              >
+
+                <path d="m344-60-76-128-144-32 14-148-98-112 98-112-14-148 144-32 76-128 136 58 136-58 76 128 144 32-14 148 98 112-98 112 14 148-144 32-76 128-136-58-136 58Zm34-102 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm60-176 226-226-56-58-170 170-86-84-56 56 142 142Z"/>
+
+              </svg>
+
+            </div>
+
+
+            <div>
+
+              <h3 class="text-lg font-semibold text-slate-900">
+                Cam kết đầu ra
+              </h3>
+
+              <p class="mt-1 text-base leading-6 text-slate-600">
+                Cam kết đầu ra bằng hợp đồng đào tạo.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+        <div class="reason-slide">
+
+          <div
+            class="h-full flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+                class="h-6 w-6 fill-current"
+              >
+
+                <path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM247-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47Zm466 0q-47 47-113 47-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113q0 66-47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Z"/>
+
+              </svg>
+
+            </div>
+
+
+            <div>
+
+              <h3 class="text-lg font-semibold text-slate-900">
+                Giảng viên tận tâm
+              </h3>
+
+              <p class="mt-1 text-base leading-6 text-slate-600">
+                Giảng viên đồng hành, theo sát quá trình học.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 5 -->
+        <div class="reason-slide">
+
+          <div
+            class="h-full flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+
+              <span
+                class="material-symbols-outlined text-[28px]"
+                style="font-variation-settings:'FILL' 1,'wght' 700;"
+              >
+                more_time
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <h3 class="text-lg font-semibold text-slate-900">
+                Lớp bổ trợ
+              </h3>
+
+              <p class="mt-1 text-[15px] leading-6 text-slate-600">
+                Học viên được tham gia các lớp bổ trợ ngoài giờ.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 6 -->
+        <div class="reason-slide">
+
+          <div
+            class="h-full flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+
+              <span
+                class="material-symbols-outlined text-[28px]"
+                style="font-variation-settings:'FILL' 1,'wght' 700;"
+              >
+                account_circle
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <h3 class="text-lg font-semibold text-slate-900">
+                Tài khoản online
+              </h3>
+
+              <p class="mt-1 text-[15px] leading-6 text-slate-600">
+                Có tài khoản bài giảng online, hỗ trợ học và ôn luyện tại nhà.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 7 -->
+        <div class="reason-slide">
+
+          <div
+            class="h-full flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="28px"
+                width="28px"
+                viewBox="0 -960 960 960"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="35"
+                stroke-linejoin="round"
+              >
+
+                <path d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z"/>
+
+              </svg>
+
+            </div>
+
+
+            <div>
+
+              <h3 class="text-lg font-semibold text-slate-900">
+                Cơ sở thuận tiện
+              </h3>
+
+              <p class="mt-1 text-base leading-6 text-slate-600">
+                3 cơ sở thuận tiện, giúp học viên linh hoạt lựa chọn địa điểm học.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
     </div>
+
+
+  
+
   </div>
 
-  <!-- Card 2 -->
-  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-<div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    height="28px" 
-    width="28px" 
-    viewBox="0 -960 960 960" 
-    fill="currentColor" 
-    stroke="currentColor" 
-    stroke-width="35" 
-    stroke-linejoin="round"
-  >
-    <path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z"/>
-  </svg>
-</div>
-
-    <div>
-      <h3 class="text-lg font-semibold text-slate-900">
-        Trọng tâm đào tạo
-      </h3>
-      <p class="mt-1 text-base leading-6 text-slate-600">
-        Đào tạo trọng tâm TOEIC 4 Kỹ Năng và IELTS.
-      </p>
-    </div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-  <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    height="28px" 
-    width="28px" 
-    viewBox="0 -960 960 960" 
-    fill="currentColor" 
-    stroke="currentColor" 
-    stroke-width="35" 
-    stroke-linejoin="round"
-  >
-    <path d="m344-60-76-128-144-32 14-148-98-112 98-112-14-148 144-32 76-128 136 58 136-58 76 128 144 32-14 148 98 112-98 112 14 148-144 32-76 128-136-58-136 58Zm34-102 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm-42 142 226-226-56-58-170 170-86-84-56 56 142 142Z"/>
-  </svg>
-</div>
-
-    <div>
-      <h3 class="text-lg font-semibold text-slate-900">
-        Cam kết đầu ra
-      </h3>
-      <p class="mt-1 text-base leading-6 text-slate-600">
-        Cam kết đầu ra bằng hợp đồng đào tạo.
-      </p>
-    </div>
-  </div>
-
-  <!-- Card 4 -->
-  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-    <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-<svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 -960 960 960" 
-    class="h-6 w-6 fill-current"
-  >
-    <path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM247-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47Zm466 0q-47 47-113 47-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113q0 66-47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q440-607 440-640t-23.5-56.5Q393-720 360-720t-56.5 23.5Q280-673 280-640t23.5 56.5Q327-560 360-560t56.5-23.5ZM360-240Zm0-400Z"/>
-  </svg>    </div>
-
-    <div>
-      <h3 class="text-lg font-semibold text-slate-900">
-        Giảng viên tận tâm
-      </h3>
-      <p class="mt-1 text-base leading-6 text-slate-600">
-        Giảng viên đồng hành, theo sát quá trình học.
-      </p>
-    </div>
-  </div>
-
-  <!-- Card 5 -->
-  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-    <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-      <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1, 'wght' 700;">
-        more_time
-      </span>
-    </div>
-
-    <div>
-      <h3 class="text-lg font-semibold text-slate-900">
-        Lớp bổ trợ
-      </h3>
-      <span class="mt-1 block text-[15px] leading-6 text-slate-600">
-        Học viên được tham gia các lớp bổ trợ ngoài giờ.
-      </span>
-    </div>
-  </div>
-
-  <!-- Card 6 -->
-  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-    <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-      <span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1, 'wght' 700;">
-        account_circle
-      </span>
-    </div>
-
-    <div>
-      <h3 class="text-lg font-semibold text-slate-900">
-        Tài khoản online
-      </h3>
-      <p class="mt-1 text-[15px] leading-6 text-slate-600">
-        Có tài khoản bài giảng online, hỗ trợ học và ôn luyện tại nhà.
-      </p>
-    </div>
-  </div>
-
-  <!-- Card 7 -->
-  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white py-6 px-4 shadow-[0_4px_20px_rgba(0,51,102,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-   <div class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    height="28px" 
-    width="28px" 
-    viewBox="0 -960 960 960" 
-    fill="currentColor" 
-    stroke="currentColor" 
-    stroke-width="35" 
-    stroke-linejoin="round"
-  >
-    <path d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/>
-  </svg>
-</div>
-
-    <div>
-      <h3 class="text-lg font-semibold text-slate-900">
-        Cơ sở thuận tiện
-      </h3>
-      <p class="mt-1 text-base leading-6 text-slate-600">
-        3 cơ sở thuận tiện, giúp học viên linh hoạt lựa chọn địa điểm học.
-      </p>
-    </div>
-  </div>
-
-</div>
-    </div>
 </section>
 
+
+<script>
+class ReasonSlider {
+
+  constructor(trackId, prevId, nextId) {
+
+    this.track =
+      document.getElementById(trackId);
+
+    this.prev =
+      document.getElementById(prevId);
+
+    this.next =
+      document.getElementById(nextId);
+
+    this.index = 0;
+
+    this.touchStartX = 0;
+    this.touchEndX = 0;
+
+    if (!this.track) return;
+
+    this.init();
+  }
+
+
+  get slides() {
+
+    return Array.from(
+      this.track.querySelectorAll(".reason-slide")
+    );
+
+  }
+
+
+  /*
+    Slider chỉ chạy dưới 768px
+  */
+  isActive() {
+
+    return window.innerWidth < 768;
+
+  }
+
+
+  /*
+    < 450px = 1 item
+
+    450px - 767px = 2 item
+  */
+  getVisibleCount() {
+
+    if (window.innerWidth >= 768) {
+      return 0;
+    }
+
+    if (window.innerWidth >= 450) {
+      return 2;
+    }
+
+    return 1;
+  }
+
+
+  /*
+    Slider trượt từng 1 card
+  */
+  getMaxIndex() {
+
+    if (!this.isActive()) {
+      return 0;
+    }
+
+    const total =
+      this.slides.length;
+
+    const visible =
+      this.getVisibleCount();
+
+    return Math.max(
+      0,
+      total - visible
+    );
+
+  }
+
+
+  getGap() {
+
+    const gap =
+      parseFloat(
+        getComputedStyle(this.track).gap
+      );
+
+    return Number.isNaN(gap)
+      ? 16
+      : gap;
+
+  }
+
+
+  update() {
+
+    /*
+      >= 768px
+      reset slider
+    */
+    if (!this.isActive()) {
+
+      this.index = 0;
+
+      this.track.style.transform =
+        "none";
+
+      this.updateButtons();
+
+      return;
+
+    }
+
+
+    const slides =
+      this.slides;
+
+    if (!slides.length) return;
+
+
+    const maxIndex =
+      this.getMaxIndex();
+
+
+    this.index =
+      Math.max(
+        0,
+        Math.min(
+          this.index,
+          maxIndex
+        )
+      );
+
+
+    const slideWidth =
+      slides[0]
+        .getBoundingClientRect()
+        .width;
+
+
+    const gap =
+      this.getGap();
+
+
+    /*
+      QUAN TRỌNG
+
+      Không nhân visible
+
+      => mỗi lần chỉ trượt 1 card
+    */
+    const offset =
+      this.index *
+      (slideWidth + gap);
+
+
+    this.track.style.transform =
+      `translateX(-${offset}px)`;
+
+
+    this.updateButtons();
+
+  }
+
+
+  updateButtons() {
+
+    if (!this.isActive()) {
+
+      if (this.prev) {
+        this.prev.disabled = true;
+      }
+
+      if (this.next) {
+        this.next.disabled = true;
+      }
+
+      return;
+
+    }
+
+
+    const maxIndex =
+      this.getMaxIndex();
+
+
+    if (this.prev) {
+
+      this.prev.disabled =
+        this.index <= 0;
+
+    }
+
+
+    if (this.next) {
+
+      this.next.disabled =
+        this.index >= maxIndex;
+
+    }
+
+  }
+
+
+  nextSlide() {
+
+    if (!this.isActive()) {
+      return;
+    }
+
+    const maxIndex =
+      this.getMaxIndex();
+
+
+    if (this.index < maxIndex) {
+
+      this.index++;
+
+      this.update();
+
+    }
+
+  }
+
+
+  prevSlide() {
+
+    if (!this.isActive()) {
+      return;
+    }
+
+
+    if (this.index > 0) {
+
+      this.index--;
+
+      this.update();
+
+    }
+
+  }
+
+
+  init() {
+
+    this.prev?.addEventListener(
+      "click",
+      () => this.prevSlide()
+    );
+
+
+    this.next?.addEventListener(
+      "click",
+      () => this.nextSlide()
+    );
+
+
+    /*
+      Swipe mobile
+    */
+    this.track.addEventListener(
+      "touchstart",
+      event => {
+
+        if (!this.isActive()) {
+          return;
+        }
+
+        this.touchStartX =
+          event.changedTouches[0].screenX;
+
+      },
+      {
+        passive: true
+      }
+    );
+
+
+    this.track.addEventListener(
+      "touchend",
+      event => {
+
+        if (!this.isActive()) {
+          return;
+        }
+
+
+        this.touchEndX =
+          event.changedTouches[0].screenX;
+
+
+        const distance =
+          this.touchEndX -
+          this.touchStartX;
+
+
+        if (Math.abs(distance) < 40) {
+          return;
+        }
+
+
+        if (distance < 0) {
+
+          this.nextSlide();
+
+        } else {
+
+          this.prevSlide();
+
+        }
+
+      },
+      {
+        passive: true
+      }
+    );
+
+
+    /*
+      Resize
+    */
+    let resizeTimer;
+
+
+    window.addEventListener(
+      "resize",
+      () => {
+
+        clearTimeout(resizeTimer);
+
+
+        resizeTimer =
+          setTimeout(
+            () => {
+
+              this.index = 0;
+
+              this.update();
+
+            },
+            100
+          );
+
+      }
+    );
+
+
+    requestAnimationFrame(
+      () => this.update()
+    );
+
+  }
+
+}
+
+
+new ReasonSlider(
+  "reasonTrack",
+  "reasonPrev",
+  "reasonNext"
+);
+</script>
 
 <section class="bg-[#f5f9ff] px-margin-mobile py-6 md:px-margin-desktop md:py-15" id="thanh-tich-hoc-vien">
   <div class="mx-auto max-w-container-max">
@@ -2651,7 +3330,6 @@ dots.forEach(dot => {
 
   .slider-card-image {
     width: 100%;
-    aspect-ratio: 4 / 5;
 
     overflow: hidden;
 
@@ -2721,6 +3399,12 @@ dots.forEach(dot => {
     .text-headline-lg-mobile{
     font-size: 21px !important;
   }
+  }
+  @media (max-width: 420px){
+    .text-headline-lg-mobile{
+      font-size: 20px !important;
+    }
+    
   }
   @media (max-width: 400px) {
     header{
@@ -3409,55 +4093,52 @@ dots.forEach(dot => {
      RENDER FEEDBACK CARD
   ========================================================= */
 
-  function renderFeedbackCard(item, index, allItems) {
+ function renderFeedbackCard(
+  item,
+  index,
+  allItems,
+  useAspect45 = false
+) {
 
-    const images = allItems
-      .map(item => item.image);
+  const images = allItems
+    .map(item => item.image);
 
-  
+  return `
 
+    <div class="slider-slide">
 
-    return `
+      <article
+        class="slider-card"
+        data-modal-images='${JSON.stringify(images)}'
+        data-modal-index="${index}"
+      >
 
-      <div class="slider-slide">
+        <div class="slider-card-image ${useAspect45 ? "aspect-[4/5]" : ""}">
 
-        <article
-          class="slider-card"
-          data-modal-images='${JSON.stringify(images)}'
-          data-modal-index="${index}"
-        >
+          <img
+            src="${item.image}"
+            alt="${item.alt}"
+            loading="lazy"
+            class="${useAspect45 ? "w-full h-full object-cover" : ""}"
+          />
 
-          <div class="slider-card-image">
-
-            <img
-              src="${item.image}"
-              alt="${item.alt}"
-              loading="lazy"
-            />
-
-          </div>
-
-
-          <div class="p-5">
-
-          
+        </div>
 
 
-            <p class="font-label-md font-semibold  uppercase tracking-wide text-center">
-              ${item.name}
-            </p>
+        <div class="p-5">
 
+          <p class="font-label-md font-semibold uppercase tracking-wide text-center">
+            ${item.name}
+          </p>
 
+        </div>
 
-          </div>
+      </article>
 
-        </article>
+    </div>
 
-      </div>
-
-    `;
-  }
-
+  `;
+}
 
   /* =========================================================
      RENDER ALL
@@ -3494,7 +4175,7 @@ dots.forEach(dot => {
     feedbackTrack.innerHTML =
       feedbackData
         .map((item, index, array) =>
-          renderFeedbackCard(item, index, array)
+          renderFeedbackCard(item, index, array,true)
         )
         .join("");
 
@@ -3670,17 +4351,14 @@ class Slider {
       số lượng card đang hiển thị
     */
 
-    const offset =
-      this.index *
-      visible *
-      (slideWidth + gap);
+const offset = 
+  this.index * 
+  (slideWidth + gap);
 
+this.track.style.transform = 
+  `translateX(-${offset}px)`;
 
-    this.track.style.transform =
-      `translateX(-${offset}px)`;
-
-
-    this.updateButtons();
+this.updateButtons();
   }
 
 
