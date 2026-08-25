@@ -2693,7 +2693,7 @@ new ReasonSlider(
         <button
           type="button"
           data-score-tab="ielts"
-          class="score-tab rounded-full bg-white px-6 py-3 font-semibold text-[#172F19] transition-all border border-secondary text-secondary"
+          class="score-tab rounded-full bg-white px-6 py-3 font-semibold text-secondary transition-all border border-secondary"
         >
           IELTS
         </button>
@@ -5179,7 +5179,7 @@ function initTeacherSlider() {
      SCORE TABS
   ========================================================= */
 
- function initTabs() {
+function initTabs() {
   const buttons = document.querySelectorAll("[data-score-tab]");
 
   buttons.forEach(button => {
@@ -5193,6 +5193,7 @@ function initTeacherSlider() {
 
       // Hiện content được chọn
       const targetContent = document.getElementById(`tab-${target}`);
+
       if (targetContent) {
         targetContent.classList.remove("hidden");
       }
@@ -5203,7 +5204,8 @@ function initTeacherSlider() {
           "bg-primary",
           "bg-secondary",
           "bg-black",
-          "text-white"
+          "text-white",
+          "text-black"
         );
 
         item.classList.add(
@@ -5212,10 +5214,12 @@ function initTeacherSlider() {
         );
       });
 
-      // Active button theo loại tab
+      // Active button
       button.classList.remove(
         "bg-white",
-        "text-primary"
+        "text-primary",
+        "text-white",
+        "text-white"
       );
 
       if (target === "toeic") {
@@ -5223,7 +5227,9 @@ function initTeacherSlider() {
           "bg-primary",
           "text-white"
         );
-      } else if (target === "ielts") {
+      }
+
+      else if (target === "ielts") {
         button.classList.add(
           "bg-secondary",
           "text-white"
@@ -5232,7 +5238,6 @@ function initTeacherSlider() {
     });
   });
 }
-
 
   /* =========================================================
      INIT
