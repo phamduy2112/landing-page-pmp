@@ -981,6 +981,11 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
 <style>
     .achievement-track { scrollbar-width: none; scroll-snap-type: x mandatory; }
     .achievement-track::-webkit-scrollbar { display: none; }
+    @media (max-width: 400px) {
+  .image-section-4 {
+    height: 150px;
+  }
+}
     .achievement-card { scroll-snap-align: center; }
     .score-badge { clip-path: polygon(8% 0, 92% 0, 100% 12%, 100% 76%, 50% 100%, 0 76%, 0 12%); }
   </style>
@@ -1035,7 +1040,7 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
   <!-- Phần cover -->
   <div
     class="relative h-[230px] shrink-0 overflow-hidden rounded-[17px]
-           bg-gradient-to-br from-primary/5 to-primary/10"
+           bg-gradient-to-br from-primary/5 to-primary/10 image-section-4" 
   >
     <img
       src="./assets/Artboard 1 copy.png"
@@ -1169,8 +1174,8 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
 >
   <!-- Phần cover -->
   <div
-    class="relative min-h-[230px] overflow-hidden rounded-[17px]
-           bg-gradient-to-br from-secondary/5 to-secondary/10"
+   class="relative h-[230px] shrink-0 overflow-hidden rounded-[17px]
+           bg-gradient-to-br from-primary/5 to-primary/10 image-section-4"
   >
     <img
       src="./assets/Artboard 2 copy.png"
