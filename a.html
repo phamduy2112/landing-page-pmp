@@ -691,120 +691,61 @@ window.addEventListener('scroll', () => {
 });
 </script>
 <!-- 01. SECTION HERO BANNER -->
-<section
-  class="relative isolate h-auto overflow-hidden px-4 sm:h-[500px] sm:px-6 lg:px-10 xl:px-16"
->
-  <!-- Ảnh nền -->
+  <section class="relative isolate min-h-[400px] overflow-hidden bg-[#FFF9E9] px-4 md:px-16">
+    <!-- Ảnh nền kiến trúc. Thay src bằng ảnh của bạn. -->
+    <img
+        src="./assets/bg-1.png"
+      alt=""
+      class="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+    />
+
+    <div class="mx-auto grid min-h-[400px] max-w-container-max grid-cols-1 items-center lg:grid-cols-[52%_48%]">
+      <div class="relative z-20 max-w-xl py-12 text-center lg:py-10 lg:text-left">
+        <span class="font-headline text-xs font-bold uppercase tracking-[.08em] text-primary-container">
+          Personalized IELTS Journey
+        </span>
+        <h2 class="mt-2 font-headline text-[34px] font-extrabold uppercase leading-[1.08] tracking-[-.035em] text-on-surface sm:text-[42px] lg:text-[48px]">
+          Chinh phục IELTS
+        </h2>
+
+        <ul class="mx-auto mt-5 w-fit space-y-2 text-left text-[14px] leading-5 text-on-surface-variant lg:mx-0">
+          <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"></span>Lộ trình cá nhân hóa cùng giáo viên giàu kinh nghiệm</li>
+          <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"></span>Sĩ số lớp nhỏ từ 4 đến 8 học viên</li>
+          <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"></span>Khóa học linh hoạt theo thời gian rảnh</li>
+          <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"></span>Cam kết đầu ra bằng hợp đồng đào tạo</li>
+        </ul>
+
+        <a href="#register" class="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-warning px-6 py-3 text-sm font-bold text-on-surface shadow-lg shadow-warning/20 transition hover:-translate-y-0.5 hover:bg-primary hover:text-white">
+          Đăng ký học
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none"><path d="m7.5 4.5 5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+<div class="relative hidden h-full min-h-[400px] lg:block">
   <img
-    src="./assets/bg-1.png"
-    alt=""
-    class="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+    src="./assets/thầy giáo-PMP (1).png"
+    alt="Giảng viên PMP English"
+    class="absolute -bottom-14 right-[3%] z-10 h-[470px] w-auto max-w-none object-contain object-bottom drop-shadow-[0_18px_25px_rgba(1,86,155,.15)] xl:h-[510px]"
   />
 
-  <!-- Lớp phủ -->
-  <div class="absolute inset-0 -z-20 bg-white/50 lg:bg-transparent"></div>
-
-  <div
-    class="mx-auto grid h-full w-full max-w-7xl  grid-cols-1 items-center sm:grid-cols-[55%_45%] lg:grid-cols-[52%_48%]"
-  >
-    <!-- Nội dung -->
-    <div
-      class="relative z-20 mx-auto mt-[35px] w-full max-w-xl sm:mt-0  lg:mx-0"
-    >
-      <!-- Text nhỏ -->
-      <span
-        class="font-headline text-[11px] font-bold uppercase tracking-[.08em] text-primary-container sm:text-xs lg:text-sm"
-      >
-        Cần TOEIC 4 kỹ năng hoặc IELTS
-      </span>
-
-      <!-- Tiêu đề chính -->
-      <h2
-        class="mb-3 mt-2 font-headline text-[30px] font-extrabold uppercase leading-[1.2] tracking-[-.03em] text-on-surface sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[46px]"
-      >
-        Nhưng chưa biết
-        <br class="hidden sm:block" />
-        bắt đầu từ đâu?
-      </h2>
-
-      <ul
-        class="mx-auto mt-5 max-w-[480px] space-y-2.5 text-left text-[14px] leading-5 text-on-surface-variant sm:mx-0 sm:text-[13px] md:text-[14px]"
-      >
-        <li class="flex items-start gap-2.5">
-          <span
-            class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-          ></span>
-          <span>Kiểm tra năng lực đầu vào</span>
-        </li>
-
-        <li class="flex items-start gap-2.5">
-          <span
-            class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-          ></span>
-          <span>Lộ trình theo trình độ và mục tiêu</span>
-        </li>
-
-        <li class="flex items-start gap-2.5">
-          <span
-            class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-          ></span>
-          <span>Học kết hợp lớp học và hệ thống luyện tập</span>
-        </li>
-
-        <li class="flex items-start gap-2.5">
-          <span
-            class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-          ></span>
-          <span>Theo dõi tiến độ xuyên suốt quá trình học</span>
-        </li>
-      </ul>
-
-      <a
-        href="#uu-dai-chinh-sach"
-        class="mt-6 inline-flex items-center justify-center gap-2 rounded-lg  px-4 py-3 text-[12px] font-bold uppercase  bg-primary text-on-secondary hover:bg-[#008ec4] font-label-md text-label-md rounded px-6 py-2.5 shadow-sm hover:shadow-md transition-colors text-center"
-      >
-        Kiểm tra trình độ &amp; nhận lộ trình
-
-        <svg class="h-4 w-4 shrink-0" viewBox="0 0 20 20" fill="none">
-          <path
-            d="m7.5 4.5 5.5 5.5-5.5 5.5"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </a>
+  <div class="pointer-events-none absolute bottom-0 right-[4%] h-16 w-[65%] rounded-[50%] bg-primary-container/10 blur-2xl"></div>
+</div>
     </div>
 
-    <!-- Ảnh giảng viên -->
-    <div class="relative mt-5 h-[280px] w-full sm:mt-0 sm:h-full">
+    <!-- Mobile dùng ảnh ngang bên dưới nội dung -->
+    <div class="relative mx-auto -mt-4 block h-[235px] max-w-md overflow-hidden rounded-t-[60px] lg:hidden">
       <img
-        src="./assets/thầy giáo-PMP.png"
-        alt="Giảng viên PMP English"
-        class="relative mx-auto block h-full max-h-[280px] w-auto max-w-full object-contain object-bottom
-               drop-shadow-[0_18px_25px_rgba(1,86,155,.15)]
-               sm:absolute sm:bottom-0 sm:left-1/2 sm:h-[400px] sm:max-h-none sm:max-w-none sm:-translate-x-1/2
-               md:h-[440px]
-               lg:left-auto lg:right-[3%] lg:h-[490px] lg:translate-x-0"
+        src="./assets/bg-1.png"
+        alt="Học viên PMP English"
+        class="h-full w-full object-cover object-center"
       />
-
-      <div
-        class="pointer-events-none absolute bottom-0 left-1/2 h-12 w-[70%] -translate-x-1/2 rounded-[50%]
-               bg-primary-container/10 blur-2xl
-               sm:h-16 sm:w-[80%]
-               lg:left-auto lg:right-[4%] lg:w-[65%] lg:translate-x-0"
-      ></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-white/25 to-transparent"></div>
     </div>
-  </div>
-</section>
+  </section>
 <!--  -->
 
   <section class="bg-surface-container-lowest px-margin-mobile py-12 md:px-margin-desktop md:py-14">
-    <div class="mx-auto max-w-7xl ">
-      <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg
-  text-center
-  md:text-headline-lg capitalize">
+    <div class="mx-auto max-w-container-max">
+      <h2 class="mx-auto max-w-3xl text-center font-headline-lg text-[26px] font-bold capitalize leading-[1.2] tracking-[-0.02em] text-on-surface md:text-[32px] md:leading-[40px]">
         Bạn cần TOEIC 4 Kỹ Năng hoặc IELTS nhưng:
 
       </h2>
@@ -815,7 +756,7 @@ window.addEventListener('scroll', () => {
 
   <script>
     const icons = {
-route: ` <svg viewBox="0 0 96 80" aria-hidden="true"> <circle cx="33" cy="27" r="22" fill="#00aeef"/> <g fill="none" stroke="#000000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" > <path d="M24 19h31v48H14V19h10"/> <path d="M27 14h15a5 5 0 0 1 5 5v3H22v-3a5 5 0 0 1 5-5Z"/> <path d="m20 40 3 3 5-6m-8 15 3 3 5-6m5-8h15m-15 12h15"/> <path d="M62 25h6l2 7v32l-5 6-5-6V32l2-7Zm-2 10h10M65 35v29"/> </g> </svg> `,      class: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="33" cy="54" r="20" fill="#00aeef "/><g fill="none" stroke="#101820" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 47a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm-12 19v-8c0-6 5-11 12-11s12 5 12 11v8H11Zm40-21a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm-11 21v-8c0-6 5-10 11-10s11 4 11 10v8H40Zm31-21a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm-9 21v-8c0-6 4-10 9-10 6 0 10 4 10 10v8H62Z"/></g><g fill="none" stroke="black" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 12h31v18H30l-8 6v-6h-4V12Zm7 7h17m-17 5h12"/><path d="M52 17h24v16h-4v6l-7-6H52"/></g></svg>`,
+route: ` <svg viewBox="0 0 96 80" aria-hidden="true"> <circle cx="33" cy="27" r="22" fill="#00aeef"/> <g fill="none" stroke="#000000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" > <path d="M24 19h31v48H14V19h10"/> <path d="M27 14h15a5 5 0 0 1 5 5v3H22v-3a5 5 0 0 1 5-5Z"/> <path d="m20 40 3 3 5-6m-8 15 3 3 5-6m5-8h15m-15 12h15"/> <path d="M62 25h6l2 7v32l-5 6-5-6V32l2-7Zm-2 10h10M65 35v29"/> </g> </svg> `,      class: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="33" cy="54" r="20" fill="#00aeef "/><g fill="none" stroke="#101820" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 47a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm-12 19v-8c0-6 5-11 12-11s12 5 12 11v8H11Zm40-21a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm-11 21v-8c0-6 5-10 11-10s11 4 11 10v8H40Zm31-21a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm-9 21v-8c0-6 4-10 9-10 6 0 10 4 10 10v8H62Z"/></g><g fill="none" stroke="#00aeef" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 12h31v18H30l-8 6v-6h-4V12Zm7 7h17m-17 5h12"/><path d="M52 17h24v16h-4v6l-7-6H52"/></g></svg>`,
       time: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="67" cy="54" r="20" fill="#00aeef"/><g fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="25" r="17"/><path d="M50 14v12l7 4m-7-27v5m18 17h5m-46 0h5"/><path d="M27 67h-9V46l5-13c1-4 7-3 7 2v12l6 7v13m32 0h9V46l-5-13c-1-4-7-3-7 2v12l-6 7v13"/></g></svg>`,
 
 learning: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="20" fill="#00aeef"/><g fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="25" width="67" height="43" rx="4"/><path d="M10 68h73l-4 7H15l-5-7Z"/><path d="M24 15c10-4 17 0 21 5v34c-5-5-12-8-21-4V15Zm42 0c-10-4-17 0-21 5v34c5-5 12-8 21-4V15Z"/></g><path d="M29 23c5-2 9-1 12 2m-12 7c5-2 9-1 12 2m20-11c-5-2-9-1-12 2m12 7c-5-2-9-1-12 2" fill="none" stroke="#000000" stroke-width="2.3" stroke-linecap="round"/></svg>`,
@@ -864,23 +805,24 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
         ${index >= 3 ? "border-t border-outline-variant/40 md:mt-12 md:pt-2" : ""}
         ${index % 3 !== 0 ? "md:border-l md:border-outline-variant/40" : ""}">
         <div class="h-20 w-24 transition-transform duration-300 group-hover:-translate-y-1">${icons[item.icon]}</div>
-        <h3 class="mt-5 font-headline-md text-[15px] sm:text-[16px] font-bold leading-7 text-on-surface">${item.title}</h3>
-        <p class="mt-2 max-w-[370px] font-body-md text-[15px] leading-6 text-on-surface">${item.text}</p>
-       
+        <h3 class="mt-5 font-headline-md text-[20px] font-bold leading-7 text-on-surface">${item.title}</h3>
+        <p class="mt-2 max-w-[370px] font-body-md text-[16px] leading-6 text-on-surface">${item.text}</p>
+        <a href="#" class="mt-4 inline-flex items-center gap-2 font-body-sm text-[14px] font-medium text-[#E9AE00] transition-colors hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+          Xem thêm
+          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m7.5 4.5 5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </article>
     `).join("");
   </script>
 
 
  <section class="overflow-hidden bg-white px-4 py-12 md:px-16 md:py-16">
-    <div class="mx-auto max-w-7xl ">
+    <div class="mx-auto max-w-container-max">
       <header class="text-center">
         <span class="inline-flex rounded-full bg-surface-container-low px-4 py-1.5 text-xs font-bold uppercase tracking-[.05em] text-primary">
           6 bước xây dựng lộ trình
         </span>
-        <h2 class="mt-3 font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg
-  text-center
-  md:text-headline-lg capitalize">
+        <h2 class="mx-auto mt-3 max-w-4xl font-headline text-[27px] font-extrabold uppercase leading-[1.2] tracking-[-.025em] md:text-[38px]">
           Đừng bắt đầu bằng việc chọn khóa học
         </h2>
         <p class="mx-auto mt-3 max-w-2xl text-sm leading-6 text-on-surface-variant md:text-base">
@@ -895,59 +837,18 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
         <img src="./assets/111.png" alt="">
       </div>
 
-     <div
-  class="mx-auto mt-8 flex w-full max-w-4xl flex-col gap-5 rounded-2xl border border-primary/35 bg-surface-container-low p-3
-         sm:mt-10 sm:p-6
-         md:flex-row md:items-center md:justify-between md:gap-6"
->
-  <!-- Nội dung -->
-  <div
-    class="flex min-w-0 flex-col items-center gap-3 text-center
-           sm:flex-row sm:text-left"
-  >
-    <span
-      class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-primary text-white"
-    >
-      <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none">
-        <path
-          d="m10 2 2.3 4.7L17.5 8l-3.8 3.7.9 5.3-4.6-2.5L5.4 17l.9-5.3L2.5 8l5.2-1.3L10 2Z"
-          stroke="currentColor"
-          stroke-width="1.7"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </span>
-
-    <p
-      class="max-w-xl text-[13px] leading-5 text-on-surface-variant sm:text-sm"
-    >
-      Không cần học nhiều hơn, cần biết mình đang ở đâu, thiếu gì và phải
-      làm gì để tiến gần mục tiêu.
-    </p>
-  </div>
-
-  <!-- Nút CTA -->
-  <a
-    href="#register"
-    class="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3
-           text-center text-[11px] font-bold uppercase leading-4 text-white shadow-lg shadow-primary/20
-           transition hover:-translate-y-0.5 hover:bg-primary-container
-           sm:px-5 sm:text-xs
-           md:w-auto md:max-w-[270px]"
-  >
-    <span>Nhận lộ trình ngay</span>
-
-    <svg class="h-4 w-4 shrink-0" viewBox="0 0 20 20" fill="none">
-      <path
-        d="m7.5 4.5 5.5 5.5-5.5 5.5"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </a>
-</div>
+      <div class="mx-auto mt-10 flex max-w-4xl flex-col items-center justify-between gap-4 rounded-xl border border-primary/35 bg-surface-container-low p-4 md:flex-row md:px-5">
+        <div class="flex items-center gap-3 text-center md:text-left">
+          <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-primary text-white">
+            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none"><path d="m10 2 2.3 4.7L17.5 8l-3.8 3.7.9 5.3-4.6-2.5L5.4 17l.9-5.3L2.5 8l5.2-1.3L10 2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <p class="text-sm leading-5 text-on-surface-variant">Không cần học nhiều hơn, cần biết mình đang ở đâu, thiếu gì và phải làm gì để tiến gần mục tiêu.</p>
+        </div>
+        <a href="#register" class="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-xs font-bold uppercase text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:bg-primary-container md:w-auto">
+          Kiểm tra trình độ và nhận lộ trình
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none"><path d="m7.5 4.5 5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -984,307 +885,191 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
     .achievement-card { scroll-snap-align: center; }
     .score-badge { clip-path: polygon(8% 0, 92% 0, 100% 12%, 100% 76%, 50% 100%, 0 76%, 0 12%); }
   </style>
-<section class="relative overflow-hidden bg-[#f7fbff] px-4 py-14 md:px-8 md:py-20">
-  <!-- Background -->
-  <div
-    class="pointer-events-none absolute left-0 top-0 h-80 w-80
-           rounded-full bg-blue-200/25 blur-[110px]"
-  ></div>
+<section class="relative overflow-hidden bg-[#f6faff] px-5 py-16">
+  <!-- Các mảng màu mờ phía sau -->
+  <div class="pointer-events-none absolute -left-20 top-10 h-80 w-80 rounded-full bg-blue-300/30 blur-[100px]"></div>
+  <div class="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-emerald-300/25 blur-[100px]"></div>
+  <div class="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-200/20 blur-[110px]"></div>
 
-  <div
-    class="pointer-events-none absolute bottom-0 right-0 h-80 w-80
-           rounded-full bg-emerald-200/20 blur-[110px]"
-  ></div>
-
-  <div class="relative z-10 mx-auto max-w-[1180px]">
-
+  <div class="relative z-10 mx-auto max-w-6xl">
     <!-- Tiêu đề -->
-    <div class="mx-auto mb-10 max-w-[760px] text-center">
-      <h2
-        class="mt-3 font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg
-  text-center
-  md:text-headline-lg capitalize"
-      >
-        Bạn đang cần
-        <span class="text-primary">TOEIC 4 Kỹ Năng</span>
-        hay
-        <span class="text-secondary">IELTS?</span>
+    <div class="mx-auto mb-10 max-w-2xl text-center">
+      <h2 class="text-2xl font-extrabold uppercase text-slate-900 md:text-3xl">
+        Giải pháp tối ưu vận hành bán hàng
       </h2>
 
-      <p
-        class="mx-auto mt-3 max-w-[670px] text-[13px] leading-6
-               text-on-surface-variant md:text-[15px]"
-      >
-        Chọn chương trình phù hợp với mục tiêu của bạn. PMP English đồng hành
-        từ điểm xuất phát đến khi bạn chinh phục mục tiêu.
+      <p class="mt-3 text-sm leading-6 text-slate-500 md:text-base">
+        Lựa chọn giải pháp phù hợp để giảm chi phí, tăng tốc xử lý
+        và nâng cao hiệu quả kinh doanh.
       </p>
     </div>
 
-    <!-- Danh sách card -->
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+    <div class="grid gap-7 md:grid-cols-2">
 
-      <!-- TOEIC CARD -->
-     <!-- TOEIC CARD -->
-<article
-  class="group flex h-full flex-col rounded-[22px]
-         border border-primary/20 bg-white p-3
-         shadow-[0_14px_45px_rgba(0,174,239,.10)]
-         transition duration-300 hover:-translate-y-1
-         hover:shadow-[0_20px_55px_rgba(0,174,239,.16)]"
->
-  <!-- Phần cover -->
-  <div
-    class="relative h-[230px] shrink-0 overflow-hidden rounded-[17px]
-           bg-gradient-to-br from-primary/5 to-primary/10"
-  >
-    <img
-      src="./assets/Artboard 1 copy.png"
-      alt="Luyện thi TOEIC"
-      class="block h-full w-full object-cover object-center"
-    />
-  </div>
-
-  <!-- Nội dung -->
-  <div class="flex flex-1 flex-col px-3 pb-2 pt-5 sm:px-5">
-    <h4 class="text-[14px] font-bold text-primary">
-      Phù hợp với người cần:
-    </h4>
-
-    <ul class="mt-4 space-y-3 text-[13px] leading-5 text-slate-700">
-      <li class="flex items-start gap-3">
-        <span
-          class="mt-[2px] flex h-[18px] w-[18px] shrink-0
-                 items-center justify-center rounded-full
-                 bg-primary text-[11px] font-bold text-white"
-        >
-          ✓
-        </span>
-
-        <span>Chuẩn đầu ra Đại học</span>
-      </li>
-
-      <li class="flex items-start gap-3">
-        <span
-          class="mt-[2px] flex h-[18px] w-[18px] shrink-0
-                 items-center justify-center rounded-full
-                 bg-primary text-[11px] font-bold text-white"
-        >
-          ✓
-        </span>
-
-        <span>Hoàn thiện hồ sơ xin việc</span>
-      </li>
-
-      <li class="flex items-start gap-3">
-        <span
-          class="mt-[2px] flex h-[18px] w-[18px] shrink-0
-                 items-center justify-center rounded-full
-                 bg-primary text-[11px] font-bold text-white"
-        >
-          ✓
-        </span>
-
-        <span>
-          Chứng minh năng lực tiếng Anh trong môi trường công việc
-        </span>
-      </li>
-
-      <li class="flex items-start gap-3">
-        <span
-          class="mt-[2px] flex h-[18px] w-[18px] shrink-0
-                 items-center justify-center rounded-full
-                 bg-primary text-[11px] font-bold text-white"
-        >
-          ✓
-        </span>
-
-        <span>
-          Phát triển đồng thời khả năng tiếp nhận và sử dụng tiếng Anh
-        </span>
-      </li>
-    </ul>
-
-    <!-- Khu vực cuối card -->
-    <div class="mt-auto pt-6">
-      <!-- Box thông tin -->
-      <div
-        class="flex items-center gap-3 rounded-[14px]
-               border border-primary/20 bg-primary/5 px-4 py-3.5"
+      <!-- Card Pancake -->
+      <article
+        class="group relative flex h-full flex-col overflow-hidden rounded-[26px]
+               border border-white/80 bg-white/65 p-3
+               shadow-[0_18px_55px_rgba(37,99,235,0.12)]
+               backdrop-blur-xl"
       >
-        <span
-          class="flex h-8 w-8 shrink-0 items-center justify-center
-                 rounded-full bg-primary text-sm font-bold text-white"
-        >
-          i
-        </span>
+        <!-- Ánh sáng mờ trong card -->
+        <div class="pointer-events-none absolute -right-16 top-32 h-48 w-48 rounded-full bg-blue-300/25 blur-[65px]"></div>
 
-        <p class="text-[12px] leading-5 text-slate-600">
-          <strong class="font-bold text-primary-container">
-            Bạn chưa biết mình cần bao nhiêu điểm?
-          </strong>
-          <br />
-          PMP hỗ trợ kiểm tra và tư vấn mục tiêu phù hợp.
-        </p>
-      </div>
+        <div class="relative z-10 flex h-full flex-col">
+          <a href="#" class="relative block h-[220px] overflow-hidden rounded-[20px]">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85"
+              alt="Giải pháp Pancake"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
 
-      <!-- CTA -->
-      <a
-        href="#dang-ky-toeic"
-        class="mt-5 flex min-h-[52px] w-full items-center
-               justify-between rounded-full
-               bg-gradient-to-r from-primary-container to-primary
-               px-5 text-[12px] font-bold uppercase tracking-[.02em]
-               text-white shadow-[0_10px_25px_rgba(0,174,239,.24)]
-               transition duration-300 hover:brightness-110"
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-950/75 via-blue-900/30 to-transparent"></div>
+
+            <!-- Chuyển mờ từ ảnh xuống nội dung -->
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white/90"></div>
+
+            <div class="absolute left-6 top-6 text-white">
+              <span class="rounded-full border border-white/30 bg-white/15 px-3 py-1 text-xs font-semibold backdrop-blur-md">
+                Pancake
+              </span>
+
+              <h3 class="mt-4 max-w-[300px] text-3xl font-extrabold leading-tight">
+                Tối ưu vận hành bán hàng
+              </h3>
+            </div>
+          </a>
+
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-5">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="max-w-[310px] text-xl font-bold leading-snug text-slate-900">
+                Baratico: Giải pháp đột phá tối ưu bán hàng
+              </h3>
+
+              <div class="shrink-0 rounded-2xl border border-blue-100 bg-blue-50/70 px-4 py-3 text-3xl font-extrabold text-blue-500 backdrop-blur-md">
+                40%
+              </div>
+            </div>
+
+            <p class="mt-4 text-sm leading-6 text-slate-500">
+              Giảm chi phí vận hành, tăng tốc xử lý và thu hút nhiều khách hàng hơn.
+            </p>
+
+            <ul class="mt-5 space-y-3 text-sm text-slate-700">
+              <li class="flex gap-3">
+                <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-500 text-xs text-white">✓</span>
+                Quản lý hội thoại và đơn hàng tập trung
+              </li>
+
+              <li class="flex gap-3">
+                <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-500 text-xs text-white">✓</span>
+                Tăng tốc phản hồi và xử lý khách hàng
+              </li>
+
+              <li class="flex gap-3">
+                <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-500 text-xs text-white">✓</span>
+                Tiết kiệm chi phí và nguồn lực vận hành
+              </li>
+            </ul>
+
+            <a
+              href="#"
+              class="mt-auto flex w-full items-center justify-between rounded-full
+                     bg-gradient-to-r from-blue-600 to-blue-500 px-6 py-4
+                     text-sm font-bold text-white shadow-lg shadow-blue-500/20
+                     transition hover:shadow-blue-500/35"
+            >
+              Tìm hiểu giải pháp Pancake
+              <span class="text-xl">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card WhatsApp -->
+      <article
+        class="group relative flex h-full flex-col overflow-hidden rounded-[26px]
+               border border-white/80 bg-white/65 p-3
+               shadow-[0_18px_55px_rgba(5,150,105,0.12)]
+               backdrop-blur-xl"
       >
-        <span class="flex items-center gap-3">
-          <svg
-            class="h-5 w-5 shrink-0"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            aria-hidden="true"
-          >
-            <rect x="5" y="4" width="14" height="17" rx="2"></rect>
-            <path d="M9 4.5V3h6v1.5M9 9h6M9 13h6M9 17h4"></path>
-          </svg>
+        <div class="pointer-events-none absolute -left-16 top-32 h-48 w-48 rounded-full bg-emerald-300/25 blur-[65px]"></div>
 
-          <span>Nhận lộ trình TOEIC 4 Kỹ Năng</span>
-        </span>
+        <div class="relative z-10 flex h-full flex-col">
+          <a href="#" class="relative block h-[220px] overflow-hidden rounded-[20px]">
+            <img
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+              alt="Giải pháp WhatsApp"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
 
-        <span class="ml-3 text-[22px] font-normal">→</span>
-      </a>
-    </div>
-  </div>
-</article>
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/75 via-emerald-900/30 to-transparent"></div>
 
-      <!-- IELTS CARD -->
-   <article
-  class="group flex h-full flex-col rounded-[22px]
-         border border-secondary/20 bg-white p-3
-         shadow-[0_14px_45px_rgba(237,28,36,.10)]
-         transition duration-300 hover:-translate-y-1
-         hover:shadow-[0_20px_55px_rgba(237,28,36,.16)]"
->
-  <!-- Phần cover -->
-  <div
-    class="relative min-h-[230px] overflow-hidden rounded-[17px]
-           bg-gradient-to-br from-secondary/5 to-secondary/10"
-  >
-    <img
-      src="./assets/Artboard 2 copy.png"
-      alt="Luyện thi IELTS"
-      class="h-full w-full object-cover"
-    />
-  </div>
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white/90"></div>
 
-  <!-- Nội dung -->
-  <div class="flex flex-1 flex-col px-3 pb-2 pt-5 sm:px-5">
-    <h4 class="text-[14px] font-bold text-secondary">
-      Phù hợp với người cần:
-    </h4>
+            <div class="absolute left-6 top-6 text-white">
+              <span class="rounded-full border border-white/30 bg-white/15 px-3 py-1 text-xs font-semibold backdrop-blur-md">
+                WhatsApp
+              </span>
 
-    <ul class="mt-4 space-y-3 text-[13px] leading-5 text-slate-700">
-      <li class="flex items-start gap-3">
-        <span
-          class="mt-[2px] flex h-[18px] w-[18px] shrink-0
-                 items-center justify-center rounded-full
-                 bg-secondary text-[11px] font-bold text-white"
-        >
-          ✓
-        </span>
-        <span>IELTS phục vụ học tập</span>
-      </li>
+              <h3 class="mt-4 max-w-[300px] text-3xl font-extrabold leading-tight">
+                Kết nối khách hàng nhanh hơn
+              </h3>
+            </div>
+          </a>
 
-      <li class="flex items-start gap-3">
-        <span
-          class="mt-[2px] flex h-[18px] w-[18px] shrink-0
-                 items-center justify-center rounded-full
-                 bg-secondary text-[11px] font-bold text-white"
-        >
-          ✓
-        </span>
-        <span>Chuẩn đầu ra</span>
-      </li>
+          <div class="flex flex-1 flex-col px-5 pb-5 pt-5">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="max-w-[310px] text-xl font-bold leading-snug text-slate-900">
+                Tăng tốc tư vấn và chăm sóc khách hàng
+              </h3>
 
-      <li class="flex items-start gap-3">
-        <span
-          class="mt-[2px] flex h-[18px] w-[18px] shrink-0
-                 items-center justify-center rounded-full
-                 bg-secondary text-[11px] font-bold text-white"
-        >
-          ✓
-        </span>
-        <span>Du học hoặc hồ sơ</span>
-      </li>
+              <div class="shrink-0 rounded-2xl border border-emerald-100 bg-emerald-50/70 px-4 py-3 text-3xl font-extrabold text-emerald-600 backdrop-blur-md">
+                2X
+              </div>
+            </div>
 
-      <li class="flex items-start gap-3">
-        <span
-          class="mt-[2px] flex h-[18px] w-[18px] shrink-0
-                 items-center justify-center rounded-full
-                 bg-secondary text-[11px] font-bold text-white"
-        >
-          ✓
-        </span>
-        <span>Công việc và phát triển năng lực tiếng Anh</span>
-      </li>
-    </ul>
+            <p class="mt-4 text-sm leading-6 text-slate-500">
+              Tập trung hội thoại, phản hồi nhanh và nâng cao trải nghiệm khách hàng.
+            </p>
 
-    <!-- Box thông tin -->
-    <div
-      class="mt-6 flex items-center gap-3 rounded-[14px]
-             border border-secondary/20 bg-secondary/5 px-4 py-3.5"
-    >
-      <span
-        class="flex h-8 w-8 shrink-0 items-center justify-center
-               rounded-full bg-secondary text-sm font-bold text-white"
-      >
-        i
-      </span>
+            <ul class="mt-5 space-y-3 text-sm text-slate-700">
+              <li class="flex gap-3">
+                <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs text-white">✓</span>
+                Kết nối khách hàng nhanh chóng
+              </li>
 
-      <p class="text-[12px] leading-5 text-slate-600">
-        Không chỉ luyện đề, học viên được xác định điểm yếu từng kỹ năng
-        để tập trung cải thiện đúng phần đang ảnh hưởng đến Overall Band.
-      </p>
-    </div>
+              <li class="flex gap-3">
+                <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs text-white">✓</span>
+                Quản lý hội thoại trên một hệ thống
+              </li>
 
-    <!-- CTA -->
-    <a
-      href="#dang-ky-ielts"
-      class="mt-5 flex min-h-[52px] w-full items-center
-             justify-between rounded-full
-             bg-gradient-to-r from-secondary to-secondary-container
-             px-5 text-[12px] font-bold uppercase tracking-[.02em]
-             text-white shadow-[0_10px_25px_rgba(237,28,36,.24)]
-             transition duration-300 hover:brightness-110"
-    >
-      <span class="flex items-center gap-3">
-        <svg
-          class="h-5 w-5"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-        >
-          <rect x="5" y="4" width="14" height="17" rx="2"></rect>
-          <path d="M9 4.5V3h6v1.5M9 9h6M9 13h6M9 17h4"></path>
-        </svg>
+              <li class="flex gap-3">
+                <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs text-white">✓</span>
+                Nâng cao tốc độ tư vấn và chuyển đổi
+              </li>
+            </ul>
 
-        Nhận lộ trình IELTS
-      </span>
-
-      <span class="text-[22px] font-normal">→</span>
-    </a>
-  </div>
-</article>
+            <a
+              href="#"
+              class="mt-auto flex w-full items-center justify-between rounded-full
+                     bg-gradient-to-r from-emerald-600 to-emerald-500 px-6 py-4
+                     text-sm font-bold text-white shadow-lg shadow-emerald-500/20
+                     transition hover:shadow-emerald-500/35"
+            >
+              Tìm hiểu giải pháp WhatsApp
+              <span class="text-xl">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
 
     </div>
   </div>
 </section>
 
 <section class="bg-[#f5f9ff] px-margin-mobile py-6 md:px-margin-desktop md:py-15" id="thanh-tich-hoc-vien">
-  <div class="mx-auto max-w-7xl ">
+  <div class="mx-auto max-w-container-max">
 
     <!-- ===================================================== -->
     <!-- HEADING -->
@@ -1343,7 +1128,7 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
         <button
           type="button"
           data-score-tab="ielts"
-          class="score-tab rounded-full bg-white px-6 py-3 font-semibold transition-all border border-secondary  text-secondary"
+          class="score-tab rounded-full bg-white px-6 py-3 font-semibold transition-all border border-secondary"
         >
           IELTS
         </button>
@@ -1746,9 +1531,7 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
     transform: scale(1.04);
   }
 
-p{
-  font-size: 15px!important;
-}
+
   /* =========================================================
      MOBILE
   ========================================================= */
@@ -3118,51 +2901,45 @@ function initTeacherSlider() {
 
 function initTabs() {
   const buttons = document.querySelectorAll("[data-score-tab]");
-  const contents = document.querySelectorAll(".score-tab-content");
 
-  buttons.forEach((button) => {
+  buttons.forEach(button => {
     button.addEventListener("click", () => {
       const target = button.dataset.scoreTab;
 
-      /* Ẩn tất cả nội dung */
-      contents.forEach((content) => {
+      // Ẩn tất cả content
+      document.querySelectorAll(".score-tab-content").forEach(content => {
         content.classList.add("hidden");
       });
 
-      /* Hiện nội dung được chọn */
+      // Hiện content được chọn
       const targetContent = document.getElementById(`tab-${target}`);
 
       if (targetContent) {
         targetContent.classList.remove("hidden");
       }
 
-      /* Reset màu tất cả tab */
-      buttons.forEach((item) => {
+      // Reset tất cả button
+      buttons.forEach(item => {
         item.classList.remove(
           "bg-primary",
           "bg-secondary",
+          "bg-black",
           "text-white",
-          "text-primary",
-          "text-secondary"
+          "text-black"
         );
 
-        item.classList.add("bg-white");
-
-        /* Màu chữ khi không active */
-        if (item.dataset.scoreTab === "toeic") {
-          item.classList.add("text-primary");
-        }
-
-        if (item.dataset.scoreTab === "ielts") {
-          item.classList.add("text-secondary");
-        }
+        item.classList.add(
+          "bg-white",
+          "text-primary"
+        );
       });
 
-      /* Active tab được chọn */
+      // Active button
       button.classList.remove(
         "bg-white",
         "text-primary",
-        "text-secondary"
+        "text-white",
+        "text-white"
       );
 
       if (target === "toeic") {
@@ -3172,7 +2949,7 @@ function initTabs() {
         );
       }
 
-      if (target === "ielts") {
+      else if (target === "ielts") {
         button.classList.add(
           "bg-secondary",
           "text-white"
@@ -4483,386 +4260,181 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<section class="overflow-hidden bg-white px-4 py-12 md:px-16 md:py-16">
-  <div class="mx-auto max-w-7xl ">
+  <section class="overflow-hidden bg-white px-4 py-12 md:px-16 md:py-16">
+    <div class="mx-auto max-w-container-max">
 
-    <!-- Tiêu đề -->
-    <header class="text-center">
-     
+      <header class="text-center">
+        <span class="inline-flex rounded-full bg-surface-container-low px-4 py-1.5 text-xs font-bold uppercase tracking-[.05em] text-primary">
+          Những người đồng hành
+        </span>
 
-      <h2
-        class="mt-3 font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg
-  text-center
-  md:text-headline-lg capitalize"
-      >
-        Đội ngũ giảng viên
-        <span class="text-primary">PMP English</span>
-      </h2>
-    </header>
+        <h2 class="mt-3 font-headline text-[27px] font-extrabold uppercase leading-tight md:text-[36px]">
+          Đội ngũ nói gì về
+          <span class="text-primary">PMP English</span>
+        </h2>
+      </header>
 
-    <!-- Danh sách giảng viên -->
-    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="mt-10 grid grid-cols-1 gap-x-7 gap-y-5 md:grid-cols-2">
 
-      <!-- BOX 01 -->
-   <article
-  class="group relative min-h-[220px] overflow-hidden rounded-[24px]
-         bg-white px-5 pb-5 pt-5
+        <!-- Item 01 -->
+  <article
+  class="group relative min-h-[185px] overflow-hidden rounded-[24px] bg-white
+         pl-[118px] pr-5 pt-5
          shadow-[0_10px_30px_rgba(1,86,155,.07)]
-         transition duration-300 hover:-translate-y-1
-         hover:shadow-[0_15px_35px_rgba(1,86,155,.12)]
-         sm:overflow-visible sm:pl-[100px] sm:pr-7"
+         sm:pl-[150px] sm:pr-7"
 >
   <!-- Border góc trên trái -->
-  <span
-    class="hidden sm:block pointer-events-none absolute left-0 top-0
-           h-[70px] w-[90%] rounded-tl-[24px]
-           border-l border-t border-primary/50"
-  ></span>
-
-  <!-- Border góc trên phải -->
-  <span
-    class="hidden sm:block pointer-events-none absolute right-0 top-0
-           h-[20px] w-[10%] rounded-tr-[24px]
-           border-r border-t border-primary/30"
-  ></span>
+  <div
+    class="pointer-events-none absolute left-0 top-0 h-[55%] w-full
+           rounded-tl-[24px] rounded-tr-[24px]
+           border-l border-t border-primary/60"
+  ></div>
 
   <!-- Border góc dưới phải -->
-  <span
-    class="hidden sm:block pointer-events-none absolute bottom-0 right-0
-           h-[20px] w-[5%] rounded-br-[24px]
-           border-b border-r border-primary/30"
-  ></span>
+<div
+  class="pointer-events-none absolute bottom-0 right-0
+         h-[24px] w-[24px]
+         border-b border-r border-primary/30
+         rounded-br-[24px]"
+></div>
 
   <!-- Hình giảng viên -->
   <div
-    class="relative z-20 mx-auto flex h-[220px] w-full max-w-[280px]
-           items-end justify-center
-           sm:absolute sm:bottom-0 sm:left-[-28px] sm:mx-0
-           sm:h-[205px] sm:w-[180px] sm:max-w-none sm:ml-[-50px]"
+    class="absolute bottom-0 left-0 flex h-[168px] w-[112px]
+           items-end justify-center sm:w-[142px]"
   >
-    <!-- Nửa hình tròn trên mobile -->
     <div
-      class="absolute sm:hidden bottom-0 left-1/2 h-[170px] w-[250px]
-             -translate-x-1/2 rounded-t-full bg-surface-container-low
-             sm:h-[145px] sm:w-[145px]"
+      class="absolute bottom-0 h-[125px] w-[105px] rounded-t-full
+             bg-surface-container-low sm:w-[130px]"
     ></div>
 
     <img
-      src="./assets/GV-GIANG.png"
-      alt="Ms. Nguyễn Hương Giang"
-      class="relative z-10 h-[215px] w-auto max-w-full
-             object-contain object-bottom
-             transition-transform duration-300
-             group-hover:scale-[1.03]
-             sm:h-[200px] sm:w-[170px] sm:max-w-none"
-    />
+      src="https://i.pravatar.cc/360?img=47"
+      alt="Nguyễn Minh Anh"
+      class="relative z-10 h-[158px] w-[108px] rounded-t-full
+             object-cover object-top transition-transform duration-300
+             group-hover:scale-[1.03] sm:w-[135px]"
+    >
   </div>
 
   <!-- Dấu ngoặc kép -->
   <span
-    class="absolute right-5 top-3 z-10 font-headline text-[46px]
+    class="absolute right-5 top-3 font-headline text-[46px]
            font-extrabold leading-none text-primary/20"
   >
     “
   </span>
 
   <!-- Nội dung -->
-  <div class="relative z-10 mt-5 text-center sm:mt-0 sm:text-left xl:mt-[20px]">
-    <h3
-      class="sm:pr-8 font-headline text-[15px] font-bold uppercase leading-6"
-    >
-      Ms. Nguyễn Hương Giang
+  <div class="relative z-10">
+    <h3 class="pr-8 font-headline text-[15px] font-bold leading-6">
+      Nguyễn Minh Anh
+      <span class="font-body font-semibold text-primary-container">
+        | IELTS Instructor
+      </span>
     </h3>
 
-    <span
-      class="mt-1 inline-block text-[12px] font-bold uppercase
-             tracking-[.03em] text-primary-container"
-    >
-      TOEIC 4 kỹ năng
-    </span>
-
-    <p class="mt-3 text-[13px] leading-5 text-on-surface-variant">
-      Sở hữu <strong>400/400 TOEIC Speaking &amp; Writing</strong>,
-      cô Hương Giang có hơn 6 năm kinh nghiệm giảng dạy và tốt nghiệp
-      Cử nhân Sư phạm Tiếng Anh. Cô tập trung giúp học viên cải thiện
-      khả năng sử dụng tiếng Anh và chinh phục mục tiêu TOEIC 4 kỹ năng.
-    </p>
-  </div>
-</article>
-      <!-- BOX 02 -->
-     <article
-  class="group relative min-h-[220px] overflow-hidden rounded-[24px]
-         bg-white px-5 pb-5 pt-5
-         shadow-[0_10px_30px_rgba(1,86,155,.07)]
-         transition duration-300 hover:-translate-y-1
-         hover:shadow-[0_15px_35px_rgba(1,86,155,.12)]
-         sm:overflow-visible sm:pl-[100px] sm:pr-7"
->
-  <!-- Border góc trên trái -->
-  <span
-    class="hidden sm:block pointer-events-none absolute left-0 top-0
-           h-[70px] w-[90%] rounded-tl-[24px]
-           border-l border-t border-primary/50"
-  ></span>
-
-  <!-- Border góc trên phải -->
-  <span
-    class="hidden sm:block pointer-events-none absolute right-0 top-0
-           h-[20px] w-[10%] rounded-tr-[24px]
-           border-r border-t border-primary/30"
-  ></span>
-
-  <!-- Border góc dưới phải -->
-  <span
-    class="hidden sm:block  pointer-events-none absolute bottom-0 right-0
-           h-[20px] w-[5%] rounded-br-[24px]
-           border-b border-r border-primary/30"
-  ></span>
-
-  <!-- Hình giảng viên -->
-  <div
-    class="relative z-20 mx-auto flex h-[220px] w-full max-w-[280px]
-           items-end justify-center
-           sm:absolute sm:bottom-0 sm:left-[-28px] sm:mx-0 sm:ml-[-50px]
-           sm:h-[205px] sm:w-[180px] sm:max-w-none"
-  >
-    <!-- Nửa hình tròn chỉ hiển thị trên mobile -->
-    <div
-      class="absolute bottom-0 left-1/2 h-[170px] w-[250px]
-             -translate-x-1/2 rounded-t-full bg-surface-container-low
-             sm:hidden"
-    ></div>
-
-    <img
-      src="./assets/GV-PHU.png"
-      alt="Mr. Dương Gia Phú"
-      class="relative z-10 h-[215px] w-auto max-w-full
-             object-contain object-bottom
-             transition-transform duration-300
-             group-hover:scale-[1.03]
-             sm:h-[200px] sm:w-[170px] sm:max-w-none"
-    />
-  </div>
-
-  <!-- Dấu ngoặc kép -->
-  <span
-    class="absolute right-5 top-3 z-10 font-headline text-[46px]
-           font-extrabold leading-none text-primary/20"
-  >
-    “
-  </span>
-
-  <!-- Nội dung -->
-  <div
-    class="relative z-10 mt-5 text-center
-           sm:mt-0 sm:text-left
-           xl:mt-[20px]"
-  >
-    <h3
-      class="sm:pr-8 font-headline text-[15px] font-bold uppercase leading-6"
-    >
-      Mr. Dương Gia Phú
-    </h3>
-
-    <span
-      class="mt-1 inline-block text-[12px] font-bold uppercase
-             tracking-[.03em] text-primary-container"
-    >
-      IELTS
-    </span>
-
-    <p class="mt-3 text-[13px] leading-5 text-on-surface-variant">
-      Tốt nghiệp loại Giỏi ngành Sư phạm Anh và có hơn 7 năm kinh nghiệm
-      giảng dạy, thầy Gia Phú đồng hành cùng học viên trong quá trình xây
-      nền tảng, cải thiện từng kỹ năng và hướng đến mục tiêu IELTS phù hợp.
-    </p>
-  </div>
-</article>
-<!-- BOX 03 -->
-<article
-  class="group relative min-h-[220px] overflow-hidden rounded-[24px]
-         bg-white px-5 pb-5 pt-5
-         shadow-[0_10px_30px_rgba(1,86,155,.07)]
-         transition duration-300 hover:-translate-y-1
-         hover:shadow-[0_15px_35px_rgba(1,86,155,.12)]
-         sm:overflow-visible sm:pl-[100px] sm:pr-7"
->
-  <!-- Border góc trên trái -->
-  <span
-    class="hidden sm:block  pointer-events-none absolute left-0 top-0
-           h-[70px] w-[90%] rounded-tl-[24px]
-           border-l border-t border-primary/50"
-  ></span>
-
-  <!-- Border góc trên phải -->
-  <span
-    class="hidden sm:block pointer-events-none absolute right-0 top-0
-           h-[20px] w-[10%] rounded-tr-[24px]
-           border-r border-t border-primary/30"
-  ></span>
-
-  <!-- Border góc dưới phải -->
-  <span
-    class=" hidden sm:block pointer-events-none absolute bottom-0 right-0
-           h-[20px] w-[5%] rounded-br-[24px]
-           border-b border-r border-primary/30"
-  ></span>
-
-  <!-- Hình giảng viên -->
-  <div
-    class="relative z-20 mx-auto flex h-[220px] w-full max-w-[280px]
-           items-end justify-center
-           sm:absolute sm:bottom-0 sm:left-[-28px] sm:mx-0 sm:ml-[-50px]
-           sm:h-[205px] sm:w-[180px] sm:max-w-none"
-  >
-    <!-- Nửa hình tròn chỉ hiển thị trên mobile -->
-    <div
-      class="absolute bottom-0 left-1/2 h-[170px] w-[250px]
-             -translate-x-1/2 rounded-t-full bg-surface-container-low
-             sm:hidden"
-    ></div>
-
-    <img
-      src="./assets/GV-HAO-1.png"
-      alt="Ms. Trần Thị Thanh Hảo"
-      class="relative z-10 h-[215px] w-auto max-w-full
-             object-contain object-bottom
-             transition-transform duration-300
-             group-hover:scale-[1.03]
-             sm:h-[200px] sm:w-[170px] sm:max-w-none"
-    />
-  </div>
-
-  <!-- Dấu ngoặc kép -->
-  <span
-    class="absolute right-5 top-3 z-10 font-headline text-[46px]
-           font-extrabold leading-none text-primary/20"
-  >
-    “
-  </span>
-
-  <!-- Nội dung -->
-  <div
-    class="relative z-10 mt-5 text-center
-           sm:mt-0 sm:text-left
-           xl:mt-[20px]"
-  >
-    <h3
-      class="sm:pr-8 font-headline text-[15px] font-bold uppercase leading-6"
-    >
-      Ms. Trần Thị Thanh Hảo
-    </h3>
-
-    <span
-      class="mt-1 inline-block text-[12px] font-bold uppercase
-             tracking-[.03em] text-primary-container"
-    >
-      TOEIC
-    </span>
-
-    <p class="mt-3 text-[13px] leading-5 text-on-surface-variant">
-      Sở hữu <strong>990/990 TOEIC Listening &amp; Reading</strong>,
-      cô Thanh Hảo có hơn 6 năm kinh nghiệm giảng dạy và tốt nghiệp
-      Cử nhân Ngôn ngữ Anh. Cô đã đồng hành cùng nhiều học viên trong
-      quá trình luyện thi và đạt kết quả TOEIC mục tiêu.
+    <p class="mt-3 pb-5 text-[13px] leading-5 text-on-surface-variant">
+      Điều tôi trân trọng tại PMP English là mỗi học viên đều có một lộ
+      trình riêng. Giáo viên không chỉ truyền đạt kiến thức mà còn theo
+      sát sự tiến bộ và điều chỉnh phương pháp khi cần.
     </p>
   </div>
 </article>
 
-<!-- BOX 04 -->
-<article
-  class="group relative min-h-[220px] overflow-hidden rounded-[24px]
-         bg-white px-5 pb-5 pt-5
-         shadow-[0_10px_30px_rgba(1,86,155,.07)]
-         transition duration-300 hover:-translate-y-1
-         hover:shadow-[0_15px_35px_rgba(1,86,155,.12)]
-         sm:overflow-visible sm:pl-[100px] sm:pr-7"
->
-  <!-- Border góc trên trái -->
-  <span
-    class="hidden sm:block pointer-events-none absolute left-0 top-0
-           h-[70px] w-[90%] rounded-tl-[24px]
-           border-l border-t border-primary/50"
-  ></span>
+        <!-- Item 02 -->
+        <article class="group relative min-h-[185px] overflow-hidden rounded-xl border border-primary/45 bg-white pl-[118px] pr-5 pt-5 shadow-[0_10px_30px_rgba(1,86,155,.07)] sm:pl-[150px] sm:pr-7">
+          <div class="absolute bottom-0 left-0 flex h-[168px] w-[112px] items-end justify-center sm:w-[142px]">
+            <div class="absolute bottom-0 h-[125px] w-[105px] rounded-t-full bg-surface-container-low sm:w-[130px]"></div>
 
-  <!-- Border góc trên phải -->
-  <span
-    class="hidden sm:block  pointer-events-none absolute right-0 top-0
-           h-[20px] w-[10%] rounded-tr-[24px]
-           border-r border-t border-primary/30"
-  ></span>
+            <img
+              src="https://i.pravatar.cc/360?img=12"
+              alt="Trần Hoàng Nam"
+              class="relative z-10 h-[158px] w-[108px] rounded-t-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03] sm:w-[135px]"
+            >
+          </div>
 
-  <!-- Border góc dưới phải -->
-  <span
-    class="hidden sm:block  pointer-events-none absolute bottom-0 right-0
-           h-[20px] w-[5%] rounded-br-[24px]
-           border-b border-r border-primary/30"
-  ></span>
+          <span class="absolute right-5 top-3 font-headline text-[46px] font-extrabold leading-none text-primary/20">
+            “
+          </span>
 
-  <!-- Hình giảng viên -->
-  <div
-    class="relative z-20 mx-auto flex h-[220px] w-full max-w-[280px]
-           items-end justify-center
-           sm:absolute sm:bottom-0 sm:left-[-28px] sm:mx-0 sm:ml-[-50px]
-           sm:h-[205px] sm:w-[180px] sm:max-w-none"
-  >
-    <!-- Nửa hình tròn chỉ hiển thị trên mobile -->
-    <div
-      class="absolute bottom-0 left-1/2 h-[170px] w-[250px]
-             -translate-x-1/2 rounded-t-full bg-surface-container-low
-             sm:hidden"
-    ></div>
+          <h3 class="relative pr-8 font-headline text-[15px] font-bold leading-6">
+            Trần Hoàng Nam
+            <span class="font-body font-semibold text-primary-container">
+              | TOEIC Instructor
+            </span>
+          </h3>
 
-    <img
-      src="./assets/GV-LAN.png"
-      alt="Ms. Nghiêm Thị Lan"
-      class="relative z-10 h-[215px] w-auto max-w-full
-             object-contain object-bottom
-             transition-transform duration-300
-             group-hover:scale-[1.03]
-             sm:h-[200px] sm:w-[170px] sm:max-w-none"
-    />
-  </div>
+          <p class="relative mt-3 pb-5 text-[13px] leading-5 text-on-surface-variant">
+            Một lớp học hiệu quả phải giúp học viên hiểu mình đang thiếu
+            gì. Vì vậy, mỗi buổi học đều tập trung vào lỗi sai thực tế và
+            hướng cải thiện cụ thể thay vì học lan man.
+          </p>
+        </article>
 
-  <!-- Dấu ngoặc kép -->
-  <span
-    class="absolute right-5 top-3 z-10 font-headline text-[46px]
-           font-extrabold leading-none text-primary/20"
-  >
-    “
-  </span>
+        <!-- Item 03 -->
+        <article class="group relative min-h-[185px] overflow-hidden rounded-xl border border-primary/45 bg-white pl-[118px] pr-5 pt-5 shadow-[0_10px_30px_rgba(1,86,155,.07)] sm:pl-[150px] sm:pr-7">
+          <div class="absolute bottom-0 left-0 flex h-[168px] w-[112px] items-end justify-center sm:w-[142px]">
+            <div class="absolute bottom-0 h-[125px] w-[105px] rounded-t-full bg-surface-container-low sm:w-[130px]"></div>
 
-  <!-- Nội dung -->
-  <div
-    class="relative z-10 mt-5 text-center
-           sm:mt-0 sm:text-left
-           xl:mt-[20px]"
-  >
-    <h3
-      class="sm:pr-8 font-headline text-[15px] font-bold uppercase leading-6"
-    >
-      Ms. Nghiêm Thị Lan
-    </h3>
+            <img
+              src="https://i.pravatar.cc/360?img=45"
+              alt="Lê Thùy Dương"
+              class="relative z-10 h-[158px] w-[108px] rounded-t-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03] sm:w-[135px]"
+            >
+          </div>
 
-    <span
-      class="mt-1 inline-block text-[12px] font-bold uppercase
-             tracking-[.03em] text-primary-container"
-    >
-      TOEIC
-    </span>
+          <span class="absolute right-5 top-3 font-headline text-[46px] font-extrabold leading-none text-primary/20">
+            “
+          </span>
 
-    <p class="mt-3 text-[13px] leading-5 text-on-surface-variant">
-      Sở hữu <strong>990/990 TOEIC Listening &amp; Reading</strong>,
-      cô Nghiêm Thị Lan có hơn 6 năm kinh nghiệm giảng dạy và tốt nghiệp
-      Cử nhân Ngôn ngữ Anh. Phương pháp giảng dạy tập trung vào trọng tâm
-      bài thi, giúp học viên cải thiện năng lực và tiến gần mục tiêu điểm số.
-    </p>
-  </div>
-</article>
+          <h3 class="relative pr-8 font-headline text-[15px] font-bold leading-6">
+            Lê Thùy Dương
+            <span class="font-body font-semibold text-primary-container">
+              | Academic Team
+            </span>
+          </h3>
 
+          <p class="relative mt-3 pb-5 text-[13px] leading-5 text-on-surface-variant">
+            Chúng tôi liên tục theo dõi kết quả học tập để lộ trình luôn
+            phù hợp với năng lực và mục tiêu đầu ra của từng học viên
+            trong từng giai đoạn.
+          </p>
+        </article>
+
+        <!-- Item 04 -->
+        <article class="group relative min-h-[185px] overflow-hidden rounded-xl border border-primary/45 bg-white pl-[118px] pr-5 pt-5 shadow-[0_10px_30px_rgba(1,86,155,.07)] sm:pl-[150px] sm:pr-7">
+          <div class="absolute bottom-0 left-0 flex h-[168px] w-[112px] items-end justify-center sm:w-[142px]">
+            <div class="absolute bottom-0 h-[125px] w-[105px] rounded-t-full bg-surface-container-low sm:w-[130px]"></div>
+
+            <img
+              src="https://i.pravatar.cc/360?img=15"
+              alt="Phạm Quốc Huy"
+              class="relative z-10 h-[158px] w-[108px] rounded-t-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03] sm:w-[135px]"
+            >
+          </div>
+
+          <span class="absolute right-5 top-3 font-headline text-[46px] font-extrabold leading-none text-primary/20">
+            “
+          </span>
+
+          <h3 class="relative pr-8 font-headline text-[15px] font-bold leading-6">
+            Phạm Quốc Huy
+            <span class="font-body font-semibold text-primary-container">
+              | Student Support
+            </span>
+          </h3>
+
+          <p class="relative mt-3 pb-5 text-[13px] leading-5 text-on-surface-variant">
+            Sự đồng hành không dừng lại khi buổi học kết thúc. Đội ngũ
+            hỗ trợ luôn sẵn sàng giải đáp, nhắc tiến độ và giúp học viên
+            duy trì nhịp học ổn định.
+          </p>
+        </article>
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -4872,7 +4444,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="pointer-events-none absolute inset-0 -z-10 opacity-45" aria-hidden="true"
       style="background-image:radial-gradient(circle,rgba(0,174,239,.16) 1.2px,transparent 1.2px);background-size:18px 18px;mask-image:linear-gradient(to bottom,transparent 10%,black 60%,black 100%);"></div>
 
-    <div class="mx-auto max-w-7xl ">
+    <div class="mx-auto max-w-container-max">
       <header class="text-center">
         <span class="inline-flex rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-[.04em] text-primary shadow-sm">
           Học viên nói gì về PMP English?
@@ -4988,9 +4560,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <section class="bg-surface-container-low px-4 py-8 md:px-16 md:py-10">
-    <div class="mx-auto max-w-7xl ">
+    <div class="mx-auto max-w-container-max">
       <div class="rounded-xl bg-surface-container-lowest px-5 py-6 shadow-[0_6px_24px_rgba(1,86,155,.06)] md:px-8 md:py-7">
-        <h2 class="font-headline text-[16px] font-bold leading-6 md:text-[18px] capitalize">
+        <h2 class="font-headline text-[16px] font-bold leading-6 md:text-[18px]">
           Lý Do Chọn PMP English
         </h2>
 
@@ -5055,7 +4627,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           <div class="mt-8 grid grid-cols-2 gap-3">
             <article class="rounded-2xl border border-white bg-white p-4 shadow-sm">
-              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-surface-container-low text-primary">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-secondary/20 text-secondary">
                 <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V6H6.5A2.5 2.5 0 004 8.5v11zM8 10h8M8 13h6" />
                 </svg>
@@ -5065,8 +4637,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </article>
 
             <article class="rounded-2xl border border-white bg-white p-4 shadow-sm">
-              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-surface-container-low text-primary">
-                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-primary" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <div class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-secondary/20 text-secondary">
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-secondary" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M12 22a10 10 0 100-20 10 10 0 000 20z" />
                 </svg>
               </div>
@@ -5080,7 +4652,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="mt-1 text-sm leading-6">
               PMP sẽ dựa trên trình độ, mục tiêu và thời gian dự kiến để tư vấn lộ trình phù hợp, giúp bạn tránh học sai hướng và mất thêm thời gian.
             </p>
-            <a href="#uu-dai-chinh-sach" class="mt-4 uppercase inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md">
+            <a href="#uu-dai-chinh-sach" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md">
               Nhận tư vấn lộ trình
               <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" />
@@ -5197,8 +4769,8 @@ document.addEventListener("DOMContentLoaded", function () {
       
       <!-- Card 1 -->
       <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-5 hover:shadow-md transition">
-        <div class="w-14 h-14 rounded-full bg-surface-container-low text-primary flex items-center justify-center shrink-0">
-          <svg class="w-7 h-7 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
           </svg>
         </div>
@@ -5210,8 +4782,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       <!-- Card 2 -->
       <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-5 hover:shadow-md transition">
-        <div class="w-14 h-14 rounded-full bg-surface-container-low text-primary flex items-center justify-center shrink-0">
-          <svg class="w-7 h-7 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
           </svg>
         </div>
@@ -5223,8 +4795,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       <!-- Card 3 -->
       <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-5 hover:shadow-md transition">
-        <div class="w-14 h-14 rounded-full bg-surface-container-low text-primary flex items-center justify-center shrink-0">
-          <svg class="w-7 h-7 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+          <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
           </svg>
         </div>
@@ -5368,7 +4940,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <button 
           type="submit" 
-          class="w-full uppercase mt-4 py-3 bg-secondary hover:bg-red-600 text-white font-bold rounded-lg transition duration-200 text-sm shadow-sm cursor-pointer"
+          class="w-full mt-4 py-3 bg-secondary hover:bg-red-600 text-white font-bold rounded-lg transition duration-200 text-sm shadow-sm cursor-pointer"
         >
           Nhận tư vấn ngay
         </button>
@@ -5382,14 +4954,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- SECTION HỆ THỐNG CƠ SỞ -->
 <section class="bg-white px-margin-mobile py-12 md:px-margin-desktop md:py-16">
-  <div class="mx-auto max-w-7xl ">
+  <div class="mx-auto max-w-container-max">
     <div class="text-center">
-      <!-- <span class="inline-flex rounded-full bg-surface-container-low px-4 py-1.5 font-label-sm font-semibold uppercase tracking-[.05em] text-primary">
+      <span class="inline-flex rounded-full bg-surface-container-low px-4 py-1.5 font-label-sm font-semibold uppercase tracking-[.05em] text-primary">
         Hệ thống PMP English
-      </span> -->
-      <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg
-  text-center
-  md:text-headline-lg capitalize">
+      </span>
+      <h2 class="mt-3 font-headline-lg text-[28px] font-bold leading-9 text-on-surface md:text-[36px] md:leading-[44px]">
         Cơ sở của chúng tôi
       </h2>
       <p class="mx-auto mt-2 max-w-2xl font-body-md text-on-surface-variant">
@@ -5444,10 +5014,10 @@ document.addEventListener("DOMContentLoaded", function () {
     branchList.innerHTML = pmpBranches.map((branch, index) => `
       <button type="button" data-branch-index="${index}" class="pmp-branch-button min-w-[285px] rounded-xl border border-transparent bg-white p-4 text-left transition duration-300 hover:border-primary/40 hover:shadow-md lg:min-w-0">
         <span class="flex items-center gap-2 font-headline-md text-[17px] font-semibold leading-6 text-on-surface">
-          <span class="material-symbols-outlined text-[15px] sm:text-[21px] text-primary">location_on</span>
+          <span class="material-symbols-outlined text-[21px] text-primary">location_on</span>
           ${branch.name}
         </span>
-        <span class="mt-2 block pl-[29px] font-body-sm text-on-surface-variant text-[13px]">${branch.address}</span>
+        <span class="mt-2 block pl-[29px] font-body-sm text-on-surface-variant">${branch.address}</span>
         <span class="mt-3 inline-flex items-center gap-1 pl-[29px] font-label-sm font-semibold text-primary">
           Xem trên bản đồ
           <span class="material-symbols-outlined text-[16px]">arrow_forward</span>

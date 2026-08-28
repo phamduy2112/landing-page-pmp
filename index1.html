@@ -1,3 +1,26 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baratico Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "Arial", "sans-serif"] },
+          boxShadow: { card: "0 16px 45px rgba(15, 23, 42, 0.10)" }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-slate-100 p-5 font-sans text-slate-800 sm:p-10">
 <section class="relative overflow-hidden bg-[#f6faff] px-5 py-16">
   <!-- Các mảng màu mờ phía sau -->
   <div class="pointer-events-none absolute -left-20 top-10 h-80 w-80 rounded-full bg-blue-300/30 blur-[100px]"></div>
@@ -180,3 +203,5 @@
     </div>
   </div>
 </section>
+</body>
+</html>
