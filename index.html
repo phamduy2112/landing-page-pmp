@@ -4863,7 +4863,380 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </section>
+<!-- =====================================================
+     THÔNG BÁO HỌC VIÊN ĐĂNG KÝ
+====================================================== -->
+<style>
+  #studentRegisterToast {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 999999;
 
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    padding: 15px;
+
+    background: #ffffff;
+    border: 1px solid rgba(0, 174, 239, 0.2);
+    border-radius: 18px;
+
+    box-shadow:
+      0 18px 50px rgba(14, 29, 40, 0.16),
+      0 4px 12px rgba(14, 29, 40, 0.08);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(25px);
+
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  #studentRegisterToast.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .student-toast-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .student-toast-avatar {
+    display: flex;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(0, 174, 239, 0.1);
+
+    color: #00aeef;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .student-toast-information {
+    min-width: 0;
+    flex: 1;
+    padding-right: 18px;
+  }
+
+  .student-toast-message {
+    margin: 0;
+
+    color: #475569;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .student-toast-name {
+    color: #0f172a;
+    font-weight: 700;
+  }
+
+  .student-toast-course {
+    color: #00aeef;
+    font-weight: 700;
+  }
+
+  .student-toast-time {
+    margin: 4px 0 0;
+
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .student-toast-close {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+
+    display: flex;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+
+    background: transparent;
+    color: #94a3b8;
+
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .student-toast-close:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+  }
+
+  @media (max-width: 640px) {
+    #studentRegisterToast {
+      right: 16px;
+      bottom: 16px;
+      left: 16px;
+
+      width: auto;
+      max-width: none;
+    }
+  }
+</style>
+
+<div
+  id="studentRegisterToast"
+  role="status"
+  aria-live="polite"
+  aria-atomic="true"
+>
+  <button
+    id="studentToastClose"
+    class="student-toast-close"
+    type="button"
+    aria-label="Đóng thông báo"
+  >
+    ×
+  </button>
+
+  <div class="student-toast-content">
+    <div
+      id="studentToastAvatar"
+      class="student-toast-avatar"
+    >
+      N
+    </div>
+
+    <div class="student-toast-information">
+      <p class="student-toast-message">
+        <strong
+          id="studentToastName"
+          class="student-toast-name"
+        >
+          Nguyễn Minh Anh
+        </strong>
+
+        tại
+
+        <span id="studentToastLocation">
+          TP.HCM
+        </span>
+
+        vừa đăng ký khóa
+
+        <strong
+          id="studentToastCourse"
+          class="student-toast-course"
+        >
+          TOEIC 4 Kỹ Năng
+        </strong>
+      </p>
+
+      <p
+        id="studentToastTime"
+        class="student-toast-time"
+      >
+        5 phút trước
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const registrationData = [
+      {
+        name: "Nguyễn Minh Anh",
+        location: "TP.HCM",
+        course: "TOEIC 4 Kỹ Năng",
+        time: "5 phút trước",
+        type: "toeic"
+      },
+      {
+        name: "Trần Gia Hân",
+        location: "Thủ Đức",
+        course: "IELTS",
+        time: "12 phút trước",
+        type: "ielts"
+      },
+      {
+        name: "Lê Hoàng Nam",
+        location: "Bình Thạnh",
+        course: "TOEIC Speaking & Writing",
+        time: "20 phút trước",
+        type: "toeic"
+      },
+      {
+        name: "Phạm Ngọc Linh",
+        location: "Quận 9",
+        course: "IELTS",
+        time: "35 phút trước",
+        type: "ielts"
+      }
+    ];
+
+    const toast =
+      document.getElementById("studentRegisterToast");
+
+    const closeButton =
+      document.getElementById("studentToastClose");
+
+    const avatar =
+      document.getElementById("studentToastAvatar");
+
+    const studentName =
+      document.getElementById("studentToastName");
+
+    const studentLocation =
+      document.getElementById("studentToastLocation");
+
+    const studentCourse =
+      document.getElementById("studentToastCourse");
+
+    const studentTime =
+      document.getElementById("studentToastTime");
+
+    if (
+      !toast ||
+      !closeButton ||
+      !avatar ||
+      !studentName ||
+      !studentLocation ||
+      !studentCourse ||
+      !studentTime
+    ) {
+      console.error(
+        "Không tìm thấy thành phần thông báo đăng ký."
+      );
+
+      return;
+    }
+
+    const theme = {
+      toeic: {
+        color: "#00aeef",
+        background: "rgba(0, 174, 239, 0.10)",
+        border: "rgba(0, 174, 239, 0.22)"
+      },
+
+      ielts: {
+        color: "#ed1c24",
+        background: "rgba(237, 28, 36, 0.10)",
+        border: "rgba(237, 28, 36, 0.22)"
+      }
+    };
+
+    let currentIndex = 0;
+    let hideTimeout = null;
+    let intervalId = null;
+
+    function getFirstLetter(name) {
+      const cleanName = String(name || "").trim();
+
+      return cleanName
+        ? cleanName.charAt(0).toUpperCase()
+        : "P";
+    }
+
+    function updateToast(item) {
+      const selectedTheme =
+        theme[item.type] || theme.toeic;
+
+      studentName.textContent = item.name;
+      studentLocation.textContent = item.location;
+      studentCourse.textContent = item.course;
+      studentTime.textContent = item.time;
+
+      avatar.textContent = getFirstLetter(item.name);
+
+      avatar.style.color =
+        selectedTheme.color;
+
+      avatar.style.backgroundColor =
+        selectedTheme.background;
+
+      studentCourse.style.color =
+        selectedTheme.color;
+
+      toast.style.borderColor =
+        selectedTheme.border;
+    }
+
+    function hideToast() {
+      toast.classList.remove("is-visible");
+
+      if (hideTimeout) {
+        clearTimeout(hideTimeout);
+        hideTimeout = null;
+      }
+    }
+
+    function showToast() {
+      const item =
+        registrationData[currentIndex];
+
+      updateToast(item);
+
+      toast.classList.add("is-visible");
+
+      if (hideTimeout) {
+        clearTimeout(hideTimeout);
+      }
+
+      hideTimeout = setTimeout(function () {
+        hideToast();
+      }, 6000);
+
+      currentIndex =
+        (currentIndex + 1) %
+        registrationData.length;
+    }
+
+    closeButton.addEventListener(
+      "click",
+      function () {
+        hideToast();
+      }
+    );
+
+    /* Hiện lần đầu sau 2 giây */
+    setTimeout(function () {
+      showToast();
+
+      /* Các lần tiếp theo cách nhau 12 giây */
+      intervalId = setInterval(function () {
+        showToast();
+      }, 12000);
+    }, 2000);
+
+    /* Dừng khi người dùng rời tab */
+    document.addEventListener(
+      "visibilitychange",
+      function () {
+        if (document.hidden) {
+          hideToast();
+        }
+      }
+    );
+  });
+</script>
 
 
 
