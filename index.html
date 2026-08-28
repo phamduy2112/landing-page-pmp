@@ -577,14 +577,14 @@
       <a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" href="#lo-trinh-hoc"> 
         Lộ trình học 
       </a>  
-      <a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" href="#toeic-4-ky-nang"> 
-        TOEIC 4 Kỹ năng 
-      </a>  
-      <a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" href="#ielts-chuyen-sau"> 
-        IELTS Chuyên sâu 
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" href="#khoa-hoc"> 
+       Khóa học
       </a>  
       <a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" href="#thanh-tich-hoc-vien"> 
         Thành tích học viên 
+      </a>  
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" href="#giang-vien"> 
+        Giảng Viên
       </a>  
       <a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" href="#cau-hoi"> 
         Câu hỏi 
@@ -800,7 +800,7 @@ window.addEventListener('scroll', () => {
 </section>
 <!--  -->
 
-  <section class="bg-surface-container-lowest px-margin-mobile py-12 md:px-margin-desktop md:py-14">
+  <section class="bg-surface-container-lowest px-margin-mobile py-12 md:px-margin-desktop md:py-14" id="lo-trinh-hoc">
     <div class="mx-auto max-w-7xl ">
       <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg
   text-center
@@ -928,7 +928,7 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
 
   <!-- Nút CTA -->
   <a
-    href="#register"
+    href="#uu-dai-chinh-sach"
     class="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3
            text-center text-[11px] font-bold uppercase leading-4 text-white shadow-lg shadow-primary/20
            transition hover:-translate-y-0.5 hover:bg-primary-container
@@ -989,7 +989,7 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
     .achievement-card { scroll-snap-align: center; }
     .score-badge { clip-path: polygon(8% 0, 92% 0, 100% 12%, 100% 76%, 50% 100%, 0 76%, 0 12%); }
   </style>
-<section class="relative overflow-hidden bg-[#f7fbff] px-4 py-14 md:px-8 md:py-20">
+<section class="relative overflow-hidden bg-[#f7fbff] px-4 py-14 md:px-8 md:py-20" id="khoa-hoc">
   <!-- Background -->
   <div
     class="pointer-events-none absolute left-0 top-0 h-80 w-80
@@ -1134,7 +1134,9 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
 
       <!-- CTA -->
       <a
-        href="#dang-ky-toeic"
+          target="_blank"
+
+        href="https://pmpenglish.edu.vn/khoa_hoc/toeic-4-ky-nang/"
         class="mt-5 flex min-h-[52px] w-full items-center
                justify-between rounded-full
                bg-gradient-to-r from-primary-container to-primary
@@ -1256,7 +1258,8 @@ tests: `<svg viewBox="0 0 96 80" aria-hidden="true"><circle cx="31" cy="58" r="2
 
     <!-- CTA -->
     <a
-      href="#dang-ky-ielts"
+    target="_blank"
+      href="https://pmpenglish.edu.vn/khoa_hoc/luyen-thi-ielts/"
       class="mt-5 flex min-h-[52px] w-full items-center
              justify-between rounded-full
              bg-gradient-to-r from-secondary to-secondary-container
@@ -4488,7 +4491,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<section class="overflow-hidden bg-white px-4 py-12 md:px-16 md:py-16">
+<section class="overflow-hidden bg-white px-4 py-12 md:px-16 md:py-16" id="giang-vien">
   <div class="mx-auto max-w-7xl ">
 
     <!-- Tiêu đề -->
@@ -5287,7 +5290,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="mt-1 text-sm text-on-surface-variant">PMP English sẽ đồng hành và xây dựng lộ trình phù hợp với bạn.</p>
           </div>
         </div>
-        <a href="#register" class="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-[.02em] text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:bg-primary-container md:w-auto">
+        <a href="#uu-dai-chinh-sach" class="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-[.02em] text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:bg-primary-container md:w-auto">
           Kiểm tra trình độ và nhận lộ trình ngay
           <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none"><path d="m7.5 4.5 5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -5904,13 +5907,20 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="footer-col">
         <h3>Các khóa học</h3>
         <ul class="footer-links">
-          <li><a href="https://pmpenglish.edu.vn/khoa_hoc/toeic-4-ky-nang/">TOEIC 4 Kỹ Năng</a></li>
-          <li><a href="https://pmpenglish.edu.vn/khoa_hoc/toeic-nghe-doc/">TOEIC Nghe Đọc</a></li>
-          <li><a href="https://pmpenglish.edu.vn/khoa_hoc/anh-van-giao-tiep/">Anh Văn Giao Tiếp</a></li>
-          <li><a href="https://pmpenglish.edu.vn/khoa_hoc/luyen-thi-ielts/">Luyện Thi IELTS</a></li>
-          <li><a href="https://pmpenglish.edu.vn/khoa_hoc/anh-van-thieu-nhi/">Anh Văn Thiếu Nhi</a></li>
-          <li><a href="https://pmpenglish.edu.vn/khoa_hoc/anh-van-thieu-nien/">Anh Văn Thiếu Niên</a></li>
-          <li><a href="https://pmpenglish.edu.vn/khoa_hoc/khoa-hoc-online/">Khóa Học Online</a></li>
+          <li><a     target="_blank"
+ href="https://pmpenglish.edu.vn/khoa_hoc/toeic-4-ky-nang/">TOEIC 4 Kỹ Năng</a></li>
+          <li><a     target="_blank"
+ href="https://pmpenglish.edu.vn/khoa_hoc/toeic-nghe-doc/">TOEIC Nghe Đọc</a></li>
+          <li><a    target="_blank"
+  href="https://pmpenglish.edu.vn/khoa_hoc/anh-van-giao-tiep/">Anh Văn Giao Tiếp</a></li>
+          <li><a     target="_blank"
+ href="https://pmpenglish.edu.vn/khoa_hoc/luyen-thi-ielts/">Luyện Thi IELTS</a></li>
+          <li><a     target="_blank"
+ href="https://pmpenglish.edu.vn/khoa_hoc/anh-van-thieu-nhi/">Anh Văn Thiếu Nhi</a></li>
+          <li><a     target="_blank"
+ href="https://pmpenglish.edu.vn/khoa_hoc/anh-van-thieu-nien/">Anh Văn Thiếu Niên</a></li>
+          <li><a     target="_blank"
+ href="https://pmpenglish.edu.vn/khoa_hoc/khoa-hoc-online/">Khóa Học Online</a></li>
         </ul>
       </div>
 
