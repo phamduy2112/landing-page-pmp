@@ -88,8 +88,37 @@
                 "gutter": "24px",
                 "margin-mobile": "16px"
         },
-        "fontFamily": {
-             
+       "fontFamily": {
+                "headline-lg-mobile": [
+                        "Montserrat"
+                ],
+                "display-lg-mobile": [
+                        "Montserrat"
+                ],
+                "headline-lg": [
+                        "Montserrat"
+                ],
+                "body-lg": [
+                        "Public Sans"
+                ],
+                "label-md": [
+                        "Public Sans"
+                ],
+                "label-sm": [
+                        "Public Sans"
+                ],
+                "display-lg": [
+                        "Montserrat"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ],
+                "body-md": [
+                        "Public Sans"
+                ],
+                "body-sm": [
+                        "Public Sans"
+                ]
         },
         "fontSize": {
                 "headline-lg-mobile": [
@@ -173,9 +202,6 @@
   
 </script>
 <style>
-  body{
-    font-family: Inter;
-  }
 
 
         .material-symbols-outlined {
@@ -485,6 +511,7 @@
     animation: slideDown .3s ease;
     box-shadow: 0 8px 24px rgba(0,0,0,.08);
 }
+
 #teacherTrack {
   display: flex;
   gap: 24px;
@@ -589,7 +616,6 @@
   }
 }
 
-<style>
 
 /* =========================================
    DESKTOP
@@ -609,7 +635,7 @@
 
 
 /* =========================================
-   MOBILE < 768PX
+   MOBILE <style 768PX
 ========================================= */
 
 @media (max-width: 767px) {
@@ -1168,112 +1194,9 @@ window.addEventListener('scroll', () => {
 });
 </script>
 <!-- 01. SECTION HERO BANNER -->
-<section
-  class="relative isolate h-auto overflow-hidden px-4 sm:h-[500px] sm:px-6 lg:px-10 xl:px-16"
->
-  <!-- Ảnh nền -->
-  <img
-    src="./assets/bg-1.png"
-    alt=""
-    class="absolute inset-0 -z-30 h-full w-full object-cover object-center"
-  />
-
-  <!-- Lớp phủ -->
-  <div class="absolute inset-0 -z-20 bg-white/50 lg:bg-transparent"></div>
-
-  <div
-    class="mx-auto grid h-full w-full max-w-7xl  grid-cols-1 items-center sm:grid-cols-[55%_45%] lg:grid-cols-[52%_48%]"
-  >
-    <!-- Nội dung -->
-    <div
-      class="relative z-20 mx-auto mt-[35px] w-full max-w-xl sm:mt-0  lg:mx-0"
-    >
-      <!-- Text nhỏ -->
-      <span
-        class="font-headline text-[11px] font-bold uppercase tracking-[.08em] text-primary-container sm:text-xs lg:text-sm"
-      >
-        Cần TOEIC 4 kỹ năng hoặc IELTS
-      </span>
-
-      <!-- Tiêu đề chính -->
-      <h2
-        class="mb-3 mt-2 font-headline text-[30px] font-extrabold uppercase leading-[1.2] tracking-[-.03em] text-on-surface sm:text-[32px] md:text-[36px] lg:text-[42px] xl:text-[46px]"
-      >
-        Nhưng chưa biết
-        <br class="hidden sm:block" />
-        bắt đầu từ đâu?
-      </h2>
-
-      <ul
-        class="mx-auto mt-5 max-w-[480px] space-y-2.5 text-left text-[14px] leading-5 text-on-surface-variant sm:mx-0 sm:text-[13px] md:text-[14px]"
-      >
-        <li class="flex items-start gap-2.5">
-          <span
-            class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-          ></span>
-          <span>Kiểm tra năng lực đầu vào</span>
-        </li>
-
-        <li class="flex items-start gap-2.5">
-          <span
-            class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-          ></span>
-          <span>Lộ trình theo trình độ và mục tiêu</span>
-        </li>
-
-        <li class="flex items-start gap-2.5">
-          <span
-            class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-          ></span>
-          <span>Học kết hợp lớp học và hệ thống luyện tập</span>
-        </li>
-
-        <li class="flex items-start gap-2.5">
-          <span
-            class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-          ></span>
-          <span>Theo dõi tiến độ xuyên suốt quá trình học</span>
-        </li>
-      </ul>
-
-      <a
-        href="#uu-dai-chinh-sach"
-        class="mt-6 inline-flex items-center justify-center gap-2 rounded-lg  px-4 py-3 text-[12px] font-bold uppercase  bg-primary text-on-secondary hover:bg-[#008ec4] font-label-md text-label-md rounded px-6 py-2.5 shadow-sm hover:shadow-md transition-colors text-center"
-      >
-        Kiểm tra trình độ &amp; nhận lộ trình
-
-        <svg class="h-4 w-4 shrink-0" viewBox="0 0 20 20" fill="none">
-          <path
-            d="m7.5 4.5 5.5 5.5-5.5 5.5"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </a>
-    </div>
-
-    <!-- Ảnh giảng viên -->
-    <div class="relative mt-5 h-[280px] w-full sm:mt-0 sm:h-full">
-      <img
-        src="./assets/thầy giáo-PMP.png"
-        alt="Giảng viên PMP English"
-        class="relative mx-auto block h-full max-h-[280px] w-auto max-w-full object-contain object-bottom
-               drop-shadow-[0_18px_25px_rgba(1,86,155,.15)]
-               sm:absolute sm:bottom-0 sm:left-1/2 sm:h-[400px] sm:max-h-none sm:max-w-none sm:-translate-x-1/2
-               md:h-[440px]
-               lg:left-auto lg:right-[3%] lg:h-[490px] lg:translate-x-0"
-      />
-
-      <div
-        class="pointer-events-none absolute bottom-0 left-1/2 h-12 w-[70%] -translate-x-1/2 rounded-[50%]
-               bg-primary-container/10 blur-2xl
-               sm:h-16 sm:w-[80%]
-               lg:left-auto lg:right-[4%] lg:w-[65%] lg:translate-x-0"
-      ></div>
-    </div>
-  </div>
+<section>
+  <img src="./assets/LANDING PAGE 5-01.png" alt="" class="hidden sm:block w-[100%] h-full">
+  <img src="./assets/Untitled design (5).png" alt="" class="block sm:hidden w-[100%] h-full">
 </section>
 <!--  -->
 <section
@@ -1299,7 +1222,7 @@ window.addEventListener('scroll', () => {
 
 
     <!-- SLIDER WRAPPER -->
-    <div class="feature-slider mt-3 md:mt-12">
+    <div class="feature-slider mt-3 md:mt-7">
 
       <!-- VIEWPORT -->
       <div class="feature-slider-viewport">
@@ -1452,16 +1375,15 @@ featureGrid.innerHTML = features.map((item, index) => `
 
     <!-- XEM THÊM -->
     <a
-    target="_blank"
       href="${ '#uu-dai-chinh-sach'}"
       class="feature-more mt-3
              inline-flex items-center gap-1.5
              text-[14px] font-semibold
              text-[#00aeef]
              transition-all duration-300
-             hover:gap-2.5"
+             hover:gap-2.5 capitalize"
     >
-      <span>Xem thêm</span>
+      <span>Tìm hiểu thêm</span>
 
       <svg
         class="h-[15px] w-[15px]"
@@ -1845,7 +1767,7 @@ startAutoplay();
 
 
 
- <section class="overflow-hidden bg-white px-4  md:px-16 md:py-16">
+ <section class="overflow-hidden bg-white px-4  md:px-16">
     <div class="mx-auto max-w-7xl ">
       <header class="text-center">
        
@@ -1908,7 +1830,7 @@ startAutoplay();
     .achievement-card { scroll-snap-align: center; }
     .score-badge { clip-path: polygon(8% 0, 92% 0, 100% 12%, 100% 76%, 50% 100%, 0 76%, 0 12%); }
   </style>
-<section class="relative overflow-hidden bg-[#f7fbff] px-4 py-6 md:px-8 md:py-20" id="khoa-hoc">
+<section class="relative overflow-hidden bg-[#f7fbff] px-4 py-6 md:px-8 md:py-12" id="khoa-hoc">
   <!-- Background -->
   <div
     class="pointer-events-none absolute left-0 top-0 h-80 w-80
@@ -1923,7 +1845,7 @@ startAutoplay();
   <div class="relative z-10 mx-auto max-w-[1180px]">
 
     <!-- Tiêu đề -->
-    <div class="mx-auto mb-3 sm:mb-10 max-w-[760px] text-center">
+    <div class="mx-auto mb-3 sm:mb-6 max-w-[760px] text-center">
       <h2
         class="mt-3 font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg
   text-center
@@ -2264,7 +2186,7 @@ startAutoplay();
     <!-- SCORE -->
     <!-- ===================================================== -->
 
-    <div class="mb-3 sm:mb-20">
+    <div class="mb-3 sm:mb-8">
 
       <!-- <div class="mb-8 text-center md:text-left">
 
@@ -2390,7 +2312,7 @@ startAutoplay();
     <!-- FEEDBACK -->
     <!-- ===================================================== -->
 
-    <div class="mb-3 sm:mb-20">
+    <div class="mb-3 sm:mb-8">
 
       <div class="mb-3 sm:mb-8 text-center">
 
@@ -5434,7 +5356,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<section class="overflow-hidden bg-white py-4 px-4 sm:py-12 md:px-16 md:py-16" id="giang-vien">
+<section class="overflow-hidden bg-white py-4 px-4 sm:py-12 md:px-16 md:py-8" id="giang-vien">
   <div class="mx-auto max-w-7xl ">
 
     <!-- Tiêu đề -->
@@ -5456,7 +5378,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </header>
 
     <!-- Danh sách giảng viên -->
-    <div class="mt-3 sm:mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+    <div class="mt-3 sm:mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 
       <!-- BOX 01 -->
    <article
@@ -7686,7 +7608,7 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
 <!-- 10. ƯU ĐÃI & CHÍNH SÁCH -->
 
-<main class=" mx-auto space-y-3 sm:space-y-12 px-margin-mobile py-10 md:px-margin-desktop md:py-[100px] bg-[url('./assets/home-bg-box6-min.jpg')]" id="uu-dai-chinh-sach">
+<main class=" mx-auto space-y-3 sm:space-y-12 px-margin-mobile py-10 md:px-margin-desktop md:py-[100px] bg-[url('./assets/home-bg-box6-min.jpg')]" >
 <!-- BEGIN: Header Section -->
 <header class="text-center space-y-2 sm:space-y-4">
 <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-black md:font-headline-lg text-secondary
@@ -7743,16 +7665,16 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
     <!-- CỘT PHẢI: Form tư vấn -->
-    <div class="lg:col-span-6 relative bg-white rounded-2xl shadow-xl p-6 sm:p-8 border-t-4 border-primary">
+    <div class="lg:col-span-6 relative bg-white rounded-2xl shadow-xl p-6 sm:p-8 border-t-4 border-primary" id="uu-dai-chinh-sach">
       
       <!-- Vạch vàng bên trái mép card -->
       <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-1.5 h-24 bg-primary rounded-r"></div>
 
       <h2 class="text-xl font-bold text-gray-900 leading-snug capitalize
 ">Nhận tư vấn & Kiểm tra trình độ miễn phí</h2>
-      <p class="text-[11px] sm:text-xs text-gray-500 mt-2 mb-5 leading-relaxed">
-        PMP cam kết sử dụng thông tin vào mục đích tư vấn lộ trình học và không kinh doanh dưới mọi hình thức.
-      </p>
+   <span class="block my-3 text-[13px] leading-4 text-on-surface-variant sm:my-4">
+  PMP cam kết sử dụng thông tin vào mục đích tư vấn lộ trình học và không kinh doanh dưới mọi hình thức.
+</span>
 
       <form class="space-y-3.5">
         <div>
