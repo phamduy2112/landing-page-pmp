@@ -964,8 +964,8 @@
     >
       <span
         class="flex h-7 w-7 items-center justify-center
-               rounded-full border border-[#0068ff]
-               bg-white text-[10px] font-bold"
+               rounded-full border border-[#0068ff] bg-[#0068ff]
+               text-[10px] font-bold text-white"
       >
         Zalo
       </span>
@@ -7606,6 +7606,95 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   </script>
+  <!-- BACK TO TOP -->
+<button
+  id="backToTop"
+  class="back-to-top"
+  type="button"
+  aria-label="Quay về đầu trang"
+>
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9997;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #00aeef;
+    color: #fff;
+
+    font-size: 17px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 24px rgba(0, 174, 239, 0.25);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease,
+      background 0.3s ease;
+  }
+
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover {
+    background: #009bd5;
+    transform: translateY(-3px);
+  }
+
+  /* MOBILE - tránh đè thanh contact phía dưới */
+  @media (max-width: 767px) {
+    .back-to-top {
+      right: 14px !important;
+      bottom: 90px !important;
+
+      width: 42px;
+      height: 42px;
+
+      font-size: 15px;
+    }
+  }
+</style>
+
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 <!-- 10. ƯU ĐÃI & CHÍNH SÁCH -->
 
 <main class=" mx-auto space-y-3 sm:space-y-6 px-margin-mobile py-8 md:px-margin-desktop md:py-[60px] bg-[url('./assets/home-bg-box6-min.jpg')]" >
