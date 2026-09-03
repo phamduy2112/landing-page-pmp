@@ -1826,7 +1826,31 @@ startAutoplay();
     z-index: 0;
     pointer-events: none;
   }
+ .roadmap-item::before {
+        content: "";
+        position: absolute;
 
+        top: 0;
+        bottom: -18px;
+
+        left: 14px;
+
+        border-left: 2px dashed #abc3ef;
+
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    /* Item đầu tiên: không chạy lên phía trên */
+    .roadmap-item:first-child::before {
+        top: 20px;
+    }
+
+    /* Item cuối: chỉ chạy từ trên xuống tới chấm số */
+    .roadmap-item:last-child::before {
+        bottom: auto;
+        height: 20px;
+    }
   /* Tablet */
   @media (min-width: 577px) and (max-width: 768px) {
     .roadmap-list::before {
@@ -1839,7 +1863,7 @@ startAutoplay();
   /* Desktop */
   @media (min-width: 769px) {
     /* Không cần timeline dọc */
-    .roadmap-list::before {
+    .roadmap-item::before  {
       display: none;
     }
 
@@ -2151,17 +2175,33 @@ startAutoplay();
 
             <div
               class="
+             
                 relative
                 z-[2]
-                text-[40px]
-                leading-none
 
-                drop-shadow-[0_7px_7px_rgba(0,0,0,0.12)]
+                h-auto
+                max-h-[50px]
+                w-auto
+                max-w-[50px]
 
-                max-[400px]:text-[34px]
+                object-contain
+
+                max-[400px]:max-h-10
+                max-[400px]:max-w-10
+
+                min-[577px]:max-h-[90px]
+                min-[577px]:max-w-[90px]
+
+                min-[769px]:max-h-[60px]
+                min-[769px]:max-w-[60px]
+              
               "
             >
-              📋
+              <img
+                src="./assets/ChatGPT Image Sep 3, 2026, 05_55_04 PM.png"
+                alt=""
+                class="h-full w-full object-contain"
+              />
             </div>
 
           </div>
@@ -2474,7 +2514,7 @@ startAutoplay();
           >
 
             <img
-              src="./assets/icon 1.png"
+              src="./assets/ChatGPT Image Sep 3, 2026, 05_50_52 PM.png"
               alt="Xác định mục tiêu"
               class="
                 relative
@@ -2800,17 +2840,28 @@ startAutoplay();
             "
           >
 
-            <div
-              class="
-                text-[40px]
-                leading-none
-                drop-shadow-[0_7px_7px_rgba(0,0,0,0.12)]
+           
+              <img class="
+                relative
+                z-[2]
 
-                max-[400px]:text-[34px]
-              "
-            >
-              📝
-            </div>
+                h-auto
+                max-h-[50px]
+                w-auto
+                max-w-[50px]
+
+                object-contain
+
+                max-[400px]:max-h-10
+                max-[400px]:max-w-10
+
+                min-[577px]:max-h-[90px]
+                min-[577px]:max-w-[90px]
+
+                min-[769px]:max-h-[60px]
+                min-[769px]:max-w-[60px]
+              " src="./assets/ChatGPT Image Sep 3, 2026, 05_50_48 PM.png" alt=""/>
+        
 
           </div>
 
@@ -3106,17 +3157,32 @@ startAutoplay();
             "
           >
 
-            <div
+            <img
+              src="./assets/ChatGPT Image Sep 3, 2026, 05_58_13 PM.png"
               class="
-                text-[40px]
-                leading-none
-                drop-shadow-[0_7px_7px_rgba(0,0,0,0.12)]
+               
+                relative
+                z-[2]
 
-                max-[400px]:text-[34px]
+                h-auto
+                max-h-[50px]
+                w-auto
+                max-w-[50px]
+
+                object-contain
+
+                max-[400px]:max-h-10
+                max-[400px]:max-w-10
+
+                min-[577px]:max-h-[90px]
+                min-[577px]:max-w-[90px]
+
+                min-[769px]:max-h-[60px]
+                min-[769px]:max-w-[60px]
+              
               "
-            >
-              📈
-            </div>
+            />
+          
 
           </div>
 
