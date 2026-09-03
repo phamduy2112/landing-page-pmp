@@ -1,0 +1,779 @@
+<style>
+/* ==================================================
+   OSU FOOTER
+================================================== */
+
+.osu-footer,
+.osu-footer *{
+    box-sizing:border-box;
+}
+
+.osu-footer{
+    --osu-orange:#F47A22;
+    --osu-green:#2E7D32;
+    --osu-dark:#263238;
+    --osu-text:#37474F;
+    --osu-muted:#7A8795;
+    --osu-line:#E1E6EA;
+    --osu-bg:#FFFFFF;
+
+    width:100%;
+    background:var(--osu-bg);
+    color:var(--osu-text);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.osu-footer a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.osu-footer-container{
+    width:100%;
+    max-width:1460px;
+    margin:auto;
+    padding-left:24px;
+    padding-right:24px;
+}
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.osu-footer-logo-row{
+    display: flex;
+    gap: 10px;
+    padding:44px 0 28px;
+    border-bottom:1px solid var(--osu-line);
+}
+
+.osu-footer-logo{
+    display:inline-flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.osu-footer-logo-main{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:34px;
+    font-weight:800;
+    line-height:1;
+    letter-spacing:-1px;
+}
+
+.osu-footer-logo-main .osu-word{
+    color:var(--osu-orange);
+}
+
+.osu-footer-logo-main .osu-food{
+    color:var(--osu-green);
+}
+
+.osu-footer-logo-tagline{
+    font-size:12px;
+    color:var(--osu-muted);
+    letter-spacing:.4px;
+}
+
+/* Nếu dùng logo ảnh thật */
+
+.osu-footer-logo-img{
+    width:auto;
+    height:58px;
+    max-width:250px;
+    object-fit:contain;
+    display:block;
+}
+
+
+/* ==================================================
+   MAIN MENU
+================================================== */
+
+.osu-footer-menu{
+    min-height:66px;
+    display:flex;
+    align-items:center;
+    gap:38px;
+
+    border-bottom:1px solid var(--osu-line);
+
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.osu-footer-menu::-webkit-scrollbar{
+    display:none;
+}
+
+.osu-footer-menu a{
+    position:relative;
+    flex:0 0 auto;
+
+    color:var(--osu-dark);
+
+    font-size:16px;
+    font-weight:500;
+
+    white-space:nowrap;
+
+    transition:.2s ease;
+}
+
+.osu-footer-menu a:hover{
+    color:var(--osu-orange);
+}
+
+
+/* ==================================================
+   MAIN INFORMATION
+================================================== */
+
+.osu-footer-main{
+    min-height:150px;
+
+    display:grid;
+    grid-template-columns:
+        minmax(480px,1.5fr)
+        minmax(350px,1fr)
+        auto;
+
+    gap:60px;
+
+    align-items:center;
+
+    padding:28px 0;
+}
+
+
+/* COMPANY */
+
+.osu-company-title,
+.osu-contact-title{
+    margin-bottom:6px;
+
+    color:var(--osu-dark);
+
+    font-size:17px;
+    line-height:1.4;
+    font-weight:700;
+}
+
+.osu-company p,
+.osu-contact p{
+    margin:0;
+
+    color:var(--osu-text);
+
+    font-size:15.5px;
+    line-height:1.8;
+}
+
+.osu-company strong,
+.osu-contact strong{
+    font-weight:700;
+    color:var(--osu-dark);
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.osu-contact-item{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.osu-contact-icon{
+    flex:0 0 25px;
+
+    width:25px;
+    height:25px;
+
+    color:var(--osu-muted);
+}
+
+.osu-contact-item a{
+    color:#667B95;
+}
+
+.osu-contact-item a:hover{
+    color:var(--osu-orange);
+}
+
+.osu-contact-note{
+    color:var(--osu-muted);
+}
+
+
+/* ==================================================
+   BADGE / BỘ CÔNG THƯƠNG
+================================================== */
+
+.osu-bct{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.osu-bct img{
+    display:block;
+
+    width:220px;
+    max-width:100%;
+
+    height:auto;
+
+    object-fit:contain;
+}
+
+
+/* badge demo */
+
+.osu-bct-demo{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.osu-bct-check{
+    width:65px;
+    height:65px;
+
+    position:relative;
+
+    border:7px solid #138ED0;
+    border-radius:50%;
+}
+
+.osu-bct-check:after{
+    content:"";
+
+    position:absolute;
+
+    width:28px;
+    height:14px;
+
+    top:11px;
+    left:10px;
+
+    border-left:7px solid #138ED0;
+    border-bottom:7px solid #138ED0;
+
+    transform:rotate(-45deg);
+}
+
+.osu-bct-label{
+    min-width:140px;
+
+    padding:5px 10px;
+
+    border:3px solid #2D7FBD;
+
+    color:#2879B8;
+
+    text-align:center;
+
+    font-size:15px;
+    font-weight:700;
+}
+
+.osu-bct-label small{
+    display:block;
+
+    margin-top:2px;
+
+    font-size:11px;
+    font-weight:500;
+}
+
+
+/* ==================================================
+   BOTTOM MENU
+================================================== */
+
+.osu-footer-bottom-wrap{
+    border-top:1px solid var(--osu-line);
+}
+
+.osu-footer-bottom{
+    min-height:46px;
+
+    display:flex;
+    align-items:center;
+
+    gap:28px;
+
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.osu-footer-bottom::-webkit-scrollbar{
+    display:none;
+}
+
+.osu-footer-bottom a{
+    flex:0 0 auto;
+
+    color:var(--osu-muted);
+
+    font-size:14px;
+
+    white-space:nowrap;
+
+    transition:.2s ease;
+}
+
+.osu-footer-bottom a:hover{
+    color:var(--osu-orange);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media(max-width:1100px){
+
+    .osu-footer-main{
+        grid-template-columns:1fr 1fr;
+        gap:28px 45px;
+    }
+
+    .osu-bct{
+        grid-column:1 / -1;
+        justify-content:flex-start;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media(max-width:767px){
+
+    .osu-footer-container{
+        padding-left:18px;
+        padding-right:18px;
+    }
+
+    .osu-footer-logo-row{
+        padding:28px 0 20px;
+    }
+
+    .osu-footer-logo-main{
+        font-size:29px;
+    }
+
+    .osu-footer-menu{
+        min-height:56px;
+        gap:26px;
+
+        margin-right:-18px;
+        padding-right:18px;
+    }
+
+    .osu-footer-menu a{
+        font-size:14px;
+    }
+
+    .osu-footer-main{
+        display:flex;
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:24px;
+
+        padding:27px 0;
+    }
+
+    .osu-company-title,
+    .osu-contact-title{
+        font-size:15px;
+    }
+
+    .osu-company p,
+    .osu-contact p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .osu-contact-item{
+        align-items:flex-start;
+    }
+
+    .osu-contact-icon{
+        width:21px;
+        height:21px;
+
+        flex-basis:21px;
+
+        margin-top:2px;
+    }
+
+    .osu-bct{
+        justify-content:flex-start;
+    }
+
+    .osu-footer-bottom{
+        min-height:auto;
+
+        padding:15px 0;
+
+        gap:22px;
+    }
+
+    .osu-footer-bottom a{
+        font-size:13px;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media(max-width:480px){
+
+    .osu-footer-logo-main{
+        font-size:27px;
+    }
+
+    .osu-footer-main{
+        gap:21px;
+    }
+
+}
+</style>
+
+
+<footer class="osu-footer">
+
+    <div class="osu-footer-container">
+
+
+        <!-- =========================
+             LOGO
+        ========================== -->
+
+        <div class="osu-footer-logo-row">
+
+            
+     
+            <a href="/">
+                <img
+                    class="osu-footer-logo-img"
+                    src="LINK-LOGO-OSU.png"
+                    alt="OSU"
+                >
+            </a>
+           
+
+
+            <a href="/" class="osu-footer-logo">
+
+                <div class="osu-footer-logo-main">
+
+                    <span class="osu-word">
+                        OSU
+                    </span>
+
+                    <span class="osu-food">
+                        FOOD
+                    </span>
+
+                </div>
+
+                <span class="osu-footer-logo-tagline">
+                    5 phút cho bữa ăn ngon
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =========================
+             MENU
+        ========================== -->
+
+        <nav class="osu-footer-menu">
+
+            <a href="#">
+                Về OSU
+            </a>
+
+            <a href="#">
+                Sản phẩm
+            </a>
+
+            <a href="#">
+                Thế giới thực phẩm
+            </a>
+
+            <a href="#">
+                Cẩm nang
+            </a>
+
+            <a href="#">
+                Khuyến mãi
+            </a>
+
+            <a href="#">
+                Hệ thống cửa hàng
+            </a>
+
+            <a href="#">
+                Liên hệ
+            </a>
+
+        </nav>
+
+
+
+        <!-- =========================
+             INFORMATION
+        ========================== -->
+
+        <div class="osu-footer-main">
+
+
+            <!-- COMPANY -->
+
+            <div class="osu-company">
+
+                <div class="osu-company-title">
+                    CÔNG TY CỔ PHẦN OSU
+                </div>
+
+                <p>
+                    <strong>Địa chỉ:</strong>
+                    Nhập địa chỉ doanh nghiệp OSU tại đây
+                </p>
+
+                <p>
+                    <strong>GPDKKD:</strong>
+                    Nhập mã số doanh nghiệp và thông tin cấp phép tại đây
+                </p>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="osu-contact">
+
+                <div class="osu-contact-title">
+                    Liên hệ chăm sóc khách hàng
+                </div>
+
+
+                <!-- PHONE -->
+
+                <p class="osu-contact-item">
+
+                    <svg
+                        class="osu-contact-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+
+                        <path
+                            d="
+                            M22 16.92v3
+                            a2 2 0 0 1-2.18 2
+                            19.79 19.79 0 0 1-8.63-3.07
+                            19.5 19.5 0 0 1-6-6
+                            19.79 19.79 0 0 1-3.07-8.67
+                            A2 2 0 0 1 4.11 2h3
+                            a2 2 0 0 1 2 1.72
+                            12.84 12.84 0 0 0 .7 2.81
+                            2 2 0 0 1-.45 2.11
+                            L8.09 9.91
+                            a16 16 0 0 0 6 6
+                            l1.27-1.27
+                            a2 2 0 0 1 2.11-.45
+                            12.84 12.84 0 0 0 2.81.7
+                            A2 2 0 0 1 22 16.92z
+                            "
+                        />
+
+                    </svg>
+
+
+                    <span>
+
+                        <strong>
+                            Hotline:
+                        </strong>
+
+                        <a href="tel:0900000000">
+                            0900 000 000
+                        </a>
+
+                        <span class="osu-contact-note">
+                            (08:00 - 21:00 hàng ngày)
+                        </span>
+
+                    </span>
+
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <p class="osu-contact-item">
+
+                    <svg
+                        class="osu-contact-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+
+                        <path
+                            d="
+                            M4 4h16
+                            c1.1 0 2 .9 2 2v12
+                            c0 1.1-.9 2-2 2H4
+                            c-1.1 0-2-.9-2-2V6
+                            c0-1.1.9-2 2-2z
+                            "
+                        />
+
+                        <polyline
+                            points="22,6 12,13 2,6"
+                        />
+
+                    </svg>
+
+
+                    <span>
+
+                        <strong>
+                            Email:
+                        </strong>
+
+                        <a href="mailto:hello@osufoods.vn">
+                            hello@osufoods.vn
+                        </a>
+
+                    </span>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BỘ CÔNG THƯƠNG
+            ========================== -->
+
+            <div class="osu-bct">
+
+
+                <!--
+                SAU KHI UPLOAD LOGO BỘ CÔNG THƯƠNG
+                THÌ DÙNG:
+
+                <a
+                    href="#"
+                    target="_blank"
+                    rel="nofollow"
+                >
+
+                    <img
+                        src="LINK-ANH-BO-CONG-THUONG.png"
+                        alt="Đã thông báo Bộ Công Thương"
+                    >
+
+                </a>
+                -->
+
+
+                <!-- DEMO -->
+
+                <div class="osu-bct-demo">
+
+                    <div class="osu-bct-check"></div>
+
+                    <div class="osu-bct-label">
+
+                        ĐÃ THÔNG BÁO
+
+                        <small>
+                            BỘ CÔNG THƯƠNG
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         BOTTOM
+    ========================== -->
+
+    <div class="osu-footer-bottom-wrap">
+
+        <div class="osu-footer-container">
+
+            <div class="osu-footer-bottom">
+
+                <a href="#">
+                    Điều khoản sử dụng
+                </a>
+
+                <a href="#">
+                    Chính sách bảo mật
+                </a>
+
+                <a href="#">
+                    Chính sách giao hàng
+                </a>
+
+                <a href="#">
+                    Chính sách thanh toán
+                </a>
+
+                <a href="#">
+                    Chính sách đổi trả
+                </a>
+
+                <a href="#">
+                    Hướng dẫn mua hàng
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
