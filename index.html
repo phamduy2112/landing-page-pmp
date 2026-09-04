@@ -1266,8 +1266,8 @@ window.addEventListener('scroll', () => {
 <!-- 01. SECTION HERO BANNER -->
 <section>
  <a href="#uu-dai-chinh-sach">
-   <img src="./assets/LANDING PAGE 6-01.png" alt="" class="hidden sm:block w-[100%] h-full">
-     <img src="./assets/Untitled design.png" alt="" class="block sm:hidden w-[100%] h-full">
+   <img src="./assets/LANDING PAGE 6-01 (1).png" alt="" class="hidden sm:block w-[100%] h-full">
+     <img src="./assets/Untitled design (1)2.png" alt="" class="block sm:hidden w-[100%] h-full">
 
  </a>
 </section>
@@ -9314,132 +9314,343 @@ document.addEventListener("DOMContentLoaded", function () {
   PMP cam kết sử dụng thông tin vào mục đích tư vấn lộ trình học và không kinh doanh dưới mọi hình thức.
 </span>
 
-      <form class="space-y-3.5">
-        <div>
-          <input 
-            type="text" 
-            placeholder="Tên của bạn" 
-            class="w-full px-4 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:border-primary focus:bg-white transition"
-            required
-          >
-        </div>
+    <form id="consultForm" class="space-y-3.5">
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <input 
-            type="tel" 
-            placeholder="Số điện thoại" 
-            class="w-full px-4 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:border-primary focus:bg-white transition"
-            required
-          >
-          <select class="w-full px-3 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-500 outline-none focus:border-primary focus:bg-white transition" required>
-            <option value="" disabled selected>Khoá học bạn quan tâm</option>
-            <option value="ielts">Luyện Thi IELTS</option>
-            <option value="toeic">TOEIC 4 Kỹ Năng</option>
-          </select>
-        </div>
+  <!-- Họ tên -->
+  <div>
+    <input 
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Tên của bạn" 
+      class="w-full px-4 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:border-primary focus:bg-white transition"
+      required
+    >
+  </div>
 
-        <div>
-          <select class="w-full px-3 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-500 outline-none focus:border-primary focus:bg-white transition" required>
-            <option value="" disabled selected>Bạn muốn kiểm tra ở trung tâm nào?</option>
-            <option value="cs1">
-34 Hồ Thị Tư, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh</option>
-            <option value="cs2">411 Lê Văn Việt, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh</option>
-            <option value="cs2">1Q Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh</option>
-          </select>
-        </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 
-        <!-- Hình thức học -->
-        <div class="pt-1">
-          <label class="block text-xs sm:text-sm font-bold text-gray-900 mb-2">Hình thức học*</label>
-          <div class="flex flex-wrap gap-4 text-xs text-gray-700">
-            <label class="flex items-center gap-1.5 cursor-pointer">
-              <input type="radio" name="learning_mode" value="online" class="accent-[#0088cc] w-4 h-4 cursor-pointer" checked>
-              Online
-            </label>
-            <label class="flex items-center gap-1.5 cursor-pointer">
-              <input type="radio" name="learning_mode" value="offline" class="accent-[#0088cc] w-4 h-4 cursor-pointer">
-              Offline
-            </label>
-            <label class="flex items-center gap-1.5 cursor-pointer">
-              <input type="radio" name="learning_mode" value="hybrid" class="accent-[#0088cc] w-4 h-4 cursor-pointer">
-              Kết hợp online & offline
-            </label>
-          </div>
-        </div>
+    <!-- Số điện thoại -->
+    <input 
+      type="tel"
+      id="phone"
+      name="phone"
+      placeholder="Số điện thoại" 
+      class="w-full px-4 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:border-primary focus:bg-white transition"
+      required
+    >
 
-        <!-- Thời gian tư vấn -->
-     <div class="pt-1">
-  <label class="block text-xs sm:text-sm font-bold text-gray-900 mb-2.5">Thời gian bạn muốn nhận tư vấn: *</label>
-  <div class="space-y-2 text-xs">
-    
-    <!-- Hàng Sáng -->
-    <div class="flex items-center gap-2">
-      <span class="w-10 font-medium text-gray-700 shrink-0">Sáng</span>
-      <div class="grid grid-cols-3 gap-2 flex-1">
-        <label class="cursor-pointer">
-          <input type="radio" name="slot" value="09-10" class="peer sr-only" checked>
-          <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">09h - 10h</span>
-        </label>
-        <label class="cursor-pointer">
-          <input type="radio" name="slot" value="10-11" class="peer sr-only">
-          <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">10h - 11h</span>
-        </label>
-        <label class="cursor-pointer">
-          <input type="radio" name="slot" value="11-12" class="peer sr-only">
-          <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">11h - 12h</span>
-        </label>
-      </div>
-    </div>
+    <!-- Khóa học -->
+    <select 
+      id="course"
+      name="course"
+      class="w-full px-3 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-500 outline-none focus:border-primary focus:bg-white transition"
+      required
+    >
+      <option value="" disabled selected>
+        Khoá học bạn quan tâm
+      </option>
 
-    <!-- Hàng Chiều -->
-    <div class="flex items-center gap-2">
-      <span class="w-10 font-medium text-gray-700 shrink-0">Chiều</span>
-      <div class="grid grid-cols-3 gap-2 flex-1">
-        <label class="cursor-pointer">
-          <input type="radio" name="slot" value="14-15" class="peer sr-only">
-          <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">14h - 15h</span>
-        </label>
-        <label class="cursor-pointer">
-          <input type="radio" name="slot" value="15-16" class="peer sr-only">
-          <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">15h - 16h</span>
-        </label>
-        <label class="cursor-pointer">
-          <input type="radio" name="slot" value="16-17" class="peer sr-only">
-          <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">16h - 17h</span>
-        </label>
-      </div>
-    </div>
+      <option value="ielts">
+        Luyện Thi IELTS
+      </option>
 
-    <!-- Hàng Tối -->
-    <div class="flex items-center gap-2">
-      <span class="w-10 font-medium text-gray-700 shrink-0">Tối</span>
-      <div class="grid grid-cols-3 gap-2 flex-1">
-        <label class="cursor-pointer">
-          <input type="radio" name="slot" value="17-18" class="peer sr-only">
-          <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">17h - 18h</span>
-        </label>
-        <label class="cursor-pointer">
-          <input type="radio" name="slot" value="18-19" class="peer sr-only">
-          <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">18h - 19h</span>
-        </label>
-        <label class="cursor-pointer">
-          <input type="radio" name="slot" value="19-20" class="peer sr-only">
-          <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">19h - 20h</span>
-        </label>
-      </div>
+      <option value="toeic">
+        TOEIC 4 Kỹ Năng
+      </option>
+    </select>
+
+  </div>
+
+  <!-- Cơ sở -->
+  <div>
+    <select 
+      id="campus"
+      name="campus"
+      class="w-full px-3 py-2.5 bg-[#f8fafc] border border-gray-200 rounded-lg text-sm text-gray-500 outline-none focus:border-primary focus:bg-white transition"
+      required
+    >
+
+      <option value="" disabled selected>
+        Bạn muốn kiểm tra ở trung tâm nào?
+      </option>
+
+      <option value="cs1">
+        34 Hồ Thị Tư, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh
+      </option>
+
+      <option value="cs2">
+        411 Lê Văn Việt, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh
+      </option>
+
+      <option value="cs3">
+        1Q Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh
+      </option>
+
+    </select>
+  </div>
+
+
+  <!-- Hình thức học -->
+  <div class="pt-1">
+
+    <label class="block text-xs sm:text-sm font-bold text-gray-900 mb-2">
+      Hình thức học*
+    </label>
+
+    <div class="flex flex-wrap gap-4 text-xs text-gray-700">
+
+      <label class="flex items-center gap-1.5 cursor-pointer">
+        <input 
+          type="radio"
+          id="learning_online"
+          name="learning_mode"
+          value="online"
+          class="accent-[#0088cc] w-4 h-4 cursor-pointer"
+          checked
+        >
+        Online
+      </label>
+
+      <label class="flex items-center gap-1.5 cursor-pointer">
+        <input 
+          type="radio"
+          id="learning_offline"
+          name="learning_mode"
+          value="offline"
+          class="accent-[#0088cc] w-4 h-4 cursor-pointer"
+        >
+        Offline
+      </label>
+
+      <label class="flex items-center gap-1.5 cursor-pointer">
+        <input 
+          type="radio"
+          id="learning_hybrid"
+          name="learning_mode"
+          value="hybrid"
+          class="accent-[#0088cc] w-4 h-4 cursor-pointer"
+        >
+        Kết hợp online & offline
+      </label>
+
     </div>
 
   </div>
-</div>
 
-        <button 
-          type="submit" 
-          class="w-full uppercase mt-4 py-3 bg-secondary hover:bg-red-600 text-white font-bold rounded-lg transition duration-200 text-sm shadow-sm cursor-pointer"
-        >
-          Nhận tư vấn ngay
-        </button>
-      </form>
 
+  <!-- Thời gian tư vấn -->
+  <div class="pt-1">
+
+    <label class="block text-xs sm:text-sm font-bold text-gray-900 mb-2.5">
+      Thời gian bạn muốn nhận tư vấn: *
+    </label>
+
+    <div class="space-y-2 text-xs">
+
+      <!-- Sáng -->
+      <div class="flex items-center gap-2">
+
+        <span class="w-10 font-medium text-gray-700 shrink-0">
+          Sáng
+        </span>
+
+        <div class="grid grid-cols-3 gap-2 flex-1">
+
+          <label class="cursor-pointer">
+
+            <input 
+              type="radio"
+              id="slot_09_10"
+              name="slot"
+              value="09-10"
+              class="peer sr-only"
+              checked
+            >
+
+            <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">
+              09h - 10h
+            </span>
+
+          </label>
+
+
+          <label class="cursor-pointer">
+
+            <input 
+              type="radio"
+              id="slot_10_11"
+              name="slot"
+              value="10-11"
+              class="peer sr-only"
+            >
+
+            <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">
+              10h - 11h
+            </span>
+
+          </label>
+
+
+          <label class="cursor-pointer">
+
+            <input 
+              type="radio"
+              id="slot_11_12"
+              name="slot"
+              value="11-12"
+              class="peer sr-only"
+            >
+
+            <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">
+              11h - 12h
+            </span>
+
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Chiều -->
+      <div class="flex items-center gap-2">
+
+        <span class="w-10 font-medium text-gray-700 shrink-0">
+          Chiều
+        </span>
+
+        <div class="grid grid-cols-3 gap-2 flex-1">
+
+          <label class="cursor-pointer">
+
+            <input 
+              type="radio"
+              id="slot_14_15"
+              name="slot"
+              value="14-15"
+              class="peer sr-only"
+            >
+
+            <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">
+              14h - 15h
+            </span>
+
+          </label>
+
+
+          <label class="cursor-pointer">
+
+            <input 
+              type="radio"
+              id="slot_15_16"
+              name="slot"
+              value="15-16"
+              class="peer sr-only"
+            >
+
+            <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">
+              15h - 16h
+            </span>
+
+          </label>
+
+
+          <label class="cursor-pointer">
+
+            <input 
+              type="radio"
+              id="slot_16_17"
+              name="slot"
+              value="16-17"
+              class="peer sr-only"
+            >
+
+            <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">
+              16h - 17h
+            </span>
+
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Tối -->
+      <div class="flex items-center gap-2">
+
+        <span class="w-10 font-medium text-gray-700 shrink-0">
+          Tối
+        </span>
+
+        <div class="grid grid-cols-3 gap-2 flex-1">
+
+          <label class="cursor-pointer">
+
+            <input 
+              type="radio"
+              id="slot_17_18"
+              name="slot"
+              value="17-18"
+              class="peer sr-only"
+            >
+
+            <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">
+              17h - 18h
+            </span>
+
+          </label>
+
+
+          <label class="cursor-pointer">
+
+            <input 
+              type="radio"
+              id="slot_18_19"
+              name="slot"
+              value="18-19"
+              class="peer sr-only"
+            >
+
+            <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">
+              18h - 19h
+            </span>
+
+          </label>
+
+
+          <label class="cursor-pointer">
+
+            <input 
+              type="radio"
+              id="slot_19_20"
+              name="slot"
+              value="19-20"
+              class="peer sr-only"
+            >
+
+            <span class="block text-center py-1.5 px-1 bg-[#f1f5f9] text-gray-600 rounded-full border border-transparent peer-checked:bg-[#e6f7fd] peer-checked:text-[#007bb0] peer-checked:border-primary peer-checked:font-semibold hover:bg-gray-200 transition">
+              19h - 20h
+            </span>
+
+          </label>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Submit -->
+  <button 
+    type="submit"
+    id="consultSubmit"
+    class="w-full uppercase mt-4 py-3 bg-secondary hover:bg-red-600 text-white font-bold rounded-lg transition duration-200 text-sm shadow-sm cursor-pointer"
+  >
+    Nhận tư vấn ngay
+  </button>
+
+</form>
     </div>
 
   </div>
@@ -9732,6 +9943,63 @@ document.addEventListener("DOMContentLoaded", function () {
   items.forEach(function (item) {
     observer.observe(item);
   });
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("consultForm");
+
+  const API_URL =
+  "https://script.google.com/macros/s/AKfycbxacLmv0DBQ5hAFoBiXzSEmbNzZGgWlMewI2qFogkxo-y4AuU6dneunD_gQH4QOWwK_/exec";
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  const campusMap = {
+    cs1: "34 Hồ Thị Tư, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh",
+    cs2: "411 Lê Văn Việt, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh",
+    cs3: "1Q Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh"
+  };
+
+  const data = new URLSearchParams();
+
+  data.append("name", formData.get("name") || "");
+  data.append("phone", formData.get("phone") || "");
+  data.append("course", formData.get("course") || "");
+  data.append(
+    "campus",
+    campusMap[formData.get("campus")] || ""
+  );
+  data.append(
+    "learning_mode",
+    formData.get("learning_mode") || ""
+  );
+  data.append(
+    "slot",
+    formData.get("slot") || ""
+  );
+
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      body: data,
+      redirect: "follow"
+    });
+
+    console.log("Status:", response.status);
+    console.log("URL cuối:", response.url);
+
+   
+
+  } catch (error) {
+    console.error("Lỗi gửi form:", error);
+  }
+});
 
 });
 </script>
