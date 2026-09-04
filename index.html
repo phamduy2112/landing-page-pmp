@@ -9649,7 +9649,10 @@ document.addEventListener("DOMContentLoaded", function () {
   >
     Nhận tư vấn ngay
   </button>
-
+<p
+  id="formMessage"
+  class="hidden text-sm text-red-500 mt-2"
+></p>
 </form>
     </div>
 
@@ -9951,14 +9954,12 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.getElementById("consultForm");
+  const submitBtn = document.getElementById("consultSubmit");
+  const title = document.getElementById("consultTitle");
+  const message = document.getElementById("formMessage");
 
   const API_URL =
-  "https://script.google.com/macros/s/AKfycbxacLmv0DBQ5hAFoBiXzSEmbNzZGgWlMewI2qFogkxo-y4AuU6dneunD_gQH4QOWwK_/exec";
-
-form.addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const formData = new FormData(form);
+    "https://script.google.com/macros/s/AKfycbwFsOW6SpMIDh7EQk4mdzQm1wdOp_9E7rlU3rXd7ROsnvqA7-oGTWb-6g25m8clqka-/exec";
 
   const campusMap = {
     cs1: "34 Hồ Thị Tư, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh",
@@ -9966,40 +9967,218 @@ form.addEventListener("submit", async function (e) {
     cs3: "1Q Dân Chủ, Phường Thủ Đức, Thành phố Hồ Chí Minh"
   };
 
-  const data = new URLSearchParams();
+  form.addEventListener("submit", async function (e) {
 
-  data.append("name", formData.get("name") || "");
-  data.append("phone", formData.get("phone") || "");
-  data.append("course", formData.get("course") || "");
-  data.append(
-    "campus",
-    campusMap[formData.get("campus")] || ""
+    e.preventDefault();
+
+    // =========================
+    // LẤY DATA
+    // =========================
+    const formData = new FormData(form);
+
+    const name = (formData.get("name") || "").trim();
+    const phone = (formData.get("phone") || "").trim();
+    const course = formData.get("course") || "";
+    const campus = formData.get("campus") || "";
+    const learningMode = formData.get("learning_mode") || "";
+    const slot = formData.get("slot") || "";
+
+    // =========================
+    // RESET MESSAGE
+    // =========================
+    message.classList.add("hidden");
+    message.textContent = "";
+
+    // =========================
+    // VALIDATE HỌ TÊN
+    // =========================
+    if (name.length < 2) {
+      showError("Vui lòng nhập họ tên hợp lệ.");
+      return;
+    }
+
+    // =========================
+    // VALIDATE SĐT
+    // =========================
+    const phoneRegex = /^(0|\+84)[0-9]{9}$/;
+
+    const cleanPhone = phone.replace(/\s+/g, "");
+
+    if (!phoneRegex.test(cleanPhone)) {
+      showError("Vui lòng nhập số điện thoại hợp lệ.");
+      return;
+    }
+
+    // =========================
+    // VALIDATE KHÓA HỌC
+    // =========================
+    if (!course) {
+      showError("Vui lòng chọn khóa học.");
+      return;
+    }
+
+    // =========================
+    // VALIDATE CƠ SỞ
+    // =========================
+    if (!campus) {
+      showError("Vui lòng chọn cơ sở.");
+      return;
+    }
+
+    // =========================
+    // VALIDATE HÌNH THỨC HỌC
+    // =========================
+    if (!learningMode) {
+      showError("Vui lòng chọn hình thức học.");
+      return;
+    }
+
+    // =========================
+    // VALIDATE THỜI GIAN
+    // =========================
+    if (!slot) {
+      showError("Vui lòng chọn thời gian tư vấn.");
+      return;
+    }
+
+    // =========================
+    // CHUẨN BỊ DATA GỬI
+    // =========================
+    const data = new URLSearchParams();
+
+    data.append("name", name);
+    data.append("phone", cleanPhone);
+    data.append("course", course);
+
+    data.append(
+      "campus",
+      campusMap[campus] || campus
+    );
+
+    data.append(
+      "learning_mode",
+      learningMode
+    );
+
+    data.append(
+      "slot",
+      slot
+    );
+
+    // =========================
+    // LOADING
+    // =========================
+    const oldButtonText = submitBtn.innerHTML;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "ĐANG GỬI...";
+
+    try {
+
+      const response = await fetch(API_URL, {
+        method: "POST",
+        body: data
+      });
+
+      const resultText = await response.text();
+
+      console.log("Google trả về:", resultText);
+
+      let result;
+
+      try {
+        result = JSON.parse(resultText);
+      } catch {
+        result = {
+          success: response.ok
+        };
+      }
+
+      // =========================
+      // SUCCESS
+      // =========================
+      if (result.success) {
+
+       message.textContent =
+    "Gửi thành công! Cảm ơn bạn đã để lại thông tin. Chúng tôi sẽ liên hệ với bạn sớm.";
+
+  message.classList.remove(
+    "hidden",
+    "text-red-500"
   );
-  data.append(
-    "learning_mode",
-    formData.get("learning_mode") || ""
-  );
-  data.append(
-    "slot",
-    formData.get("slot") || ""
+
+  message.classList.add(
+    "text-green-600"
   );
 
-  try {
-    const response = await fetch(API_URL, {
-      method: "POST",
-      body: data,
-      redirect: "follow"
-    });
+  form.reset();
 
-    console.log("Status:", response.status);
-    console.log("URL cuối:", response.url);
+  submitBtn.disabled = false;
+  submitBtn.innerHTML = oldButtonText;
 
-   
+        // set lại radio mặc định
+        const online = form.querySelector(
+          '[name="learning_mode"][value="online"]'
+        );
 
-  } catch (error) {
-    console.error("Lỗi gửi form:", error);
+        const firstSlot = form.querySelector(
+          '[name="slot"][value="09-10"]'
+        );
+
+        if (online) {
+          online.checked = true;
+        }
+
+        if (firstSlot) {
+          firstSlot.checked = true;
+        }
+
+        // Ẩn nút submit sau khi gửi thành công
+        submitBtn.classList.add("hidden");
+
+      } else {
+
+        showError(
+          result.message ||
+          "Không thể gửi thông tin. Vui lòng thử lại."
+        );
+
+      }
+
+    } catch (error) {
+
+      console.error("Lỗi API:", error);
+
+      showError(
+        "Có lỗi xảy ra. Vui lòng thử lại."
+      );
+
+    } finally {
+
+      if (!submitBtn.classList.contains("hidden")) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = oldButtonText;
+      }
+
+    }
+
+  });
+
+
+  function showError(text) {
+
+    message.textContent = text;
+
+    message.classList.remove(
+      "hidden",
+      "text-green-600"
+    );
+
+    message.classList.add(
+      "text-red-500"
+    );
+
   }
-});
 
 });
 </script>
